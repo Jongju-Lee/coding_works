@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background: linear-gradient(90deg, dodgerblue, rgb(33, 221, 212));
+}
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.card_img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card_img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.btn_more {
+  display: flex;
+  justify-content: end;
+}
+.btn_more span {
+  cursor: pointer;
+}
+.card_description {
+  color: gray;
+  margin-top: 30px;
+}
+.card_description h1 {
+  color: #333;
+  font-weight: normal;
+}
+.card_description h1 span {
+  color: gray;
+  font-size: 20px;
+  display: block;
+  padding-top: 15px;
+}
+.sns {
+}
+.sns a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  line-height: 30px;
+}
+.share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.share p {
+  color: crimson;
+  font-weight: bold;
+  font-size: 22px;
+  width: 70px;
+  margin: 20px 10px;
+}
+.share p span {
+  font-weight: normal;
+  font-size: 16px;
+  color: rgb(190, 190, 190);
+  display: block;
+}
+button.follow {
+  border: none;
+  width: 220px;
+  padding: 12px;
+  background-color: gold;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+button.follow:hover {
+  background-color: goldenrod;
+}
