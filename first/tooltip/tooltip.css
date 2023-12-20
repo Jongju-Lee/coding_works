@@ -1,0 +1,51 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  height: 100vh;
+  color: #333;
+}
+.items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.item {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  margin: 20px;
+}
+.image {
+}
+.image img {
+}
+.description {
+  position: absolute;
+  top: -70%;
+  left: -55%;
+  width: 250px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border-radius: 20px;
+  border: 1px solid #000;
+  opacity: 0;
+  transition: 0.5s;
+}
+.item:hover .description {
+  opacity: 1;
+}
+.description p {
+}
+.description span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  transform: translateY(-50%) rotate(45deg);
+}
