@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>video_background</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="video_background.css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -48,5 +51,18 @@
         </div>
       </div>
     </div>
+
+    <audio src="./music/piano-bgm.mp3" autoplay loop></audio>
+
+    <script>
+      // trigger
+      $(".trigger").click(function () {
+        $(this).toggleClass("active");
+        $(".modal_gnb").fadeToggle("slow");
+      });
+      // audio controls
+      const $audio = document.querySelector("audio");
+      $audio.volume = 0.2; // audio volume : 0 ~ 1
+    </script>
   </body>
 </html>
