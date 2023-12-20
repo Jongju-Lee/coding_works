@@ -1,0 +1,82 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+/* Default CSS */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+.container {
+}
+/* header */
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+header nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+header nav span:first-child {
+  cursor: pointer;
+}
+/* section */
+section {
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.content h1 {
+  font-weight: normal;
+  font-size: 40px;
+}
+.items_inner {
+}
+.items {
+  display: flex;
+}
+/* item */
+.item {
+  margin: 15px;
+}
+.img {
+}
+.img img {
+}
+.description {
+  font-weight: 600;
+}
+.description p {
+  margin: 10px;
+}
+.description span {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+/* footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: #777;
+  color: lightgray;
+}
