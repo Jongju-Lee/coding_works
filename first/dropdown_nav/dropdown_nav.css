@@ -1,0 +1,53 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  height: 100vh;
+  color: #333;
+}
+/* container */
+.container {
+  display: inline-block;
+}
+.container nav {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown_btn {
+  border: none;
+  width: 250px;
+  padding: 15px 20px;
+  font-size: 22px;
+  background-color: yellowgreen;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.dropdown_btn:hover {
+  opacity: 1;
+}
+.dropdown_submenu {
+  display: none;
+  width: 250px;
+}
+.container:hover .dropdown_submenu {
+  display: block;
+}
+.dropdown_submenu a {
+  display: block;
+  text-decoration: none;
+  padding: 15px 20px;
+  padding-left: 25px;
+  color: #333;
+  background-color: #eee;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.dropdown_submenu a:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.dropdown_submenu a:hover {
+  opacity: 1;
+}
