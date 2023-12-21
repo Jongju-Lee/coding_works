@@ -1,0 +1,55 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* skill_progress */
+.skill_progress {
+  width: 500px;
+  padding: 20px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+.skill_progress h1 {
+  text-align: center;
+}
+.item {
+}
+.item p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.item p span {
+}
+.progress {
+  width: 100%;
+  border: 1px solid #00cec9;
+  height: 25px;
+  padding: 6px;
+  border-radius: 5px;
+}
+.progress_level {
+  height: 12px;
+  background: linear-gradient(90deg, crimson, gold);
+  border-radius: 3px;
+  animation: ani 1.5s ease-out;
+}
+@keyframes ani {
+  0% {
+    width: 0;
+  }
+}
