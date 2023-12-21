@@ -1,0 +1,92 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* contents */
+.items {
+  display: flex;
+}
+.item {
+  position: relative;
+  width: 300px;
+  height: 230px;
+  text-align: center;
+  transition: 0.5s;
+  margin: 15px;
+}
+.item:hover {
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  transition: 0.5s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.item:hover .image {
+  background-color: yellowgreen;
+  top: -50%;
+}
+.item:hover .image img {
+  animation: scale 0.8s linear infinite;
+}
+.image h2 {
+  margin-top: 15px;
+}
+.description {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  padding: 15px;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  color: #333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.item:hover .description {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+}
+.description p {
+  margin-bottom: 25px;
+}
+.description a {
+  background-color: dodgerblue;
+  padding: 7px 15px;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+.description a:hover {
+  opacity: 1;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
