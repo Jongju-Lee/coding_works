@@ -1,0 +1,50 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* container */
+.container {
+}
+.container p {
+  font-size: 50px;
+}
+.container p::before,
+.container p::after {
+  font-size: 30px;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  vertical-align: text-bottom;
+}
+
+.container p::before {
+  content: "01";
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: royalblue;
+  border-radius: 50%;
+  line-height: 45px;
+}
+.container p::after {
+  content: "update";
+  width: 100px;
+  padding: 10px 3px;
+  margin-left: 10px;
+  background-color: crimson;
+  border-radius: 10px;
+  border: 1px solid red;
+  line-height: 30px;
+}

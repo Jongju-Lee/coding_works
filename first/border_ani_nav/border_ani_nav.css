@@ -1,0 +1,45 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* container */
+.container {
+}
+.container nav {
+  width: 1000px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.container nav a {
+  position: relative;
+  font-size: 18px;
+}
+.container nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  height: 3px;
+  background-color: dodgerblue;
+  transition: 0.3s;
+}
+.container nav a:hover::after {
+  width: 100%;
+}
