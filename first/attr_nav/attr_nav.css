@@ -1,0 +1,57 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, gold, green);
+}
+/* container */
+nav {
+  background-color: #fff;
+  width: 900px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+}
+nav a::before,
+nav a::after {
+  content: attr(data-link);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+nav a::before {
+  top: 0;
+}
+nav a:hover::before {
+  top: -100%;
+}
+nav a::after {
+  top: 100%;
+  color: #45b649;
+}
+nav a:hover::after {
+  top: 0;
+}

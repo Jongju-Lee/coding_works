@@ -1,0 +1,59 @@
+/* Font Awesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* form */
+.form {
+}
+.form > div {
+  position: relative;
+}
+.form > div input {
+  height: 50px;
+  padding-left: 60px;
+  margin: 10px;
+  outline: none;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.form > div input:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+.form > div input:focus + i {
+  background-color: dodgerblue;
+}
+.form > div i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 25px;
+  background-color: lightgray;
+  color: #fff;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px 0 0 5px;
+  transition: 0.5s;
+}
+.form > div input::placeholder {
+  transition: 0.5s;
+}
+.form > div input:focus::placeholder {
+  color: transparent;
+}
