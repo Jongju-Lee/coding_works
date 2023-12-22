@@ -1,0 +1,106 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* tab_menu */
+.tab_menu {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+}
+/* tab_menu > input */
+input[name="tab_menu"] {
+  display: none;
+}
+/* content */
+.content {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+input[id="tab1"]:checked ~ .slide1,
+input[id="tab2"]:checked ~ .slide2,
+input[id="tab3"]:checked ~ .slide3 {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+/* sale */
+.sale {
+}
+
+.text1,
+.text2,
+.text3 {
+  position: absolute;
+  top: -80px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 12px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.text1 {
+  background-color: yellowgreen;
+}
+.text2 {
+  background-color: royalblue;
+}
+.text3 {
+  background-color: crimson;
+}
+input[id="tab1"]:checked ~ .sale .text1,
+input[id="tab2"]:checked ~ .sale .text2,
+input[id="tab3"]:checked ~ .sale .text3 {
+  top: 20px;
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+.sale div span {
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 25px;
+  margin-top: 5px;
+}
+/* slide_btn */
+.slide_btn {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  margin-bottom: 3px;
+}
+.slide_btn label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  margin: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+input[id="tab1"]:checked ~ .slide_btn label[for="tab1"],
+input[id="tab2"]:checked ~ .slide_btn label[for="tab2"],
+input[id="tab3"]:checked ~ .slide_btn label[for="tab3"] {
+  background-color: crimson;
+}

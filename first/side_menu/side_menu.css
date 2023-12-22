@@ -1,0 +1,76 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+}
+/* container */
+.container {
+  position: relative;
+  height: inherit;
+  overflow: hidden;
+}
+input[id="side_menu_trigger"] {
+  display: none;
+}
+label[for="side_menu_trigger"] {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+input[id="side_menu_trigger"]:checked + label[for="side_menu_trigger"] {
+  right: 320px;
+}
+label[for="side_menu_trigger"] span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  transition: 0.3s;
+}
+label[for="side_menu_trigger"] span:nth-child(1) {
+  top: 0;
+}
+label[for="side_menu_trigger"] span:nth-child(2) {
+  top: 50%;
+}
+label[for="side_menu_trigger"] span:nth-child(3) {
+  top: 100%;
+}
+input[id="side_menu_trigger"]:checked
+  + label[for="side_menu_trigger"]
+  span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+input[id="side_menu_trigger"]:checked
+  + label[for="side_menu_trigger"]
+  span:nth-child(2) {
+  opacity: 0;
+}
+input[id="side_menu_trigger"]:checked
+  + label[for="side_menu_trigger"]
+  span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.side_menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: inherit;
+  background-color: #000;
+  transition: 0.5s;
+}
+input[id="side_menu_trigger"]:checked ~ .side_menu {
+  right: 0;
+}

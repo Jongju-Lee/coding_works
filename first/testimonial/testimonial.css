@@ -1,0 +1,84 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+}
+/* ----------container---------- */
+.container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container input[name="tab"] {
+  display: none;
+}
+.container h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+/* ----------profile---------- */
+.profile {
+  position: relative;
+  width: 1000px;
+  height: 470px;
+  overflow: hidden;
+}
+.profile_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3000px;
+  display: flex;
+  transition: 0.3s;
+}
+input[id="tab1"]:checked ~ .profile .profile_wrapper {
+  left: 0;
+}
+input[id="tab2"]:checked ~ .profile .profile_wrapper {
+  left: -1000px;
+}
+input[id="tab3"]:checked ~ .profile .profile_wrapper {
+  left: -2000px;
+}
+.contents {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 50px;
+}
+.contents .face_img {
+}
+.contents .face_img img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.contents p {
+}
+.contents p span {
+  color: orange;
+}
+/* ----------tab_btn---------- */
+.tab_btn {
+}
+.tab_btn label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  margin: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
+input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
+input[id="tab3"]:checked ~ .tab_btn label[for="tab3"] {
+  background-color: crimson;
+  border-radius: 50%;
+}

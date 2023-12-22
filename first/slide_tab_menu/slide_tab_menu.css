@@ -1,0 +1,109 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* slide_menu */
+.slide_menu {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+}
+/* slide_menu > input */
+input[name="tab_menu"] {
+  display: none;
+}
+/* slide_menu > slide_img */
+.slide_img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.img_wrapper {
+  position: absolute;
+  top: 0;
+  width: 900px;
+  font-size: 0;
+  transition: 0.3s;
+}
+input[id="tab1"]:checked ~ .slide_img .img_wrapper {
+  left: 0;
+}
+input[id="tab2"]:checked ~ .slide_img .img_wrapper {
+  left: -300px;
+}
+input[id="tab3"]:checked ~ .slide_img .img_wrapper {
+  left: -600px;
+}
+/* slide_menu > btn */
+.btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.btn label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: lightgray;
+  margin: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+input[id="tab1"]:checked ~ .btn label[for="tab1"],
+input[id="tab2"]:checked ~ .btn label[for="tab2"],
+input[id="tab3"]:checked ~ .btn label[for="tab3"] {
+  background-color: crimson;
+}
+/* slide_menu > sale */
+.sale {
+}
+.text1,
+.text2,
+.text3 {
+  position: absolute;
+  top: -90px;
+  left: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 5px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.text1 {
+  background-color: yellowgreen;
+}
+.text2 {
+  background-color: royalblue;
+}
+.text3 {
+  background-color: crimson;
+}
+input[id="tab1"]:checked ~ .sale .text1,
+input[id="tab2"]:checked ~ .sale .text2,
+input[id="tab3"]:checked ~ .sale .text3 {
+  opacity: 1;
+  top: 20px;
+  transition-delay: 0.5s;
+}
+.sale div span {
+  display: block;
+  font-size: 25px;
+}
