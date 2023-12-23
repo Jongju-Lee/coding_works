@@ -1,0 +1,118 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+/* container */
+.container {
+  position: relative;
+}
+input[name="tab_menu"] {
+  display: none;
+}
+
+/* fullscreen_tab */
+.fullscreen_tab {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.tab_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100vh;
+  display: flex;
+  transition: 0.5s;
+}
+input[id="tab1"]:checked ~ .fullscreen_tab .tab_wrapper {
+  left: 0;
+}
+input[id="tab2"]:checked ~ .fullscreen_tab .tab_wrapper {
+  left: -100%;
+}
+input[id="tab3"]:checked ~ .fullscreen_tab .tab_wrapper {
+  left: -200%;
+}
+.tab_wrapper div {
+  position: relative;
+  width: 33.333333%;
+  height: inherit;
+  color: #fff;
+}
+.tab_wrapper div:nth-child(1) {
+  background: url(./img/photo-01.jpg) no-repeat center center fixed;
+}
+.tab_wrapper div:nth-child(2) {
+  background: url(./img/photo-02.jpg) no-repeat center center fixed;
+}
+.tab_wrapper div:nth-child(3) {
+  background: url(./img/photo-03.jpg) no-repeat center center fixed;
+}
+.tab_wrapper div:nth-child(1)::after,
+.tab_wrapper div:nth-child(2)::after,
+.tab_wrapper div:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tab_wrapper div:nth-child(1)::after {
+  background: linear-gradient(120deg, gold, transparent);
+}
+.tab_wrapper div:nth-child(2)::after {
+  background: linear-gradient(120deg, crimson, transparent);
+}
+.tab_wrapper div:nth-child(3)::after {
+  background: linear-gradient(120deg, royalblue, transparent);
+}
+.tab_wrapper div h1 {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px;
+  font-weight: 300;
+  z-index: 1;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+input[id="tab1"]:checked ~ .fullscreen_tab .tab_wrapper div:nth-child(1) h1,
+input[id="tab2"]:checked ~ .fullscreen_tab .tab_wrapper div:nth-child(2) h1,
+input[id="tab3"]:checked ~ .fullscreen_tab .tab_wrapper div:nth-child(3) h1 {
+  top: 100px;
+}
+
+/* trigger */
+.trigger {
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.trigger label {
+  display: inline-block;
+  height: 7px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+input[id="tab1"]:checked ~ .trigger label[for="tab1"],
+input[id="tab2"]:checked ~ .trigger label[for="tab2"],
+input[id="tab3"]:checked ~ .trigger label[for="tab3"] {
+  color: lightgray;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}

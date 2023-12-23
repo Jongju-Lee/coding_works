@@ -1,0 +1,41 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.items {
+}
+.items div {
+  position: relative;
+  margin-top: 50px;
+}
+.item1 {
+}
+.item1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: crimson;
+  width: 0;
+  height: 3px;
+  transition: 0.5s;
+}
+.item1:hover::after {
+  width: 100%;
+}
+.item2 {
+}
+.item3 {
+}
+.item4 {
+}
+.item5 {
+}

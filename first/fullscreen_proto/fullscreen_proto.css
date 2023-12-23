@@ -1,0 +1,82 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+/* container */
+.container {
+  position: relative;
+}
+.container input[name="fullscreen"] {
+  display: none;
+}
+/* fullscreen */
+.fullscreen {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.fullscreen_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100vh;
+  display: flex;
+  transition: 0.3s;
+}
+input[id="tab1"]:checked ~ .fullscreen .fullscreen_wrapper {
+  left: 0;
+}
+input[id="tab2"]:checked ~ .fullscreen .fullscreen_wrapper {
+  left: -100%;
+}
+input[id="tab3"]:checked ~ .fullscreen .fullscreen_wrapper {
+  left: -200%;
+}
+.fullscreen_wrapper h1 {
+  margin: 0;
+  font-size: 50px;
+}
+.content1,
+.content2,
+.content3 {
+  width: 33.333333%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.content1 {
+  background-color: #0e6c7c;
+}
+.content2 {
+  background-color: royalblue;
+}
+.content3 {
+  background-color: yellowgreen;
+}
+/* trigger */
+.trigger {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.trigger label {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: lightgray;
+  margin: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+input[id="tab1"]:checked ~ .trigger label[for="tab1"],
+input[id="tab2"]:checked ~ .trigger label[for="tab2"],
+input[id="tab3"]:checked ~ .trigger label[for="tab3"] {
+  background-color: #333;
+}
