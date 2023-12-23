@@ -1,0 +1,59 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  background-color: #334660;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rotate_box {
+}
+.rotate_box a {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.5s;
+}
+.rotate_box a:hover {
+  letter-spacing: 5px;
+}
+.rotate_box a::before,
+.rotate_box a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 50px;
+  border: 1px solid #fff;
+  background-color: gray;
+  border-radius: 3px;
+  opacity: 0.1;
+  transform: rotate(0);
+  transition: 0.5s;
+}
+.rotate_box a::before {
+}
+.rotate_box a::after {
+}
+.rotate_box a:hover::before,
+.rotate_box a:hover::after {
+  background-color: transparent;
+}
+.rotate_box a:hover::before {
+  transform: rotate(45deg);
+}
+.rotate_box a:hover::after {
+  transform: rotate(-45deg);
+}
