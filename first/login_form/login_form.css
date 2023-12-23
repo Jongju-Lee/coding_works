@@ -1,0 +1,172 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* body */
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  height: 100vh;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* login_form */
+.login_form {
+  width: 800px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: #f5f4f6;
+}
+
+/* email */
+.email {
+  position: relative;
+  height: 100px;
+  /* border: 1px solid red; */
+  font-size: 30px;
+}
+.email label {
+}
+.email_input {
+  position: absolute;
+  font-size: 25px;
+  padding: 15px;
+  width: 100%;
+  padding-left: 70px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.5s;
+}
+.email_input:focus {
+  box-shadow: 0 0 8px #2288b4;
+  border: 1px solid #2288b4;
+}
+
+.email_input::placeholder {
+  font-style: italic;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.email_input:focus::placeholder {
+  color: transparent;
+}
+.email_input + i {
+  position: absolute;
+  top: 38px;
+  left: 7px;
+  padding: 10px;
+  transition: 0.5s;
+}
+.email_input:focus + i {
+  color: #2288b4;
+}
+
+/* password */
+.password {
+  position: relative;
+  height: 100px;
+  /* border: 1px solid red; */
+  font-size: 30px;
+}
+.password label {
+}
+.password_input {
+  position: absolute;
+  font-size: 25px;
+  padding: 15px;
+  width: 100%;
+  padding-left: 70px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.5s;
+}
+.password_input:focus {
+  box-shadow: 0 0 8px #2288b4;
+  border: 1px solid #2288b4;
+}
+.password_input::placeholder {
+  font-style: italic;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.password_input:focus::placeholder {
+  color: transparent;
+}
+.password_input + i {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  padding: 10px;
+  transition: 0.5s;
+}
+.password_input:focus + i {
+  color: #2288b4;
+}
+
+/* keep_and_forgot */
+.keep_and_forgot {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.keep_and_forgot input[id="keep_login"] {
+  display: none;
+}
+.keep_and_forgot label[for="keep_login"] {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.keep_and_forgot label[for="keep_login"]:hover {
+  color: gray;
+}
+.keep_and_forgot label[for="keep_login"]::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: text-bottom;
+  background: url(./img/checkbox-03.png) no-repeat;
+  background-position: left center;
+}
+.keep_and_forgot input[id="keep_login"]:checked + label::before {
+  background-position: right center;
+}
+.keep_and_forgot a {
+  transition: 0.3s;
+}
+.keep_and_forgot a:hover {
+  color: gray;
+}
+
+/* login_btn */
+.login_btn {
+  margin-top: 20px;
+}
+.login_btn input {
+  width: 45%;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #2288b4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

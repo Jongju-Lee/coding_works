@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login_form</title>
+    <link rel="stylesheet" href="login_form.css" />
+  </head>
+  <body>
+    <form class="login_form" action="submit">
+      <div class="email">
+        <label for="email">Email</label>
+        <div>
+          <input
+            class="email_input"
+            type="text"
+            id="email"
+            placeholder="Email Address"
+          />
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="password">
+        <label for="password">Password</label>
+        <div>
+          <input
+            class="password_input"
+            type="password"
+            id="password"
+            placeholder="Password"
+          />
+          <i class="fa fa-lock" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="keep_and_forgot">
+        <div>
+          <input type="checkbox" id="keep_login" />
+          <label for="keep_login">Keep me logged in</label>
+        </div>
+        <div>
+          <a href="#none">Forgot Your Password?</a>
+        </div>
+      </div>
+      <div class="login_btn">
+        <input type="submit" value="Log in" />
+      </div>
+    </form>
+  </body>
+</html>
