@@ -1,0 +1,68 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+}
+
+/* checkbox */
+.checkbox {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 15px;
+}
+.checkbox input[id="agree"] {
+  display: none;
+}
+.checkbox label {
+  cursor: pointer;
+}
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: text-bottom;
+  margin-right: 3px;
+  background: url(./img/checkbox-02.png) no-repeat;
+  background-position: left center;
+}
+input[id="agree"]:checked + label::before {
+  background-position: right center;
+}
+
+/* radio */
+.radio {
+  padding-top: 15px;
+}
+.radio input {
+  display: none;
+}
+.radio label {
+  cursor: pointer;
+}
+.radio label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: text-bottom;
+  margin-right: 3px;
+  background: url(./img/radio-01.png) no-repeat;
+  background-position: left center;
+}
+.radio input[id="select1"]:checked ~ label[for="select1"]::before,
+.radio input[id="select2"]:checked ~ label[for="select2"]::before,
+.radio input[id="select3"]:checked ~ label[for="select3"]::before,
+.radio input[id="select4"]:checked ~ label[for="select4"]::before {
+  background-position: right center;
+}
