@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tabmenu_content</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="tabmenu_content01.css" />
+    <!-- jQuery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="tab">
+      <h1><span>CodingWorks</span> Publishing Online Class with inflearn</h1>
+      <div class="face_img">
+        <img src="./img/face-01.jpg" alt="face_image_01" data-text="tab1" />
+        <img src="./img/face-02.jpg" alt="face_image_02" data-text="tab2" />
+        <img src="./img/face-03.jpg" alt="face_image_03" data-text="tab3" />
+        <img src="./img/face-04.jpg" alt="face_image_04" data-text="tab4" />
+      </div>
+      <div class="content">
+        <div class="text1" id="tab1">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            laboriosam ipsum consectetur minima consequuntur, voluptas earum ex,
+            qui quisquam cupiditate provident? Et aliquid voluptatem molestias
+            blanditiis, facilis quas quod unde enim. Veritatis corporis quia
+            natus, sequi, voluptatum beatae, in esse excepturi vitae obcaecati
+            quo pariatur exercitationem sunt unde suscipit libero illum ipsum
+            ipsa adipisci? Harum voluptatibus sed asperiores est, accusamus
+            laboriosam et? Facilis exercitationem porro debitis sed nemo!
+            Accusantium vero assumenda possimus culpa nulla molestiae, ab at
+            sint exercitationem id a architecto! Molestiae hic quisquam cumque
+            neque delectus. Ad quia odio placeat quidem eligendi labore quos
+            doloremque tempora laudantium sapiente?
+          </p>
+          <p><b>Sally, Web Desginer</b></p>
+        </div>
+        <div class="text2" id="tab2">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            laboriosam ipsum consectetur minima consequuntur, voluptas earum ex,
+            qui quisquam cupiditate provident? Et aliquid voluptatem molestias
+            blanditiis, facilis quas quod unde enim. Veritatis corporis quia
+            natus, sequi, voluptatum beatae, in esse excepturi vitae obcaecati
+            quo pariatur exercitationem sunt unde suscipit libero illum ipsum
+            ipsa adipisci? Harum voluptatibus sed asperiores est, accusamus
+            laboriosam et? Facilis exercitationem porro debitis sed nemo!
+            Accusantium vero assumenda possimus culpa nulla molestiae, ab at
+            sint exercitationem id a architecto! Molestiae hic quisquam cumque
+            neque delectus. Ad quia odio placeat quidem eligendi labore quos
+            doloremque tempora laudantium sapiente?
+          </p>
+          <p><b>Amy, Graphic Designer</b></p>
+        </div>
+        <div class="text3" id="tab3">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            laboriosam ipsum consectetur minima consequuntur, voluptas earum ex,
+            qui quisquam cupiditate provident? Et aliquid voluptatem molestias
+            blanditiis, facilis quas quod unde enim. Veritatis corporis quia
+            natus, sequi, voluptatum beatae, in esse excepturi vitae obcaecati
+            quo pariatur exercitationem sunt unde suscipit libero illum ipsum
+            ipsa adipisci? Harum voluptatibus sed asperiores est, accusamus
+            laboriosam et? Facilis exercitationem porro debitis sed nemo!
+            Accusantium vero assumenda possimus culpa nulla molestiae, ab at
+            sint exercitationem id a architecto! Molestiae hic quisquam cumque
+            neque delectus. Ad quia odio placeat quidem eligendi labore quos
+            doloremque tempora laudantium sapiente?
+          </p>
+          <p><b>Jung Ho, Developer</b></p>
+        </div>
+        <div class="text4" id="tab4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            laboriosam ipsum consectetur minima consequuntur, voluptas earum ex,
+            qui quisquam cupiditate provident? Et aliquid voluptatem molestias
+            blanditiis, facilis quas quod unde enim. Veritatis corporis quia
+            natus, sequi, voluptatum beatae, in esse excepturi vitae obcaecati
+            quo pariatur exercitationem sunt unde suscipit libero illum ipsum
+            ipsa adipisci? Harum voluptatibus sed asperiores est, accusamus
+            laboriosam et? Facilis exercitationem porro debitis sed nemo!
+            Accusantium vero assumenda possimus culpa nulla molestiae, ab at
+            sint exercitationem id a architecto! Molestiae hic quisquam cumque
+            neque delectus. Ad quia odio placeat quidem eligendi labore quos
+            doloremque tempora laudantium sapiente?
+          </p>
+          <p><b>Chris, Printing Desinger</b></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".face_img img").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        $(".content > div").removeClass("active");
+        $("#" + $(this).attr("data-text")).addClass("active");
+      });
+    </script>
+  </body>
+</html>
