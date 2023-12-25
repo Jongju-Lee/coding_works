@@ -1,0 +1,181 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+p {
+  margin: 0;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* item */
+.item {
+  position: relative;
+  width: 317px;
+  height: 462px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* item_img */
+.item_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+}
+.item:hover .item_img {
+}
+
+/* info */
+.info {
+  position: absolute;
+  bottom: -192px;
+  left: 0;
+  padding: 20px;
+  background-color: #fafafa;
+  width: 100%;
+  transition: 0.5s;
+  cursor: auto;
+}
+.item:hover .info {
+  bottom: 0;
+}
+
+/* info > header */
+.info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+.info .left_text {
+}
+.info .left_text h3 {
+  margin: 0;
+}
+.info .left_text p {
+  margin: 0;
+  color: gray;
+}
+.info .right_text h3 {
+  margin: 0;
+  margin-top: 7px;
+  color: crimson;
+}
+
+/* info > section */
+.info section {
+  position: relative;
+}
+
+/* info > section > sizes */
+.sizes {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.sizes span {
+  font-size: 13px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding: 2px;
+  margin: 2px;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sizes span.active {
+  background-color: #222;
+  color: #fff;
+}
+
+/* info > section > colors */
+.colors {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.colors span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  margin: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.colors span:nth-of-type(1) {
+  background-color: #ccae62;
+}
+.colors span:nth-of-type(2) {
+  background-color: #ff5252;
+}
+.colors span:nth-of-type(3) {
+  background-color: #fdcb6e;
+}
+.colors span:nth-of-type(4) {
+  background-color: #18dcff;
+}
+.colors span:nth-of-type(5) {
+  background-color: #3742fa;
+}
+.colors span.active {
+  border-radius: 50%;
+}
+/* info > section > add_to_cart */
+.add_to_cart a {
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid lightgray;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.add_to_cart a:hover {
+  background-color: #f1f2f6;
+}
+
+/* info > section > wish */
+.wish {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+.wish i {
+  color: lightgray;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.wish i.active {
+  color: crimson;
+}

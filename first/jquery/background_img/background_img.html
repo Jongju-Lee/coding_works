@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>background_img_hover</title>
+    <title>Document</title>
     <!-- CSS link -->
     <link rel="stylesheet" href="background_img.css" />
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
-    <div class="conatiner">
+    <div class="container">
       <div class="background_img"></div>
-      <ul class="tab_menu">
+      <ul class="navi">
         <li>
-          <a href="#none" data-text="ABOUT" data-url="./img/portrait-01.jpg"
+          <a href="#none1" data-text="ABOUT" data-url="./img/portrait-01.jpg"
             >ABOUT</a
           >
         </li>
         <li>
           <a
-            href="#none"
+            href="#none2"
             data-text="INSTRUCTOR"
             data-url="./img/portrait-02.jpg"
             >INSTRUCTOR</a
           >
         </li>
         <li>
-          <a href="#none" data-text="CLASS" data-url="./img/portrait-03.jpg"
+          <a href="#none3" data-text="CLASS" data-url="./img/portrait-03.jpg"
             >CLASS</a
           >
         </li>
         <li>
-          <a href="#none" data-text="LOCATION" data-url="./img/portrait-04.jpg"
+          <a href="#none4" data-text="LOCATION" data-url="./img/portrait-04.jpg"
             >LOCATION</a
           >
         </li>
@@ -40,13 +40,13 @@
     </div>
 
     <script>
-      $(".tab_menu li a").mouseenter(function () {
+      $(".navi li a").mouseenter(function () {
         const img_url = $(this).attr("data-url");
         $(".background_img").css({
           "background-image": "url(" + img_url + ")",
         });
       });
-      $(".tab_menu li a").mouseleave(function () {
+      $(".navi li a").mouseleave(function () {
         $(".background_img").css({
           "background-image": "",
         });

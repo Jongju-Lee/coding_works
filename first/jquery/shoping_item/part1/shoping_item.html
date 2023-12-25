@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shoping_item</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="shoping_item.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="item">
+      <div class="item_img">
+        <img src="../img/model-female.png" alt="night_gown_image" />
+      </div>
+      <div class="info">
+        <header>
+          <div class="left_text">
+            <h3>Nightgown</h3>
+            <p>Women's Designer Wear</p>
+          </div>
+          <div class="right_text">
+            <h3>$55.99</h3>
+          </div>
+        </header>
+        <section>
+          <div class="sizes">
+            <p>Sizes</p>
+            <span>XS</span>
+            <span>S</span>
+            <span class="active">M</span>
+            <span>L</span>
+            <span>XL</span>
+          </div>
+          <div class="colors">
+            <p>Colors</p>
+            <span></span>
+            <span></span>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="add_to_cart">
+            <a href="#none1">Add to Cart</a>
+          </div>
+          <span class="wish"
+            ><i class="fa fa-heart" aria-hidden="true"></i
+          ></span>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      $(".sizes span").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".colors span").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".wish i").click(function () {
+        $(this).toggleClass("active");
+      });
+    </script>
+  </body>
+</html>
