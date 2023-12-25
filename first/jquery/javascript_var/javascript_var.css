@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* valid_adult */
+.valid_adult {
+  text-align: center;
+  padding: 30px;
+  width: 500px;
+}
+.valid_header {
+  border-bottom: 1px solid lightgray;
+}
+.valid_header h1 {
+}
+.valid_header h1 span {
+  color: crimson;
+}
+.valid_check {
+  border: 1px solid #000;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.valid_check p {
+  font-weight: bold;
+  font-size: 18px;
+}
+.valid_input,
+.valid_btn {
+  padding: 10px 20px;
+  font-weight: 18px;
+}
+.valid_input {
+  outline: none;
+}
+.valid_input:focus::placeholder {
+  color: transparent;
+}
+.valid_btn {
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+}
