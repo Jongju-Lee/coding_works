@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery_tabmenu</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="jquery_tabmenu.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <span>코딩웍스</span>, 프론트엔드 퍼블리셔 취업을 위한 실전 퍼블리싱
+          강좌
+        </h1>
+        <div class="search_bar">
+          <input type="text" placeholder="What are you looking for?" />
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      </header>
+      <section>
+        <ul class="btn">
+          <li class="active" data-link="tab1">HTML</li>
+          <li data-link="tab2">CSS3</li>
+          <li data-link="tab3">JQUERY</li>
+          <li data-link="tab4">JAVASCRIPT</li>
+          <li data-link="tab5">CSS FRAMEWORKS</li>
+        </ul>
+        <div class="content_wrapper">
+          <div class="active" id="tab1">
+            <h1>HTML5</h1>
+            <div class="content">
+              <img src="./img/platform-logo-01.png" alt="html_logo" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                molestias reprehenderit tenetur hic impedit quod repudiandae
+                voluptates quidem, consequatur, est quos aspernatur delectus
+                quaerat culpa, temporibus iste adipisci commodi labore a rem
+                architecto? Labore temporibus voluptas error consectetur?
+                Perspiciatis quibusdam omnis error repellat voluptas aperiam.
+                Veniam, velit officia? Explicabo, blanditiis totam? Animi
+                corporis aperiam nemo! Expedita quisquam doloremque adipisci
+                iste doloribus libero similique molestias quibusdam consectetur
+                esse? Officiis libero ipsa aliquid laudantium veniam. Facilis
+                culpa error, placeat, minus ea eos commodi nihil quasi
+                cupiditate assumenda dolorum nemo animi, ullam repudiandae earum
+                minima illum perferendis deserunt amet vitae! Aspernatur,
+                commodi ipsum.
+              </p>
+            </div>
+          </div>
+          <div id="tab2">
+            <h1>CSS3</h1>
+            <div class="content">
+              <img src="./img/platform-logo-02.png" alt="css_logo" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                molestias reprehenderit tenetur hic impedit quod repudiandae
+                voluptates quidem, consequatur, est quos aspernatur delectus
+                quaerat culpa, temporibus iste adipisci commodi labore a rem
+                architecto? Labore temporibus voluptas error consectetur?
+                Perspiciatis quibusdam omnis error repellat voluptas aperiam.
+                Veniam, velit officia? Explicabo, blanditiis totam? Animi
+                corporis aperiam nemo! Expedita quisquam doloremque adipisci
+                iste doloribus libero similique molestias quibusdam consectetur
+                esse? Officiis libero ipsa aliquid laudantium veniam. Facilis
+                culpa error, placeat, minus ea eos commodi nihil quasi
+                cupiditate assumenda dolorum nemo animi, ullam repudiandae earum
+                minima illum perferendis deserunt amet vitae! Aspernatur,
+                commodi ipsum.
+              </p>
+            </div>
+          </div>
+          <div id="tab3">
+            <h1>JQUERY</h1>
+            <div class="content">
+              <img src="./img/platform-logo-03.png" alt="javascript_logo" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                molestias reprehenderit tenetur hic impedit quod repudiandae
+                voluptates quidem, consequatur, est quos aspernatur delectus
+                quaerat culpa, temporibus iste adipisci commodi labore a rem
+                architecto? Labore temporibus voluptas error consectetur?
+                Perspiciatis quibusdam omnis error repellat voluptas aperiam.
+                Veniam, velit officia? Explicabo, blanditiis totam? Animi
+                corporis aperiam nemo! Expedita quisquam doloremque adipisci
+                iste doloribus libero similique molestias quibusdam consectetur
+                esse? Officiis libero ipsa aliquid laudantium veniam. Facilis
+                culpa error, placeat, minus ea eos commodi nihil quasi
+                cupiditate assumenda dolorum nemo animi, ullam repudiandae earum
+                minima illum perferendis deserunt amet vitae! Aspernatur,
+                commodi ipsum.
+              </p>
+            </div>
+          </div>
+          <div id="tab4">
+            <h1>JAVASCRIPT</h1>
+            <div class="content">
+              <img src="./img/platform-logo-04.png" alt="angular_logo" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                molestias reprehenderit tenetur hic impedit quod repudiandae
+                voluptates quidem, consequatur, est quos aspernatur delectus
+                quaerat culpa, temporibus iste adipisci commodi labore a rem
+                architecto? Labore temporibus voluptas error consectetur?
+                Perspiciatis quibusdam omnis error repellat voluptas aperiam.
+                Veniam, velit officia? Explicabo, blanditiis totam? Animi
+                corporis aperiam nemo! Expedita quisquam doloremque adipisci
+                iste doloribus libero similique molestias quibusdam consectetur
+                esse? Officiis libero ipsa aliquid laudantium veniam. Facilis
+                culpa error, placeat, minus ea eos commodi nihil quasi
+                cupiditate assumenda dolorum nemo animi, ullam repudiandae earum
+                minima illum perferendis deserunt amet vitae! Aspernatur,
+                commodi ipsum.
+              </p>
+            </div>
+          </div>
+          <div id="tab5">
+            <h1>CSS FRAMEWORKS</h1>
+            <div class="content">
+              <img src="./img/platform-logo-05.png" alt="uikit_logo" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                molestias reprehenderit tenetur hic impedit quod repudiandae
+                voluptates quidem, consequatur, est quos aspernatur delectus
+                quaerat culpa, temporibus iste adipisci commodi labore a rem
+                architecto? Labore temporibus voluptas error consectetur?
+                Perspiciatis quibusdam omnis error repellat voluptas aperiam.
+                Veniam, velit officia? Explicabo, blanditiis totam? Animi
+                corporis aperiam nemo! Expedita quisquam doloremque adipisci
+                iste doloribus libero similique molestias quibusdam consectetur
+                esse? Officiis libero ipsa aliquid laudantium veniam. Facilis
+                culpa error, placeat, minus ea eos commodi nihil quasi
+                cupiditate assumenda dolorum nemo animi, ullam repudiandae earum
+                minima illum perferendis deserunt amet vitae! Aspernatur,
+                commodi ipsum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      $(".btn li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        const value = $(this).attr("data-link");
+        $(".content_wrapper > div").removeClass("active");
+        $("#" + value).addClass("active");
+      });
+    </script>
+  </body>
+</html>

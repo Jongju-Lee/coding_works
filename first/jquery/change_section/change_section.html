@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change_section</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="change_section.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tab_menu">
+        <ul>
+          <li data-link="tab1">HTML5</li>
+          <li data-link="tab2">CSS3</li>
+          <li data-link="tab3">JQUERY</li>
+          <li data-link="tab4">JAVASCRIPT</li>
+          <li data-link="tab5">CSS FRAMEWORKS</li>
+        </ul>
+        <div class="content">
+          <div id="tab1">tab1</div>
+          <div id="tab2">tab2</div>
+          <div id="tab3">tab3</div>
+          <div id="tab4">tab4</div>
+          <div id="tab5">tab5</div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    $(".tab_menu li").click(function () {
+      $(this).addClass("active");
+      $(this).siblings().removeClass("active");
+
+      const value = $(this).attr("data-link");
+      $(".content > div").removeClass("active");
+      $("#" + value).addClass("active");
+    });
+  </script>
+</html>

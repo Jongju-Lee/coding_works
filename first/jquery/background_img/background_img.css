@@ -1,0 +1,73 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* body */
+body {
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* container */
+.container {
+}
+
+/* background_img */
+.background_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(./img/portrait-initial.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+/* tab_menu */
+.tab_menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.tab_menu li {
+  margin: 10px 0;
+}
+.tab_menu li a {
+  position: relative;
+  font-weight: bold;
+  font-size: 4em;
+}
+.tab_menu li a::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: yellowgreen;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.tab_menu li a:hover::after {
+  width: 100%;
+}

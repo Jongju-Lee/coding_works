@@ -1,6 +1,3 @@
-/* Google Web Font */
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-
 /* Fontawesome 4.7 */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -8,15 +5,13 @@
 * {
   box-sizing: border-box;
 }
-a {
-  text-decoration: none;
-}
 
 /* body */
 body {
-  font-family: "Raleway", sans-serif;
+  line-height: 1.5em;
   margin: 0;
   height: 100vh;
+  color: #222;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,30 +20,29 @@ body {
 /* star_rating */
 .star_rating {
   background-color: #333;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 30px;
-  color: #fff;
-  width: 300px;
-  border-radius: 10px;
+  width: 330px;
 }
 .star {
 }
 .star i {
-  color: #000;
   margin-right: 5px;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.2s;
 }
 .star i.active {
   color: yellow;
   text-shadow: 0 0 5px yellow;
+  transition: 0.3s;
 }
-.print {
-  line-height: 20px;
+.rating {
+  color: #fff;
 }
-.print img {
+.text {
+}
+.text img {
   margin-right: 5px;
   vertical-align: text-bottom;
 }
