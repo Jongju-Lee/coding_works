@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video_background</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="video_back.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="video_frame">
+        <video
+          src="./util/video-female.mp4"
+          autoplay
+          loop
+          muted
+          poster="./util/placeholder-female.jpg"
+        ></video>
+      </div>
+      <div class="logo">
+        <img src="./util/logo.png" alt="logo_image" />
+      </div>
+      <div class="header">
+        <h1><span>Wave Ocean</span>The World's Ocean</h1>
+        <p>
+          The Atlantic Ocean is situated between the Americas and
+          European/African continents. Atlantic Ocean is the second largest and
+          saltiest ocean in the world. It resembles an S-shape between the
+          Americas, Europe and Africa. “Atlantic” originated from the Greek god
+          “Atlas” who carried the sky for eternity.
+        </p>
+        <a href="#none1">Book Now</a>
+        <a href="#none2">Learn More</a>
+      </div>
+      <div class="anniversary">
+        <span>Anniversary</span>
+        <span>60</span>
+      </div>
+      <div class="trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="modal">
+        <div class="wrapper">
+          <a href="#none1" data-text="Attractions">Attractions</a>
+          <a href="#none2" data-text="Hotels & Spa">Hotels & Spa</a>
+          <a href="#none3" data-text="Shop & Dine">Shop & Dine</a>
+          <a href="#none4" data-text="Celebrate">Celebrate</a>
+          <a href="#none5" data-text="Promotions">Promotions</a>
+        </div>
+      </div>
+      <audio src="./util/piano-bgm.mp3" autoplay loop></audio>
+    </div>
+
+    <script>
+      $(".trigger").click(function () {
+        $(this).toggleClass("active");
+        $(".modal").fadeToggle("slow");
+      });
+      // video volume control
+      const audio = document.querySelector("audio");
+      audio.volume = 0.2;
+    </script>
+  </body>
+</html>
