@@ -1,0 +1,120 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #222;
+}
+
+/* layout */
+section {
+  height: 100vh;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article {
+  border-radius: 10px;
+  width: 1200px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding-top: 20px;
+}
+
+/* title */
+.title {
+  text-align: center;
+}
+.title p {
+  font-size: 25px;
+  color: crimson;
+}
+.title h1 {
+  font-weight: normal;
+  font-size: 40px;
+}
+.title h1 span {
+  position: relative;
+}
+.title h1 span::after {
+  content: url(./img/logo-kakao.png);
+  position: absolute;
+  top: -18px;
+  right: -30px;
+}
+
+/* main */
+.main {
+  margin-top: 10px;
+}
+.main > div {
+  float: left;
+  width: 50%;
+}
+
+/* main > accordion */
+.accordion {
+  padding: 40px;
+  padding-right: 10px;
+}
+.accordion .title {
+  position: relative;
+  text-align: left;
+  border: 1px solid gray;
+  padding: 7px;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+.accordion .title:hover,
+.accordion .title.active {
+  background-color: #1e314a;
+  color: #fff;
+}
+.accordion .title::after {
+  content: "\f105";
+  font-family: "fontawesome";
+  position: absolute;
+  right: 20px;
+  font-size: 22px;
+  transition: 0.3s;
+}
+.accordion .title:hover::after,
+.accordion .title.active::after {
+  color: orange;
+}
+.accordion .title.active::after {
+  transform: rotate(90deg);
+}
+.accordion .content {
+  padding: 20px;
+  display: none;
+}
+.accordion .content.active {
+  display: block;
+}
+/* main > image */
+.image {
+  text-align: center;
+}
+.image img {
+  transition: 0.5s;
+}
