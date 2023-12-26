@@ -10,22 +10,17 @@
 }
 a {
   text-decoration: none;
-  color: #222;
-}
-p {
-  margin: 0;
 }
 
 /* body */
 body {
-  line-height: 1.5em;
   margin: 0;
   height: 100vh;
   color: #222;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
 }
 
 /* item */
@@ -37,161 +32,163 @@ body {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
+}
+.item img {
   transition: 0.5s;
 }
-
-/* item_img */
-.item_img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  transition: 0.5s;
-}
-.item:hover .item_img {
+.item:hover img {
   filter: blur(2px);
 }
 
-/* info */
-.info {
+/* item > content */
+.content {
   position: absolute;
-  bottom: -200px;
+  bottom: -189px;
   left: 0;
   padding: 20px;
-  background-color: #fafafa;
+  background-color: #f8f8f8;
   width: 100%;
   transition: 0.5s;
+}
+.item:hover .content {
+  bottom: 0;
   cursor: auto;
 }
-.item:hover .info {
-  bottom: 0;
-}
 
-/* info > header */
-.info header {
-  display: flex;
-  justify-content: space-between;
+/* item > content > title */
+.title {
+  overflow: hidden;
   border-bottom: 1px solid lightgray;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
-.info .left_text {
-}
-.info .left_text h3 {
+.title h3 {
   margin: 0;
-}
-.info .left_text p {
-  margin: 0;
+  font-weight: normal;
+  float: left;
+  font-size: 17px;
   color: gray;
 }
-.info .right_text h3 {
-  margin: 0;
-  margin-top: 7px;
+.title h3 em {
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+}
+.title span {
+  float: right;
+  font-weight: bold;
   color: crimson;
+  font-size: 20px;
 }
 
-/* info > section */
-.info section {
+/* item > content > info */
+.info {
   position: relative;
 }
 
-/* info > section > sizes */
+/* content > info > sizes */
 .sizes {
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
 }
+.sizes label {
+  display: block;
+  margin-bottom: 5px;
+}
 .sizes span {
-  font-size: 13px;
   display: inline-block;
+  text-align: center;
+  margin-right: 5px;
+  padding: 2px;
   width: 20px;
   height: 20px;
-  line-height: 20px;
-  padding: 2px;
-  margin-right: 5px;
-  margin-top: 5px;
-  text-align: center;
-  border-radius: 5px;
+  border-radius: 3px;
+  transition: 0.3s;
   box-sizing: content-box;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 14px;
+  line-height: 20px;
 }
-.sizes span.active,
-.sizes span:hover {
-  background-color: #222;
+.sizes span:hover,
+.sizes span.active {
+  background-color: #000;
   color: #fff;
 }
-
-/* info > section > colors */
+/* content > info > colors */
 .colors {
   margin-top: 10px;
   font-weight: bold;
 }
+.colors label {
+  display: block;
+  margin-bottom: 5px;
+}
 .colors span {
   display: inline-block;
+  margin-right: 5px;
+  padding: 2px;
   width: 20px;
   height: 20px;
-  margin-right: 5px;
-  margin-top: 5px;
-  padding: 2px;
-  cursor: pointer;
   transition: 0.3s;
   box-sizing: content-box;
+  cursor: pointer;
 }
 .colors span:nth-of-type(1) {
-  background-color: #ccae62;
+  background-color: #827900;
 }
 .colors span:nth-of-type(2) {
-  background-color: #ff5252;
+  background-color: #ff1a00;
 }
 .colors span:nth-of-type(3) {
-  background-color: #fdcb6e;
+  background-color: #ffc5ca;
 }
 .colors span:nth-of-type(4) {
-  background-color: #18dcff;
+  background-color: #00e7ff;
 }
 .colors span:nth-of-type(5) {
-  background-color: #3742fa;
+  background-color: #0111ff;
 }
 .colors span.active {
   border-radius: 50%;
 }
-/* info > section > add_to_cart */
-.add_to_cart a {
-  margin-top: 10px;
-  display: inline-block;
-  width: 100%;
-  border: 1px solid lightgray;
-  padding: 5px;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #fff;
-  transition: 0.3s;
-}
-.add_to_cart a:hover {
-  background-color: #000;
-  color: #fff;
-}
 
-/* info > section > wish */
+/* content > info > wish */
 .wish {
   position: absolute;
   top: 0;
   right: 5px;
   width: 20px;
   height: 20px;
-  font-size: 20px;
-  cursor: pointer;
 }
 .wish::before {
-  content: "\f08a";
   position: absolute;
+  content: "\f08a";
   font-family: "fontawesome";
-  top: 0;
-  left: 0;
-  color: lightgray;
+  font-size: 20px;
+  cursor: pointer;
   transition: 0.5s;
+  color: gray;
 }
 .wish.active::before {
   content: "\f004";
   color: crimson;
+}
+
+/* item > content > add_cart */
+.add_cart {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  width: 100%;
+  padding: 7px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.add_cart:hover {
+  background-color: #000;
+  color: #fff;
 }
