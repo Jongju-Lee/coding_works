@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal_flex</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="modal_flex.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <img src="./img/logo-favicon.png" alt="logo_image" />
+          <i class="open_modal xi-search"></i>
+        </nav>
+      </header>
+      <section>
+        <h1>Section Content</h1>
+      </section>
+      <div class="modal">
+        <i class="close_modal xi-close-thin"></i>
+        <div class="inner">
+          <div class="modal_wrapper">
+            <input type="text" placeholder="What are you looking for?" />
+            <input type="button" value="Search" />
+          </div>
+          <p>#코딩웍스 #퍼블리싱 #인프런 #취업성공 #개인포트폴리오</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".open_modal").click(function () {
+        $(".modal").addClass("active");
+      });
+      $(".close_modal, section").click(function () {
+        $(".modal").removeClass("active");
+      });
+      $('input[type="text"]')
+        .focus(function () {
+          $(this).parent().next().slideDown();
+        })
+        .blur(function () {
+          $(this).parent().next().slideUp();
+        });
+    </script>
+  </body>
+</html>

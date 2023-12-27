@@ -1,0 +1,83 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+/* body */
+body {
+  margin: 0;
+  height: 100vh;
+  color: #222;
+}
+.trigger {
+  font-size: 50px;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000b9;
+  display: none;
+  transition: 0.5s;
+}
+.modal:target {
+  display: block;
+}
+.modal_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  padding-top: 15px;
+  border-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: slideModal 0.5s linear 0.5s both;
+}
+.modal_content h2 {
+}
+.modal_content img {
+}
+.modal_content p {
+}
+.modal_content a:nth-of-type(1) {
+  position: absolute;
+  top: 10;
+  right: 30px;
+  font-size: 25px;
+  transition: 0.3s;
+}
+.modal_content a:nth-of-type(1):hover {
+  color: gray;
+}
+.modal_content a:nth-of-type(2) {
+  display: block;
+  background-color: #5f71f4;
+  padding: 10px;
+  border-radius: 7px;
+  color: #fff;
+  opacity: 0.9;
+  transition: 0.3;
+}
+.modal_content a:nth-of-type(2):hover {
+  opacity: 1;
+}
+@keyframes slideModal {
+  0% {
+    opacity: 0;
+    margin-top: -70px;
+  }
+  0% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
