@@ -1,0 +1,107 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* font-family: "xeicon"; */
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+/* body */
+body {
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* section */
+section {
+  margin: 0;
+}
+
+/* faq */
+.faq {
+  width: 700px;
+}
+.faq h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* faq_list */
+.faq_list {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.title,
+.content {
+  background-color: #312f31;
+}
+.title {
+  border-bottom: 2px solid #000;
+  padding: 12px 30px;
+  cursor: pointer;
+  margin-top: 7px;
+  transition: 0.3s;
+}
+.title::after {
+  content: "\e9c5";
+  font-family: "xeicon";
+  float: right;
+  transition: 0.3s;
+  margin-top: 5px;
+}
+.title.active {
+  background-color: #2c3e50;
+}
+.title.active::after {
+  transform: rotate(45deg);
+}
+.content {
+  padding: 20px 30px;
+  display: none;
+}
+
+/* faq_footer */
+.faq_footer {
+  padding: 0 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+.faq_footer p {
+  margin: 0;
+}
+.faq_footer .email {
+  margin-top: 10px;
+  display: flex;
+}
+.faq_footer .email input,
+.faq_footer .email button {
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.faq_footer .email input {
+  flex: 3;
+  padding-left: 30px;
+}
+.faq_footer .email button {
+  flex: 1;
+  background-color: crimson;
+  color: #fff;
+}
