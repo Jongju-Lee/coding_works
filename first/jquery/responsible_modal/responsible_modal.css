@@ -27,136 +27,134 @@ body {
   height: 100vh;
   color: #222;
 }
+
+/* section */
 section {
-  position: relative;
-  height: 100%;
+}
+.modal_open {
 }
 
-/* .overlay */
+/* overlay */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #222222bd;
-  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   visibility: hidden;
-  transition: 0.3s;
+  opacity: 0;
+  transition: 0.5s;
 }
 .overlay.active {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
   cursor: pointer;
 }
 
-/* .modal_open_button */
-.modal_open {
-  display: inline-block;
-  padding: 10px;
-}
-
-/* modal_centering */
-.box {
+/* .modal */
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.7);
   z-index: 10;
-}
-
-/* modal */
-.modal {
-  display: flex;
-  width: 600px;
-  height: 330px;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
-  overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .modal.active {
   opacity: 1;
   visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal_content {
+  display: flex;
+  height: 100%;
+  background-color: #fff;
+  width: 650px;
+  height: 350px;
 }
 .modal_img {
   flex: 1;
   background: url(./img/office.jpg) no-repeat center right / cover;
 }
-.modal_content {
-  position: relative;
+.modal_desc {
   flex: 2;
+  position: relative;
   text-align: center;
   padding: 20px;
 }
-.modal_content h2 {
-  margin-top: 20px;
+.modal_desc h3 {
+  font-size: 25px;
 }
-.modal_content input,
-.modal_content button {
-  display: block;
+.modal_desc input,
+.modal_desc button {
   width: 100%;
   padding: 10px;
-  border-radius: 5px;
+  outline: none;
+  border-radius: 3px;
 }
-.modal_content input {
+.modal_desc input {
+  text-align: center;
+  display: block;
+  margin-bottom: 7px;
   border: 1px solid #bbb;
-  margin-bottom: 8px;
-  text-align: center;
 }
-.modal_content input::placeholder {
-  text-align: center;
+.modal_desc input::placeholder {
   transition: 0.3s;
 }
-.modal_content input:focus::placeholder {
+.modal_desc input:focus::placeholder {
   opacity: 0;
 }
-.modal_content button {
-  border: none;
+.modal_desc button {
   background-color: crimson;
   color: #fff;
+  border: none;
   opacity: 0.8;
   transition: 0.3s;
 }
-.modal_content button:hover {
+.modal_desc button:hover {
   opacity: 1;
 }
-.modal_content p {
+.modal_desc p {
 }
-
-/* modal_close_button */
-.modal_close_btn {
+.modal_desc i {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 20px;
+  top: 15px;
+  right: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #222;
+  transition: 0.3s;
   cursor: pointer;
-  transition: 0.2s;
 }
-.modal_close_btn:hover {
-  color: #ddd;
+.modal_desc i:hover {
+  color: #bbb;
 }
 
-/* ----- Mobile ----- */
+/* ----- mobile layout ----- */
 @media (max-width: 768px) {
-  .modal {
+  .modal_content {
     flex-direction: column;
     width: 100%;
     height: 100%;
   }
-  .modal > div {
-    width: 320px;
+  .modal_img,
+  .modal_desc {
+    width: 330px;
   }
   .modal_img {
     flex-basis: 200px;
   }
-  .modal_content {
-    padding-bottom: 10px;
+  .modal_desc {
+    padding: 10px 20px;
   }
-  .modal_content h2 {
-    font-size: 20px;
+  .modal_desc h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 }
