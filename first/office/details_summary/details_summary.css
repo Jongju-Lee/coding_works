@@ -1,0 +1,70 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* layout */
+
+/* body */
+body {
+  margin: 0;
+  height: 100vh;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .html_accordion */
+.html_accordion {
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 650px;
+  border-radius: 5px;
+}
+.html_accordion h1 {
+  text-align: center;
+  margin-top: 0;
+}
+.html_accordion details {
+  margin-top: 20px;
+  font-size: 18px;
+}
+details summary {
+  cursor: pointer;
+  transition: 0.2s;
+  list-style: none;
+  padding: 10px;
+}
+details[open] summary {
+  font-weight: bold;
+}
+details summary::after {
+  content: "\f107";
+  font-family: "fontawesome";
+  float: right;
+  margin-right: 10px;
+  font-size: 20px;
+}
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+details summary:hover {
+  color: gray;
+}
+details p {
+  margin: 0;
+  background-color: #eeedef;
+  border-radius: 5px;
+  padding: 15px;
+}

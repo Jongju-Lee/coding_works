@@ -1,0 +1,105 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Reset CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* layout */
+
+/* body */
+body {
+  margin: 0;
+  color: #222;
+  background-color: #ecf0f1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 800px;
+  height: 700px;
+}
+
+/* .container > .btn_wrapper */
+.btn_wrapper {
+  display: flex;
+  width: 85%;
+}
+.btn {
+  text-align: center;
+  display: inline-block;
+  padding: 15px;
+  flex: 1;
+  background-color: #000;
+  color: #fff;
+  border-right: 1px solid white;
+  border-top: 4px solid transparent;
+  transition: 0.3s;
+}
+.btn:last-child {
+  border-right: none;
+}
+.btn.active,
+.btn:hover {
+  background-color: #fff;
+  border-top: 4px solid royalblue;
+  color: royalblue;
+}
+.btn::before {
+  margin-right: 3px;
+  font-family: "fontawesome";
+}
+.btn:nth-child(1):before {
+  content: "\f118";
+}
+.btn:nth-child(2):before {
+  content: "\f27a";
+}
+.btn:nth-child(3):before {
+  content: "\f030";
+}
+.btn:nth-child(4):before {
+  content: "\f004";
+}
+/* .container > .tab_content */
+.tab_content {
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  padding-top: 20px;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.content:target {
+  visibility: visible;
+  opacity: 1;
+}
+.content:first-child {
+  opacity: 1;
+  visibility: visible;
+}
+.content h2 {
+  margin: 0;
+}
+.content p {
+}
+.image {
+}
+.image img {
+  width: 100%;
+}

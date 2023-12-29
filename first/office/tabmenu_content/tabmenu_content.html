@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tabmenu_content</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="tabmenu_content.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn_wrapper">
+        <a class="btn active" href="#tab1">LONDON</a>
+        <a class="btn" href="#tab2">PARIS</a>
+        <a class="btn" href="#tab3">NEW YORK</a>
+        <a class="btn" href="#tab4">DUBAI</a>
+      </div>
+      <div class="tab_content">
+        <div class="content" id="tab1">
+          <h2>LONDON</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
+            sed, architecto delectus vel laudantium nam, nihil perferendis culpa
+            consequuntur, voluptatum similique molestias. Consequuntur at et
+            molestias totam nobis ea vero qui, numquam nisi officia non dolor
+            eius autem rerum cum eum esse nam modi aspernatur? Hic delectus
+            dolor repellat quo.
+          </p>
+          <div class="image">
+            <img src="./img/city-01.jpg" alt="london_image" />
+          </div>
+        </div>
+        <div class="content" id="tab2">
+          <h2>PARIS</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
+            sed, architecto delectus vel laudantium nam, nihil perferendis culpa
+            consequuntur, voluptatum similique molestias. Consequuntur at et
+            molestias totam nobis ea vero qui, numquam nisi officia non dolor
+            eius autem rerum cum eum esse nam modi aspernatur? Hic delectus
+            dolor repellat quo.
+          </p>
+          <div class="image">
+            <img src="./img/city-02.jpg" alt="paris_image" />
+          </div>
+        </div>
+        <div class="content" id="tab3">
+          <h2>NEW YORK</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
+            sed, architecto delectus vel laudantium nam, nihil perferendis culpa
+            consequuntur, voluptatum similique molestias. Consequuntur at et
+            molestias totam nobis ea vero qui, numquam nisi officia non dolor
+            eius autem rerum cum eum esse nam modi aspernatur? Hic delectus
+            dolor repellat quo.
+          </p>
+          <div class="image">
+            <img src="./img/city-03.jpg" alt="newYork_image" />
+          </div>
+        </div>
+        <div class="content" id="tab4">
+          <h2>DUBAI</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
+            sed, architecto delectus vel laudantium nam, nihil perferendis culpa
+            consequuntur, voluptatum similique molestias. Consequuntur at et
+            molestias totam nobis ea vero qui, numquam nisi officia non dolor
+            eius autem rerum cum eum esse nam modi aspernatur? Hic delectus
+            dolor repellat quo.
+          </p>
+          <div class="image">
+            <img src="./img/city-04.jpg" alt="dubai_image" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".btn").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+    </script>
+  </body>
+</html>
