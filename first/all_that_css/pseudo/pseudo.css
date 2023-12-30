@@ -1,0 +1,29 @@
+body {
+  margin: 50px;
+}
+.btn {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #009dff;
+  width: 140px;
+  display: inline-block;
+  text-align: cente r;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+.success {
+  background-color: #40bc2f;
+}
+.warning {
+  background-color: #ffc22c;
+}
+.error {
+  background-color: #fc6621;
+}
+.critical-error {
+  background-color: #d02e23;
+}

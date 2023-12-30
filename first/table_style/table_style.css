@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+.crew {
+  border-collapse: collapse;
+  width: 600px;
+}
+.crew td,
+.crew th {
+  text-align: center;
+  padding: 5px;
+}
+.crew tr {
+  border-bottom: 1px solid #ddd;
+}
+.crew th {
+  background-color: #222;
+  color: #fff;
+  border: none;
+}
+.crew caption {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
