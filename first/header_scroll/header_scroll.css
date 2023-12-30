@@ -1,0 +1,70 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+input,
+button {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  margin: 0;
+  height: 100vh;
+  color: #222;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header_red {
+  height: 100px;
+  background-color: crimson;
+  transition: 0.5s;
+}
+.header_red.active {
+  height: 0;
+}
+.header_black {
+  height: 200px;
+  background-color: black;
+  transition: 0.5s;
+}
+.header_black.active {
+  background-color: #fff;
+}
+section {
+  background-color: #ddd;
+}
+section p {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+}
+.fa1 {
+  position: fixed;
+  bottom: -80px;
+  right: 80px;
+  color: #222;
+  font-size: 80px;
+  opacity: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.fa1.active {
+  opacity: 0.8;
+  bottom: 50px;
+}

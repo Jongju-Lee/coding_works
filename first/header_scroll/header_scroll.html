@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header_scroll</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="header_scroll.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header_red"></div>
+      <div class="header_black"></div>
+    </header>
+    <section>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+        facilis quod eos placeat sunt eaque, consectetur deleniti nulla dolores
+        minima maxime voluptatum illo rem molestiae nostrum nemo, commodi, alias
+        atque iusto? Laborum qui pariatur saepe minus id maiores consectetur
+        fuga quam dolores sit asperiores, quibusdam in iure earum esse est, ut
+        provident necessitatibus. Ullam dolorum nam hic quas, enim modi
+        asperiores provident in, laudantium qui sequi quae impedit error magnam
+        placeat explicabo maxime a neque ratione corporis molestias at autem
+        eveniet? Autem mollitia eos quod, odit delectus fuga facere. Optio nisi
+        iste reprehenderit, eaque quos repudiandae labore consequatur excepturi
+        tempora voluptatem hic a eum accusantium aut fugiat reiciendis ipsum
+        corporis error placeat consectetur asperiores id, velit neque totam.
+        Expedita laboriosam, earum adipisci amet repudiandae quae tenetur
+        soluta, consectetur recusandae accusantium ullam, inventore assumenda id
+        rem. Animi aliquid, consectetur porro nostrum voluptates cum velit ipsam
+        rem doloribus maiores nesciunt quos dolore fuga aut architecto pariatur
+        minima vel tenetur fugit atque autem voluptas modi a facere? Iure vero
+        tempore iusto voluptas itaque ipsam officiis facilis consequuntur velit
+        quod, ab quam sequi accusamus reprehenderit at obcaecati dolorum
+        quaerat, eos voluptate. Hic minima at praesentium, provident nulla
+        minus! Necessitatibus quo similique, neque dolorum nulla culpa. Sapiente
+        a ut, magni necessitatibus quam culpa, nesciunt maiores cumque dolor
+        dolorum reprehenderit tempora aliquid? Unde earum minima consequatur
+        numquam dolorum eum fugiat, cupiditate placeat accusantium maiores ut
+        neque quibusdam similique deserunt ullam recusandae qui provident
+        reiciendis atque? Illum pariatur velit, ipsa saepe expedita assumenda ut
+        cumque veniam quo possimus veritatis, obcaecati, nam nesciunt incidunt
+        nostrum at molestias. Soluta magnam at excepturi expedita, quos
+        recusandae veritatis quaerat, sunt, autem a totam corrupti non
+        laudantium? Illum eveniet ullam fugit quibusdam eos libero tempore
+        molestiae possimus nihil recusandae. Deserunt impedit sapiente aut
+        delectus iure aliquid dolorum distinctio error dolore consequuntur,
+        consectetur molestias accusantium asperiores aspernatur dignissimos!
+        Beatae voluptatibus exercitationem maxime earum et minima rem porro,
+        ipsa magnam quibusdam sit maiores, quasi tempore mollitia nihil ullam
+        debitis natus quae eveniet iusto necessitatibus quam, nesciunt
+        consectetur tenetur. Maiores libero harum consequuntur sapiente non
+        laudantium, eveniet doloremque voluptate at nulla. Sapiente quasi
+        dolore, expedita, sunt voluptates, libero officia quae hic minus
+        nesciunt impedit obcaecati vero cupiditate numquam. Perferendis,
+        voluptatibus. Ab reiciendis dolorum ex possimus animi eligendi veniam,
+        placeat et cumque quas, exercitationem id cupiditate eos quae sit
+        laborum velit maxime vitae voluptas quaerat? Porro maxime cumque rem
+        neque modi iusto numquam, placeat officia reiciendis nesciunt et
+        dignissimos assumenda aperiam, debitis libero at, aliquam ipsam amet vel
+        autem eum perferendis officiis inventore culpa? Voluptates, sunt
+        adipisci. Pariatur autem eligendi explicabo consequuntur quibusdam
+        voluptas illum nihil vero, officiis amet repellat libero, eveniet
+        impedit voluptates laboriosam odio odit laborum reiciendis. Amet ratione
+        repellat facere est. Necessitatibus quae corrupti praesentium beatae
+        inventore rerum, dolores cum maxime voluptatum magnam tempore maiores
+        deleniti exercitationem consequuntur ad, optio quos! Consequuntur libero
+        non exercitationem quas ex esse nisi nihil facilis quae, dignissimos
+        perferendis optio, nam, voluptas distinctio aliquid necessitatibus
+        corporis culpa. Nesciunt quo cum veritatis maxime voluptates repellendus
+        alias, ad nihil similique!
+      </p>
+      <a href="#"
+        ><i class="fa1 fa fa-arrow-circle-up" aria-hidden="true"></i
+      ></a>
+    </section>
+
+    <script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 50) {
+          $(".header_red, .header_black, .fa1").addClass("active");
+        } else {
+          $(".header_red, .header_black, .fa1").removeClass("active");
+        }
+      });
+    </script>
+  </body>
+</html>

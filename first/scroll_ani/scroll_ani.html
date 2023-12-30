@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scroll_ani</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="scroll_ani.css" />
+    <!-- wow.js -->
+    <script src="./wow.min.js"></script>
+  </head>
+  <!-- body -->
+  <body>
+    <h1>Scroll Reveal Animation</h1>
+    <img src="http://via.placeholder.com/800x1500" alt="" />
+    <div class="parent">
+      <div class="left ltr wow">left</div>
+      <div class="right rtl wow">right</div>
+    </div>
+    <img src="http://via.placeholder.com/800x1500" alt="" />
+    <div class="parent">
+      <div class="left ltr wow">left</div>
+      <div class="right rtl wow">right</div>
+    </div>
+  </body>
+
+  <script>
+    wow = new WOW({
+      boxClass: "wow", // default
+      offset: 200, // 200px 더 내려가서 실행
+      mobile: true, // 모바일에서도 wow를 적용할건지?
+      live: true, // default
+    });
+    wow.init();
+  </script>
+</html>
