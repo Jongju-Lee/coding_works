@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video_background</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="video_background.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="video_frame active">
+        <video src="./media/video-female.mp4" autoplay loop muted></video>
+      </div>
+      <div class="overlay"></div>
+      <div class="logo">
+        <img src="./media/logo.png" alt="" />
+      </div>
+      <div class="header">
+        <h1>Star Ocean <span>Wave Ocean</span></h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+          facilis at ad soluta cum recusandae fugit inventore, dignissimos ut
+          aliquam veritatis similique temporibus numquam vero ab id?
+          Praesentium, rem tempore! Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Repellat aspernatur eos aperiam deleniti quo. Lorem
+          ipsum dolor sit amet consectetur, adipisicing elit. Earum cum itaque
+          aut odit praesentium nihil at sit quaerat adipisci ab.
+        </p>
+        <a href="#none">Learn More</a>
+        <a href="#none">Read More</a>
+      </div>
+      <div class="anniversary">
+        <p>Anniversary<span>60</span></p>
+      </div>
+      <div class="trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal_content">
+        <a href="#none">First Class</a>
+        <a href="#none">Second Class</a>
+        <a href="#none">Third Class</a>
+        <a href="#none">Forth Class</a>
+        <a href="#none">Fifth Class</a>
+      </div>
+    </div>
+    <audio src="./media/piano-bgm.mp3" loop autoplay></audio>
+
+    <script>
+      // 우상단 nav 클릭시
+      $(".trigger").click(function () {
+        $(this).toggleClass("active");
+        $(".modal").toggleClass("active");
+      });
+      // audio volume
+      const audio = document.querySelector("audio");
+      audio.volume = 0.2;
+    </script>
+  </body>
+</html>

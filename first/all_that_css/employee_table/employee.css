@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+table {
+  border-collapse: collapse;
+}
+table caption {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+tr {
+  border-bottom: 1px solid #ddd;
+}
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+tr:nth-child(1) {
+  background-color: limegreen;
+  color: #fff;
+  border: none;
+}
+th,
+td {
+  padding: 10px 20px;
+}
+th {
+}
+td:nth-child(1) {
+  font-weight: bold;
+}
+td:nth-child(3) {
+  color: royalblue;
+}
