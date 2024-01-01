@@ -1,108 +1,111 @@
 /* Google Web Font */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Reset CSS */
 * {
   box-sizing: border-box;
+  outline: none;
   font-family: "Montserrat", sans-serif;
 }
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
 body {
+  line-height: 1.5em;
   margin: 0;
   height: 100vh;
   color: #222;
-  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-/* container */
-.container {
-}
-
-/* .card */
-.card {
+/* section */
+section {
+  height: inherit;
   position: relative;
-  width: 320px;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 20px;
-  padding-top: 70px;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
-/* .face_img */
-.face_img {
+/* .profile_card */
+.profile_card {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  padding-top: 60px;
+  letter-spacing: -1px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+.profile_card img {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
   border-radius: 50%;
   border: 5px solid #eee;
-  overflow: hidden;
 }
-.face_img img {
-  width: 100%;
-  height: 100%;
+.profile_card h3 {
+  text-align: center;
 }
-
-/* .card_info */
-.card_info {
-  width: 100%;
-  border-collapse: collapse;
+.profile_card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
 }
-.card_info caption {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 10px;
+.profile_card ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 3px 0;
 }
-.card_info tr {
-  font-size: 12px;
-  text-align: left;
-  border-bottom: 1px solid #eee;
-}
-.card_info tr:last-child {
+.profile_card ul li:last-child {
   border: none;
 }
-.card_info th,
-.card_info td {
-  line-height: 30px;
-}
-.card_info th {
-}
-.card_info td {
-  padding-left: 10px;
+.profile_card ul li span {
+  display: inline-block;
+  width: 90px;
+  font-weight: 500;
 }
 
-/* .card_desc */
-.card_desc {
+/* .profile_card > .profile_content */
+.profile_content {
+  font-size: 14px;
 }
-.card_desc h3 {
-  margin-top: 15px;
-  margin-bottom: 10px;
+.profile_content p:nth-of-type(1) {
 }
-.card_desc p {
-  margin-top: 0;
-}
-
-/* .card_footer */
-.card_footer {
-}
-.card_footer a {
+.profile_content p:nth-of-type(1) b {
   display: block;
-  background-color: #3d6ce9;
+  font-size: 16px;
+}
+.profile_content p:nth-of-type(1) em {
+  font-style: normal;
+  text-decoration-line: underline;
+  text-decoration-color: crimson;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+.profile_content a {
+  display: block;
+  background-color: royalblue;
   color: #fff;
-  text-decoration: none;
   text-align: center;
-  padding: 7px;
+  padding: 5px;
   border-radius: 3px;
   opacity: 0.9;
   transition: 0.3s;
 }
-.card_footer a:hover {
+.profile_content a:hover {
   opacity: 1;
 }
-.card_footer p {
+.profile_content p:nth-of-type(2) {
   text-align: center;
+  font-size: 16px;
+  font-weight: 500;
 }
