@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index_links {
+  line-height: 1.8em;
+  counter-reset: index;
+}
+.index_links a {
+  color: #222;
+  text-decoration: none;
+  display: block;
+}
+.index_links a::before {
+  counter-increment: index;
+  content: "섹션. " counter(index) " [필수이론] - ";
+}
