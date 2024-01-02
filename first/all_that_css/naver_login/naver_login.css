@@ -1,0 +1,119 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* login_form */
+form {
+}
+.login {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  border-radius: 15px;
+}
+.input_field {
+  margin: 12px 0;
+}
+.input_field b {
+  display: block;
+  margin-bottom: 5px;
+}
+.input_field input[type="text"],
+.input_field input[type="email"],
+.input_field input[type="password"],
+.input_field select,
+.input_field textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.input_field input[type="text"]:hover,
+.input_field input[type="email"]:hover,
+.input_field input[type="password"]:hover,
+.input_field select:hover,
+.input_field textarea:hover {
+  border: 1px solid limegreen;
+}
+.input_field input::placeholder,
+.input_field textarea::placeholder {
+  transition: 0.35s;
+}
+.input_field input:focus::placeholder,
+.input_field textarea:focus::placeholder {
+  color: transparent;
+}
+.input_field input[type="text"],
+.input_field input[type="email"],
+.input_field input[type="password"] {
+  padding-left: 40px;
+  background-repeat: no-repeat;
+}
+.input_field input[type="text"] {
+  background-image: url(./img/icon-user.png);
+  background-size: 25px;
+  background-position: center left 5px;
+}
+.input_field input[type="email"] {
+  background-image: url(./img/icon-email.png);
+  background-size: 22px;
+  background-position: center left 7px;
+}
+.input_field input[type="password"] {
+  background-image: url(./img/icon-password.png);
+  background-size: 22px;
+  background-position: center left 7px;
+}
+.user_check {
+  text-align: center;
+  font-size: 14px;
+}
+.user_check input {
+}
+.user_check label {
+  cursor: pointer;
+  transition: 0.35s;
+}
+.user_check label:hover {
+  color: #aaa;
+}
+.user_check span {
+}
+.signUp_btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: limegreen;
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.35s;
+}
+.signUp_btn:hover {
+  opacity: 1;
+}

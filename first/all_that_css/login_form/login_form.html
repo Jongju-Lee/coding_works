@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login_form</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="login_form.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="login_form">
+        <div class="field">
+          <b>아이디</b><input type="text" placeholder="아이디 입력" />
+        </div>
+        <div class="field">
+          <b>이메일</b><input type="email" placeholder="아이디 입력" />
+        </div>
+        <div class="field">
+          <b>비밀번호</b><input type="password" placeholder="아이디 입력" />
+        </div>
+        <div class="field"><b>하고 싶은 말</b><textarea></textarea></div>
+        <div class="field user_check">
+          <input type="checkbox" id="agree_chk" />
+          <label for="agree_chk">이벤트 메일 수신에 동의합니다.</label>
+        </div>
+        <div class="field user_check">
+          <span>개인정보 처리방침 약관 동의</span>
+          <input type="radio" id="radio1" name="agree_radio" />
+          <label for="radio1">동의함</label>
+          <input type="radio" id="radio2" name="agree_radio" />
+          <label for="radio2">동의안함</label>
+        </div>
+        <button class="field_btn">회원가입 하기</button>
+      </div>
+    </form>
+  </body>
+</html>

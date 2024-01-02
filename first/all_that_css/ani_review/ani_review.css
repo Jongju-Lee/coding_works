@@ -1,0 +1,67 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+h3 {
+  margin: 0;
+}
+header {
+}
+.header_inner {
+  position: relative;
+  text-align: center;
+}
+.header_inner::before,
+.header_inner::after {
+  font-size: 120px;
+  font-weight: bold;
+  color: #ddd;
+  position: absolute;
+  top: -55px;
+}
+.header_inner::before {
+  content: "{";
+  left: -80px;
+}
+.header_inner::after {
+  content: "}";
+  right: -80px;
+}
+.header_inner h3 {
+  font-size: 25px;
+  font-weight: 400;
+}
+.header_inner h3::before {
+  content: "\f004";
+  font-family: "fontawesome";
+  color: crimson;
+  margin-right: 5px;
+  display: inline-block;
+  animation: heartBeat 0.7s linear infinite;
+}
+.header_inner h1 {
+  margin-top: 10px;
+}
+.header_inner h1 span {
+  color: crimson;
+}
+
+/* animation */
+@keyframes heartBeat {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}

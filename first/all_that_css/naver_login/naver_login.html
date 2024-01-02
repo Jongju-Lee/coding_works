@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>naver_login</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="naver_login.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="login">
+        <div class="input_field">
+          <b>아이디</b><input type="text" placeholder="아이디 입력" />
+        </div>
+        <div class="input_field">
+          <b>이메일</b><input type="email" placeholder="이메일 입력" />
+        </div>
+        <div class="input_field">
+          <b>비밀번호</b><input type="password" placeholder="비밀번호 입력" />
+        </div>
+        <div class="input_field">
+          <select>
+            <option value="">회원가입 경로를 선택해 주세요</option>
+            <option value="">지인소개</option>
+            <option value="">인터넷 검색</option>
+          </select>
+        </div>
+        <div class="input_field">
+          <b>하고 싶은 말</b>
+          <textarea placeholder="200자 이내로 적어주세요."></textarea>
+        </div>
+        <div class="input_field user_check">
+          <input type="checkbox" id="chk1" /><label for="chk1"
+            >이벤트 메일 수신에 동의합니다.</label
+          >
+        </div>
+        <div class="input_field user_check">
+          <span>개인정보 처리방침 약관 동의</span>
+          <input type="radio" name="radio" id="radio1" />
+          <label for="radio1">동의함</label>
+          <input type="radio" name="radio" id="radio2" />
+          <label for="radio2">동의안함</label>
+        </div>
+        <button class="signUp_btn">회원가입 하기</button>
+      </div>
+    </form>
+  </body>
+</html>
