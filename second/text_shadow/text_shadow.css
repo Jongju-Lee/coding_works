@@ -1,0 +1,44 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #222;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+}
+i.fa {
+  color: #fff;
+  font-size: 10em;
+  text-shadow: 0 0 30px crimson, 0 0 60px crimson, 0 0 90px crimson,
+    0 0 120px crimson;
+  animation: hue_rotate 5s linear infinite;
+}
+@keyframes hue_rotate {
+  0% {
+    filter: hue-rotate(0);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
