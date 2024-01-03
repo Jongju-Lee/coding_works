@@ -1,0 +1,68 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+}
+.text span {
+  position: relative;
+  display: inline-block;
+  height: 150px;
+  line-height: 150px;
+  font-size: 150px;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  transition: 0.3s;
+}
+.text span::before,
+.text span::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  -webkit-text-stroke: 0px;
+  transition: 0.5s;
+  opacity: 0;
+}
+.text span::before {
+  color: crimson;
+}
+.text span::after {
+  color: royalblue;
+}
+.text span:hover {
+  color: #fff;
+}
+.text span:hover::before {
+  opacity: 1;
+  top: -10px;
+  left: 10px;
+}
+.text span:hover::after {
+  opacity: 1;
+  top: -20px;
+  left: 20px;
+}
