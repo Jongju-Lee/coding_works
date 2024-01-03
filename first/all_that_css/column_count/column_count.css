@@ -1,0 +1,11 @@
+.frame {
+  border: 1px solid #000;
+  width: 800px;
+  margin: auto;
+  column-count: 3;
+  column-gap: 0;
+}
+.frame div {
+  border: 2px solid red;
+  height: 200px;
+}

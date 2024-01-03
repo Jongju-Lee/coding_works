@@ -1,0 +1,92 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #222;
+}
+
+/* layout */
+
+.container {
+  background-color: #ddd;
+  height: inherit;
+  position: relative;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+nav {
+  width: 1200px;
+  margin: auto;
+}
+nav > div {
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+}
+
+/* header > .logo */
+.logo {
+  float: left;
+  width: 200px;
+  line-height: 90px;
+}
+.logo a {
+}
+.logo a img {
+}
+
+/* header > .gnb */
+.gnb {
+  width: calc(100% - 350px);
+  display: inline-block;
+}
+.gnb a {
+  margin: 15px;
+  transition: 0.2s;
+}
+.gnb a:hover {
+  color: #bbb;
+}
+
+/* header > .lnb */
+.lnb {
+  float: right;
+  width: 150px;
+}
+.lnb a {
+  background-color: teal;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 30px;
+  opacity: 0.8;
+  transition: 0.35s;
+}
+.lnb a:hover {
+  opacity: 1;
+}
