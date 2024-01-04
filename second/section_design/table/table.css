@@ -1,0 +1,60 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Reset CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #222;
+}
+
+section {
+  height: 100%;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user_info {
+  background-color: white;
+  width: 900px;
+  text-align: center;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.user_info tr:not(:first-child, :last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.user_info tr:hover {
+  background-color: #eee;
+}
+.user_info th {
+  padding: 15px;
+  background-color: dodgerblue;
+  color: #fff;
+  font-weight: 500;
+}
+.user_info td {
+  padding: 15px;
+}
+
+.user_info tr td:last-child {
+  color: crimson;
+}

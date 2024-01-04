@@ -1,0 +1,71 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+/* Reset CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns {
+}
+.icon_wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 8px;
+  cursor: pointer;
+}
+.icon_wrapper::before {
+  content: attr(data-text);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #aaa;
+  visibility: hidden;
+  opacity: 0;
+}
+.icon_wrapper::after {
+  content: "";
+  position: absolute;
+  background-color: #aaa;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  visibility: hidden;
+  opacity: 0;
+}
+.icon_wrapper:hover::before,
+.icon_wrapper:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+.icon_wrapper i {
+  font-size: 50px;
+}
