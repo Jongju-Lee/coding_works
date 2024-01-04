@@ -1,0 +1,64 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* tooltip */
+.tooltip {
+  position: relative;
+}
+.tooltip span {
+  position: absolute;
+  top: -63px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.tooltip span::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+}
+.tooltip i.fa {
+  color: dodgerblue;
+  font-size: 4em;
+  cursor: pointer;
+}
+.tooltip:hover span {
+  visibility: visible;
+  opacity: 1;
+}
