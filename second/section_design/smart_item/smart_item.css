@@ -1,0 +1,146 @@
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* NoonNu Font */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset CSS */
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #222;
+}
+section {
+}
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+.heading,
+.heading b,
+.heading span {
+  font-family: "GmarketSansMedium";
+  font-size: 55px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+.heading b {
+  font-weight: 600;
+}
+.heading span {
+  color: deeppink;
+}
+
+/* .item_list */
+.item_list {
+}
+.item_list > h2 {
+}
+.items {
+  display: flex;
+  gap: 20px;
+  counter-reset: index;
+}
+
+/* .item_list > .item */
+.item {
+  position: relative;
+  flex: 1;
+}
+.item::before {
+  content: counter(index);
+  counter-increment: index;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 0 0 5px 0;
+  z-index: 10;
+  transition: 0.35s;
+}
+.item:hover::before {
+  background-color: crimson;
+}
+/* .item > .photo */
+.item .photo {
+  position: relative;
+  height: 340px;
+}
+.item .photo a {
+  position: absolute;
+  transition: 0.35s;
+}
+.item .photo a img {
+  width: 100%;
+}
+.item .photo:hover a:last-child {
+  opacity: 0;
+}
+/* .item > .detail */
+.item .detail {
+  position: relative;
+}
+.item .detail > span {
+  display: block;
+  font-size: 15px;
+}
+.price {
+}
+.price b {
+  color: crimson;
+  margin-right: 5px;
+}
+.name {
+}
+.count {
+  color: #bbb;
+}
+.wish {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  right: 5px;
+  /* border: 1px solid green; */
+}
+.wish:before {
+  content: "\f08a";
+  font-family: "fontawesome";
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  color: #bbb;
+  transition: 0.35s;
+}
+.wish.active::before {
+  content: "\f004";
+  color: crimson;
+}
