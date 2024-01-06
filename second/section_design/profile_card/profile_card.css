@@ -1,0 +1,197 @@
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/* Reset CSS */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  /* background: url(./img/svg-background.svg) no-repeat center center / cover; */
+  background-image: url(./img/svg-background.svg);
+}
+section {
+  padding: 100px 0;
+}
+.inner {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .card */
+.card {
+  position: relative;
+  width: 320px;
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.card.dark {
+  background-color: #323752;
+  color: #fff;
+}
+.card .face {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+}
+.card .face img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.card .face i {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-size: 18px;
+  background-color: deepskyblue;
+  color: #fff;
+  border-radius: 50%;
+}
+.card h1 {
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+.card h1 span {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #aaa;
+}
+.card p {
+  margin-bottom: 0;
+}
+.card p span {
+  color: royalblue;
+}
+.view_portfolio {
+  display: inline-block;
+  background-color: #00bacd;
+  color: #fff;
+  padding: 5px;
+  margin: 10px;
+  width: 200px;
+  border-radius: 30px;
+  transition: 0.35s;
+}
+.view_portfolio:hover {
+  background-color: #01a1b3;
+}
+.sns {
+  margin-top: 10px;
+  border-top: 1px solid #bbb;
+  padding-top: 15px;
+  display: flex;
+}
+.sns .item {
+  flex: 1;
+}
+.sns .item i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 50px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.sns .item:nth-child(1) i {
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.sns .item:nth-child(2) i {
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
+.sns .item:nth-child(3) i {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.sns .item span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #aaa;
+}
+.sns .item span big {
+  display: block;
+  font-weight: 500;
+  color: #333;
+}
+.sns .item.dark span big {
+  color: #fff;
+}
+.dark_mode {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  cursor: pointer;
+}
+.dark_mode::before {
+  content: "\eb0f";
+  font-family: "xeicon";
+  font-size: 20px;
+  color: #666;
+}
+.dark_mode.dark::before {
+  content: "\eba3";
+  color: #fff;
+}
+.add_on {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.add_on .like {
+  margin-right: 3px;
+  cursor: pointer;
+}
+.add_on .like::before {
+  content: "\ea11";
+  font-family: "xeicon";
+  font-size: 20px;
+  color: #666;
+}
+.add_on .like.dark::before {
+  color: #fff;
+}
+.add_on .like.active::before {
+  content: "\ea10";
+  color: crimson;
+}
+
+.add_on .more_btn {
+  cursor: pointer;
+}
+.add_on .more_btn::before {
+  content: "\e949";
+  font-family: "xeicon";
+  font-size: 20px;
+  color: #666;
+}
+.add_on .more_btn.dark::before {
+  color: #fff;
+}
