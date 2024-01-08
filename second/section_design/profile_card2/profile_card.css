@@ -1,0 +1,184 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* Reset CSS */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background: url(./img/svg-background.svg);
+}
+section {
+  height: inherit;
+}
+.inner {
+  position: relative;
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+}
+/* - - - - - card - - - - - */
+.card {
+  width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.card .face {
+  position: relative;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+.face img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.face i {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+  background-color: deepskyblue;
+  color: #fff;
+  border-radius: 50%;
+}
+.card > h1 {
+  font-weight: normal;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+.card > h1 span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #bbb;
+}
+.card > p {
+  margin-bottom: 0;
+}
+.card > p span {
+  color: royalblue;
+}
+.card > a {
+  display: inline-block;
+  width: 200px;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: #00bacd;
+  color: #fff;
+  margin-top: 10px;
+  transition: 0.35s;
+}
+.card > a:hover {
+  background-color: teal;
+}
+.sns {
+  display: flex;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+.item {
+  flex: 1;
+}
+.item i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 35px;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.item:nth-child(1) i {
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.item:nth-child(2) i {
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+.item:nth-child(3) i {
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+.item span {
+  display: inline-block;
+  color: #bbb;
+  margin-top: 10px;
+}
+.item span big {
+  color: #333;
+  font-weight: 500;
+  display: block;
+}
+.dark_mode {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 18px;
+}
+.dark_mode::before {
+  content: "\eb10";
+  font-family: "xeicon";
+  cursor: pointer;
+}
+.add_on {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 18px;
+}
+.add_on .like::before,
+.add_on .more::before {
+  font-family: "xeicon";
+  cursor: pointer;
+}
+.add_on .like::before {
+  content: "\ea11";
+}
+/* "\ea10" 꽉찬하트 */
+.add_on .more::before {
+  content: "\e949";
+}
+
+/* - - - - - Dark Mode - - - - - */
+.card.dark {
+  color: #fff;
+  background-color: #34495e;
+}
+.card.dark .dark_mode::before {
+  content: "\eba3";
+}
+.card.dark .item big {
+  color: #fff;
+}
+
+/* .like click transform color */
+.add_on .like.active:before {
+  content: "\ea10";
+  color: crimson;
+}

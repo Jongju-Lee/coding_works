@@ -4,7 +4,6 @@ $(".add_on .like").click(function () {
 $(".dark_mode").click(function () {
   $(this).toggleClass("dark");
   $(".card").toggleClass("dark");
-  $(".add_on .like").toggleClass("dark");
-  $(".add_on .more_btn").toggleClass("dark");
+  $(".add_on").toggleClass("dark");
   $(".sns .item").toggleClass("dark");
 });

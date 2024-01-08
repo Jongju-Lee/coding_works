@@ -42,16 +42,13 @@ section {
   position: relative;
   width: 320px;
   text-align: center;
-  padding: 30px;
+  padding: 45px 30px;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   transition: 0.5s;
 }
-.card.dark {
-  background-color: #323752;
-  color: #fff;
-}
+
 .card .face {
   position: relative;
   width: 120px;
@@ -105,7 +102,7 @@ section {
 }
 .sns {
   margin-top: 10px;
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #ddd;
   padding-top: 15px;
   display: flex;
 }
@@ -113,14 +110,14 @@ section {
   flex: 1;
 }
 .sns .item i {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  font-size: 30px;
-  line-height: 50px;
+  font-size: 38px;
+  line-height: 60px;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .sns .item:nth-child(1) i {
   background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
@@ -135,15 +132,15 @@ section {
   display: inline-block;
   margin-top: 10px;
   color: #aaa;
+  font-size: 13px;
 }
 .sns .item span big {
   display: block;
+  font-size: 20px;
   font-weight: 500;
   color: #333;
 }
-.sns .item.dark span big {
-  color: #fff;
-}
+
 .dark_mode {
   position: absolute;
   top: 20px;
@@ -152,14 +149,8 @@ section {
 }
 .dark_mode::before {
   content: "\eb0f";
-  font-family: "xeicon";
-  font-size: 20px;
-  color: #666;
 }
-.dark_mode.dark::before {
-  content: "\eba3";
-  color: #fff;
-}
+
 .add_on {
   position: absolute;
   top: 20px;
@@ -169,29 +160,37 @@ section {
   margin-right: 3px;
   cursor: pointer;
 }
-.add_on .like::before {
-  content: "\ea11";
+
+.add_on .more_btn {
+  cursor: pointer;
+}
+.add_on :is(.like, .more_btn)::before,
+.dark_mode::before {
   font-family: "xeicon";
   font-size: 20px;
   color: #666;
 }
-.add_on .like.dark::before {
+.add_on .like::before {
+  content: "\ea11";
+}
+.add_on .more_btn::before {
+  content: "\e949";
+}
+
+/* dark_mode */
+.card.dark {
+  background-color: #323752;
+  color: #fff;
+}
+.dark_mode.dark::before {
+  content: "\eba3";
+  color: #fff;
+}
+.sns .item.dark span big,
+.add_on.dark :is(.like, .more_btn)::before {
   color: #fff;
 }
 .add_on .like.active::before {
   content: "\ea10";
   color: crimson;
-}
-
-.add_on .more_btn {
-  cursor: pointer;
-}
-.add_on .more_btn::before {
-  content: "\e949";
-  font-family: "xeicon";
-  font-size: 20px;
-  color: #666;
-}
-.add_on .more_btn.dark::before {
-  color: #fff;
 }
