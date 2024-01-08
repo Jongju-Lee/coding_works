@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 /* XEICON CDN */
 @import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
 /* Reset CSS */
 * {
   font-family: "Roboto", sans-serif;
@@ -36,24 +37,25 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+/* - - - - - login - - - - - */
 .login {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  width: 350px;
-  padding: 50px 30px 40px 30px;
+  padding: 50px 40px 30px 40px;
   border-radius: 10px;
   background-color: #fff;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .heading {
-  font-size: 35px;
-  font-weight: 500;
   margin: 0;
+  font-weight: 500;
+  font-size: 40px;
 }
 .email {
-  margin: 30px 0;
+  margin-top: 40px;
 }
 .password {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 :is(.email, .password) span {
   display: block;
@@ -62,27 +64,34 @@ section {
 }
 :is(.email, .password) input {
   width: 100%;
+  padding: 10px 0;
+  padding-left: 30px;
   border: none;
   border-bottom: 1px solid #bbb;
-  padding: 10px;
+}
+.email input {
+  background: url(./img/icon-user.png) no-repeat center left 2px;
+}
+.password input {
+  background: url(./img/icon-password.png) no-repeat center left 2px;
+}
+:is(.email, .password) input:focus::placeholder {
+  opacity: 0;
 }
 .check_area {
   margin-top: 20px;
   overflow: auto;
 }
-.save_email {
+.check_area > div {
   float: left;
 }
-.save_email input {
+.check_area input {
   display: none;
 }
-.save_email label {
+.check_area label {
   cursor: pointer;
 }
-.save_email label:hover {
-  color: #bbb;
-}
-.save_email label::before {
+.check_area label::before {
   content: "";
   display: inline-block;
   width: 18px;
@@ -90,61 +99,55 @@ section {
   background: url(./img/icon-checkbox.png) no-repeat;
   background-position: center left;
   vertical-align: text-bottom;
-  margin-right: 3px;
+  margin-right: 5px;
+  transform: translateY(-1px);
 }
-.save_email input:checked + label::before {
+.check_area input:checked + label::before {
   background-position: center right;
 }
-.forgot {
+.check_area a {
   float: right;
 }
-.forgot:hover {
-  color: #bbb;
+.check_area a:hover {
   text-decoration: underline;
+  color: #bbb;
 }
 .radio_area {
+  margin-top: 20px;
 }
-.radio_area p {
-  margin-bottom: 5px;
+.radio_area .radio {
+}
+.radio_area input {
+  display: none;
 }
 .radio_area label {
   cursor: pointer;
 }
-.radio_area label:hover {
-  color: #bbb;
-}
-.radio_area input {
-  display: none;
+.radio_area label:nth-of-type(1) {
+  margin-right: 15px;
 }
 .radio_area label:before {
   content: "";
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: url(./img/icon-radio.png);
+  background: url(./img/icon-radio.png) no-repeat;
   background-position: center left;
   vertical-align: text-bottom;
-  margin-right: 3px;
+  margin-right: 5px;
   transform: translateY(-1px);
 }
 .radio_area input:checked + label::before {
   background-position: center right;
 }
-input[id="yes"] + label {
-  margin-right: 10px;
-}
-.login_btn {
-  margin: 15px 0 20px 0;
+.radio_area + button {
+  margin-top: 20px;
   width: 100%;
   border: none;
-  padding: 10px;
   border-radius: 30px;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  transition: 0.35s;
-  color: #fff;
+  padding: 7px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: #fff;
   background-image: radial-gradient(
     circle 248px at center,
     #16d9e3 0%,
@@ -153,46 +156,43 @@ input[id="yes"] + label {
   );
 }
 .other_login {
-  margin: 0;
+  margin-top: 25px;
 }
 .sns {
   margin-top: 10px;
 }
-.sns i {
+.sns a {
+  margin: 5px;
+}
+.sns a i {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  font-size: 25px;
   color: #fff;
+  font-size: 25px;
   border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-.sns i:not(:last-child) {
-  margin-right: 7px;
+.sns a:nth-child(1) i {
+  background-color: #e75735;
 }
-.sns i:nth-child(1) {
-  background-color: #ea5836;
+.sns a:nth-child(2) i {
+  background-color: #395994;
 }
-.sns i:nth-child(2) {
-  background-color: #3859a0;
+.sns a:nth-child(3) i {
+  background-color: #00a300;
 }
-.sns i:nth-child(3) {
-  background-color: #00a400;
-}
-.sns i:nth-child(4) {
-  background-color: #ffd300;
-}
-.not_account {
-  display: block;
-  margin-top: 20px;
+.sns a:nth-child(4) i {
+  background-color: #ffd200;
 }
 .sign_up {
-  display: inline-block;
-  margin-top: 5px;
-  font-weight: 500;
+  margin-top: 25px;
 }
-.sign_up:hover {
+.sign_up a {
+  display: block;
+  margin-top: 5px;
+}
+.sign_up a:hover {
   text-decoration: underline;
   color: #bbb;
 }
