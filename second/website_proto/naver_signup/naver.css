@@ -1,0 +1,197 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Reset CSS */
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+input,
+button {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  color: #333;
+  background-color: #f5f6f9;
+}
+section {
+  padding: 50px 0;
+}
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+.member {
+  width: 460px;
+  padding: 20px;
+  margin: auto;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.field {
+  margin-bottom: 20px;
+}
+.field b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.field input:focus::placeholder {
+  opacity: 0;
+}
+.field :is(input, select) {
+  cursor: pointer;
+}
+.field:not(.gender) :is(input, select) {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #bbb;
+}
+.field.id {
+  position: relative;
+}
+.field.id span {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: #777;
+  pointer-events: none;
+}
+.field:is(.pw, .pw_check) {
+  position: relative;
+}
+.field.pw input {
+  background: #fff url(./img/icon-01.png) no-repeat;
+}
+.field.pw_check input {
+  background: #fff url(./img/icon-02.png) no-repeat;
+}
+.field:is(.pw, .pw_check) input {
+  background-size: 20px;
+  background-position: center right 15px;
+}
+.field.birth .wrapper {
+  display: flex;
+  gap: 10px;
+}
+.field.gender .wrapper {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  padding: 15px;
+}
+.field.gender .wrapper label {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.field.gender .wrapper input {
+  display: none;
+}
+.field.gender .wrapper em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 3px;
+  background: url(./img/icon-radio.png) no-repeat;
+  background-position: center left;
+  transform: translateY(3px);
+}
+.field.gender .wrapper input:checked + em {
+  background-position: center right;
+}
+.field.phone > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+.field.phone .wrapper {
+  display: flex;
+  gap: 5px;
+}
+.field.phone .wrapper input {
+  flex: 2;
+}
+.field.phone .wrapper button {
+  flex: 1;
+  background-color: #2db400;
+  color: #fff;
+  border: none;
+}
+.member > button {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background-color: #2db400;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.footer {
+  text-align: center;
+  font-size: 12px;
+}
+.footer a {
+  color: #777;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .wrapper a:not(:last-child):after {
+  content: "|";
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 10px;
+  transform: translate(2px, -2px);
+}
+
+/* .field > input, select focus border style */
+.field :is(input, select):focus {
+  border: 1px solid #2db400;
+}
+
+/* input[number], select custom style */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* FireFox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url(./img/icon-select.png) no-repeat center right 20px;
+}
+
+/* - - - - - Mobile - - - - - */
+@media (max-width: 767px) {
+  /* .inner {
+    width: 1200px;
+    margin: auto;
+  } */
+  .inner {
+    width: inherit;
+  }
+  .member {
+    width: 100%;
+  }
+  .logo img {
+    width: 70%;
+  }
+}

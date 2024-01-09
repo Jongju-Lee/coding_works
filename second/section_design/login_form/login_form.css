@@ -7,11 +7,14 @@
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  outline: none;
 }
 a {
   text-decoration: none;
   color: #333;
+}
+input,
+button {
+  outline: none;
 }
 button {
   cursor: pointer;
@@ -189,8 +192,7 @@ section {
   margin-top: 25px;
 }
 .sign_up a {
-  display: block;
-  margin-top: 5px;
+  border: 1px solid red;
 }
 .sign_up a:hover {
   text-decoration: underline;
