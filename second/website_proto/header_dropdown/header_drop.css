@@ -1,0 +1,233 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+/* Reset CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+input,
+button {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* ############### body ############### */
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+.container {
+}
+
+/* ############### Header ############### */
+header {
+}
+
+/* ############### banner ############### */
+.banner_outer {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to right, #00202b 50%, #fff 50%);
+}
+.banner {
+  width: 1400px;
+  margin: auto;
+}
+.banner img {
+  display: block;
+}
+.banner i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  font-size: 25px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* ############### lnb ############### */
+.lnb_outer {
+  background-color: #e1edf9;
+  padding: 20px 0;
+}
+.lnb {
+  width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lnb nav a:not(:last-child):after {
+  content: "|";
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-left: 7px;
+  transform: translateY(-1px);
+  color: #999;
+}
+.lnb nav a:hover {
+  color: dodgerblue;
+}
+
+/* ############### gnb ############### */
+.gnb_outer {
+  background-color: #282c3a;
+}
+.gnb_outer nav {
+  position: relative;
+  width: 1400px;
+  margin: auto;
+}
+.gnb {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+}
+.gnb li {
+  position: relative;
+}
+
+.gnb li:not(:last-child) {
+  flex: 1;
+  border-right: 1px solid #bbb;
+  text-align: center;
+}
+.gnb li:first-child {
+  background-color: crimson;
+}
+.gnb li:last-child {
+  width: 50px;
+  background-color: #0e38a6;
+  transition: 0.5s;
+}
+.gnb.active li:last-child {
+  background-color: #fff;
+}
+.gnb li > a {
+  display: block;
+  color: #fff;
+  padding: 12px;
+}
+
+/* ############### dropdown menu ############### */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: calc(100% + 1px);
+  height: 100px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+}
+.gnb li:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown a {
+  display: inline-block;
+  padding: 12px 0;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+}
+.dropdown a:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.dropdown a:hover {
+  background-color: #eee;
+}
+
+/* ############### sitemap ############### */
+.sitemap {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.sitemap.active {
+  opacity: 1;
+  visibility: visible;
+}
+.sitemap > div {
+  flex: 1;
+}
+.sitemap > div > * {
+  display: block;
+  margin-bottom: 10px;
+}
+.sitemap > div a:hover {
+  text-decoration: underline;
+}
+.sitemap > div a::before {
+  content: "- ";
+}
+/* ############### trigger ############### */
+.trigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 27px;
+  height: 15px;
+  cursor: pointer;
+}
+.trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.trigger span:nth-child(1) {
+  top: 0;
+}
+.trigger span:nth-child(2) {
+  top: 50%;
+}
+.trigger span:nth-child(3) {
+  top: 100%;
+}
+.trigger.active span {
+  background-color: #333;
+}
+.trigger.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+/* ############### Section ############### */
+section {
+}
+section img {
+  width: 100%;
+  height: 100%;
+}
