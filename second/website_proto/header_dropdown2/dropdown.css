@@ -1,0 +1,241 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+/* Reset CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+input,
+button {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* body */
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+.container {
+}
+
+/* ############### Header ############### */
+header {
+}
+
+/* ############### Banner ############### */
+.banner_outer {
+  position: relative;
+  background: linear-gradient(to right, #00202b 50%, #fff 50%);
+}
+.banner {
+  width: 1400px;
+  margin: auto;
+}
+.banner img {
+  display: block;
+  width: inherit;
+}
+.banner_outer i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotate(45deg);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ############### Lnb ############### */
+.lnb_outer {
+  background-color: #e2edf8;
+}
+.lnb_outer nav {
+  width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.lnb a:hover {
+  color: dodgerblue;
+}
+.lnb a:not(:last-child)::after {
+  content: "|";
+  margin-right: 5px;
+  margin-left: 7px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ############### Gnb ############### */
+.gnb_outer {
+  background-color: #272c38;
+}
+.gnb_outer nav {
+  position: relative;
+  width: 1400px;
+  margin: auto;
+}
+.gnb {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.gnb li {
+  cursor: pointer;
+}
+.gnb li:not(:last-child) {
+  position: relative;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-right: 1px solid #bbb;
+}
+.gnb li:first-child {
+  background-color: crimson;
+}
+.gnb li:last-child {
+  position: relative;
+  width: 50px;
+  background-color: #12359d;
+  transition: 0.5s;
+}
+.gnb.active li:last-child {
+  background-color: #fff;
+}
+.gnb li > a {
+  color: #fff;
+}
+.badge {
+  font-style: normal;
+  font-size: 10px;
+  margin-left: 3px;
+  padding: 0 4px;
+  border-radius: 10px;
+  background-color: crimson;
+}
+
+/* ############### Dropdown Menu ############### */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: calc(100% + 1px);
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+}
+.gnb li:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown a {
+  display: block;
+  padding: 10px;
+  color: #333;
+}
+.dropdown a:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown a:hover {
+  background-color: #eee;
+}
+
+/* ############### trigger ############### */
+
+.trigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 17px;
+  cursor: pointer;
+}
+.trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.trigger span:nth-child(1) {
+  top: 0;
+}
+.trigger span:nth-child(2) {
+  top: 50%;
+}
+.trigger span:nth-child(3) {
+  top: 100%;
+}
+
+.trigger.active span {
+  background-color: #333;
+}
+.trigger.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+/* ############### Site Map ############### */
+.site_map {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.site_map.active {
+  opacity: 1;
+  visibility: visible;
+}
+.site_map div {
+  flex: 1;
+}
+.site_map div a {
+  display: block;
+  margin-top: 10px;
+}
+.site_map div a:hover {
+  color: #aaa;
+  text-decoration: underline;
+}
+.site_map div a::before {
+  content: "- ";
+}
+
+/* ############### Section ############### */
+section {
+}
+section img {
+  width: 100%;
+}
