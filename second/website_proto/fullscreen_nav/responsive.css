@@ -1,0 +1,19 @@
+@media (max-width: 767px) {
+  section:not(.welcome) {
+    padding: 40px 20px;
+    height: auto;
+  }
+  .heading h1 {
+    font-size: 2em;
+    line-height: 1.3em;
+  }
+  .gnb {
+    text-align: center;
+    width: 100%;
+  }
+  .gnb li a {
+    font-size: 35px;
+    padding-right: 0;
+    line-height: 2em;
+  }
+}

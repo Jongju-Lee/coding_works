@@ -6,8 +6,11 @@
     <title>fullscreen_navigation</title>
     <!-- CSS link -->
     <link rel="stylesheet" href="fullscreen_nav.css" />
+    <link rel="stylesheet" href="./responsive.css" />
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jQuery link -->
+    <script src="./custom.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -16,12 +19,12 @@
       </div>
       <div class="overlay"></div>
       <ul class="gnb">
-        <li><a href="#none">Home</a></li>
-        <li><a href="#none">About</a></li>
-        <li><a href="#none">Graphic Portfolio</a></li>
-        <li><a href="#none">Web Portfolio</a></li>
-        <li><a href="#none">Contact</a></li>
-        <li><a href="#none">Epilogue</a></li>
+        <li><a href="#feature1">Home</a></li>
+        <li><a href="#feature2">About</a></li>
+        <li><a href="#feature3">Graphic Portfolio</a></li>
+        <li><a href="#feature4">Web Portfolio</a></li>
+        <li><a href="#feature5">Contact</a></li>
+        <li><a href="#feature6">Epilogue</a></li>
       </ul>
       <section class="welcome" id="feature1">
         <div class="welcome_img">
@@ -29,103 +32,113 @@
         </div>
       </section>
       <section id="feature2">
-        <div class="heading">
-          <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
-          <h1>Section : About</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus cum
-            voluptatibus optio excepturi veritatis totam. Delectus blanditiis
-            corrupti atque quaerat natus ut! Iste omnis quo, obcaecati hic
-            accusamus nobis, non illo veritatis, officiis cupiditate perferendis
-            adipisci consectetur tempora impedit dolore voluptas dolorem nulla!
-            Eligendi placeat modi, soluta natus ipsam repudiandae repellat
-            excepturi esse, asperiores recusandae est. Deserunt aut debitis
-            voluptatem molestias dicta dolores quas similique odio facilis, modi
-            nam sequi, impedit tenetur iure dolorum? Ea eos provident animi quod
-            suscipit voluptas, qui atque hic pariatur, reprehenderit, debitis
-            ipsam. At dolorum aliquam, omnis fugiat velit expedita corporis.
-            Dolor quos porro magnam.
-          </p>
+        <div class="inner">
+          <div class="heading">
+            <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
+            <h1>Section : About</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+              cum voluptatibus optio excepturi veritatis totam. Delectus
+              blanditiis corrupti atque quaerat natus ut! Iste omnis quo,
+              obcaecati hic accusamus nobis, non illo veritatis, officiis
+              cupiditate perferendis adipisci consectetur tempora impedit dolore
+              voluptas dolorem nulla! Eligendi placeat modi, soluta natus ipsam
+              repudiandae repellat excepturi esse, asperiores recusandae est.
+              Deserunt aut debitis voluptatem molestias dicta dolores quas
+              similique odio facilis, modi nam sequi, impedit tenetur iure
+              dolorum? Ea eos provident animi quod suscipit voluptas, qui atque
+              hic pariatur, reprehenderit, debitis ipsam. At dolorum aliquam,
+              omnis fugiat velit expedita corporis. Dolor quos porro magnam.
+            </p>
+          </div>
         </div>
       </section>
       <section id="feature3">
-        <div class="heading">
-          <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
-          <h1>Section : Graphic Portfolio</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus cum
-            voluptatibus optio excepturi veritatis totam. Delectus blanditiis
-            corrupti atque quaerat natus ut! Iste omnis quo, obcaecati hic
-            accusamus nobis, non illo veritatis, officiis cupiditate perferendis
-            adipisci consectetur tempora impedit dolore voluptas dolorem nulla!
-            Eligendi placeat modi, soluta natus ipsam repudiandae repellat
-            excepturi esse, asperiores recusandae est. Deserunt aut debitis
-            voluptatem molestias dicta dolores quas similique odio facilis, modi
-            nam sequi, impedit tenetur iure dolorum? Ea eos provident animi quod
-            suscipit voluptas, qui atque hic pariatur, reprehenderit, debitis
-            ipsam. At dolorum aliquam, omnis fugiat velit expedita corporis.
-            Dolor quos porro magnam.
-          </p>
+        <div class="inner">
+          <div class="heading">
+            <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
+            <h1>Section : Graphic Portfolio</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+              cum voluptatibus optio excepturi veritatis totam. Delectus
+              blanditiis corrupti atque quaerat natus ut! Iste omnis quo,
+              obcaecati hic accusamus nobis, non illo veritatis, officiis
+              cupiditate perferendis adipisci consectetur tempora impedit dolore
+              voluptas dolorem nulla! Eligendi placeat modi, soluta natus ipsam
+              repudiandae repellat excepturi esse, asperiores recusandae est.
+              Deserunt aut debitis voluptatem molestias dicta dolores quas
+              similique odio facilis, modi nam sequi, impedit tenetur iure
+              dolorum? Ea eos provident animi quod suscipit voluptas, qui atque
+              hic pariatur, reprehenderit, debitis ipsam. At dolorum aliquam,
+              omnis fugiat velit expedita corporis. Dolor quos porro magnam.
+            </p>
+          </div>
         </div>
       </section>
       <section id="feature4">
-        <div class="heading">
-          <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
-          <h1>Section : Web Portfolio</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus cum
-            voluptatibus optio excepturi veritatis totam. Delectus blanditiis
-            corrupti atque quaerat natus ut! Iste omnis quo, obcaecati hic
-            accusamus nobis, non illo veritatis, officiis cupiditate perferendis
-            adipisci consectetur tempora impedit dolore voluptas dolorem nulla!
-            Eligendi placeat modi, soluta natus ipsam repudiandae repellat
-            excepturi esse, asperiores recusandae est. Deserunt aut debitis
-            voluptatem molestias dicta dolores quas similique odio facilis, modi
-            nam sequi, impedit tenetur iure dolorum? Ea eos provident animi quod
-            suscipit voluptas, qui atque hic pariatur, reprehenderit, debitis
-            ipsam. At dolorum aliquam, omnis fugiat velit expedita corporis.
-            Dolor quos porro magnam.
-          </p>
+        <div class="inner">
+          <div class="heading">
+            <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
+            <h1>Section : Web Portfolio</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+              cum voluptatibus optio excepturi veritatis totam. Delectus
+              blanditiis corrupti atque quaerat natus ut! Iste omnis quo,
+              obcaecati hic accusamus nobis, non illo veritatis, officiis
+              cupiditate perferendis adipisci consectetur tempora impedit dolore
+              voluptas dolorem nulla! Eligendi placeat modi, soluta natus ipsam
+              repudiandae repellat excepturi esse, asperiores recusandae est.
+              Deserunt aut debitis voluptatem molestias dicta dolores quas
+              similique odio facilis, modi nam sequi, impedit tenetur iure
+              dolorum? Ea eos provident animi quod suscipit voluptas, qui atque
+              hic pariatur, reprehenderit, debitis ipsam. At dolorum aliquam,
+              omnis fugiat velit expedita corporis. Dolor quos porro magnam.
+            </p>
+          </div>
         </div>
       </section>
       <section id="feature5">
-        <div class="heading">
-          <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
-          <h1>Section : Contact</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus cum
-            voluptatibus optio excepturi veritatis totam. Delectus blanditiis
-            corrupti atque quaerat natus ut! Iste omnis quo, obcaecati hic
-            accusamus nobis, non illo veritatis, officiis cupiditate perferendis
-            adipisci consectetur tempora impedit dolore voluptas dolorem nulla!
-            Eligendi placeat modi, soluta natus ipsam repudiandae repellat
-            excepturi esse, asperiores recusandae est. Deserunt aut debitis
-            voluptatem molestias dicta dolores quas similique odio facilis, modi
-            nam sequi, impedit tenetur iure dolorum? Ea eos provident animi quod
-            suscipit voluptas, qui atque hic pariatur, reprehenderit, debitis
-            ipsam. At dolorum aliquam, omnis fugiat velit expedita corporis.
-            Dolor quos porro magnam.
-          </p>
+        <div class="inner">
+          <div class="heading">
+            <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
+            <h1>Section : Contact</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+              cum voluptatibus optio excepturi veritatis totam. Delectus
+              blanditiis corrupti atque quaerat natus ut! Iste omnis quo,
+              obcaecati hic accusamus nobis, non illo veritatis, officiis
+              cupiditate perferendis adipisci consectetur tempora impedit dolore
+              voluptas dolorem nulla! Eligendi placeat modi, soluta natus ipsam
+              repudiandae repellat excepturi esse, asperiores recusandae est.
+              Deserunt aut debitis voluptatem molestias dicta dolores quas
+              similique odio facilis, modi nam sequi, impedit tenetur iure
+              dolorum? Ea eos provident animi quod suscipit voluptas, qui atque
+              hic pariatur, reprehenderit, debitis ipsam. At dolorum aliquam,
+              omnis fugiat velit expedita corporis. Dolor quos porro magnam.
+            </p>
+          </div>
         </div>
       </section>
       <section id="feature6">
-        <div class="heading">
-          <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
-          <h1>Section : Epilogue</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus cum
-            voluptatibus optio excepturi veritatis totam. Delectus blanditiis
-            corrupti atque quaerat natus ut! Iste omnis quo, obcaecati hic
-            accusamus nobis, non illo veritatis, officiis cupiditate perferendis
-            adipisci consectetur tempora impedit dolore voluptas dolorem nulla!
-            Eligendi placeat modi, soluta natus ipsam repudiandae repellat
-            excepturi esse, asperiores recusandae est. Deserunt aut debitis
-            voluptatem molestias dicta dolores quas similique odio facilis, modi
-            nam sequi, impedit tenetur iure dolorum? Ea eos provident animi quod
-            suscipit voluptas, qui atque hic pariatur, reprehenderit, debitis
-            ipsam. At dolorum aliquam, omnis fugiat velit expedita corporis.
-            Dolor quos porro magnam.
-          </p>
+        <div class="inner">
+          <div class="heading">
+            <b> Lorem ipsum dolor, sit amet consectetur adipisicing. </b>
+            <h1>Section : Epilogue</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+              cum voluptatibus optio excepturi veritatis totam. Delectus
+              blanditiis corrupti atque quaerat natus ut! Iste omnis quo,
+              obcaecati hic accusamus nobis, non illo veritatis, officiis
+              cupiditate perferendis adipisci consectetur tempora impedit dolore
+              voluptas dolorem nulla! Eligendi placeat modi, soluta natus ipsam
+              repudiandae repellat excepturi esse, asperiores recusandae est.
+              Deserunt aut debitis voluptatem molestias dicta dolores quas
+              similique odio facilis, modi nam sequi, impedit tenetur iure
+              dolorum? Ea eos provident animi quod suscipit voluptas, qui atque
+              hic pariatur, reprehenderit, debitis ipsam. At dolorum aliquam,
+              omnis fugiat velit expedita corporis. Dolor quos porro magnam.
+            </p>
+          </div>
         </div>
       </section>
     </div>
