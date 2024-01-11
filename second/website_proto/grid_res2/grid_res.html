@@ -7,6 +7,14 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="./grid_res.css" />
     <link rel="stylesheet" href="responsive.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Featherlight.js -->
+    <script src="./script/featherlight-1.7.13/featherlight.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="./script/featherlight-1.7.13/featherlight.css"
+    />
   </head>
   <body>
     <section class="portfolio">
@@ -34,15 +42,29 @@
           </p>
         </aside>
         <div class="item thum">
-          <div class="photo"></div>
+          <div class="photo">
+            <img src="./img/web-portfolio-01.jpg" alt="portfolio_image1" />
+          </div>
           <span class="portfolio_title"
             >Website portfolio #01
-            <a class="btn_view pc" href="#none">PC</a>
-            <a class="btn_view mobile" href="#none">MOBILE</a>
+            <a
+              class="btn_view pc"
+              href="https://www.inflearn.com/user/courses?due=not_expired"
+              data-featherlight="iframe"
+              >PC</a
+            >
+            <a
+              class="btn_view mobile"
+              href="https://www.inflearn.com/user/courses?due=not_expired"
+              data-featherlight="iframe"
+              >MOBILE</a
+            >
           </span>
         </div>
         <div class="item thum">
-          <div class="photo"></div>
+          <div class="photo">
+            <img src="./img/web-portfolio-02.jpg" alt="portfolio_image2" />
+          </div>
           <span class="portfolio_title"
             >Website portfolio #02
             <a class="btn_view pc" href="#none">PC</a>
@@ -50,7 +72,9 @@
           </span>
         </div>
         <div class="item thum">
-          <div class="photo"></div>
+          <div class="photo">
+            <img src="./img/web-portfolio-03.jpg" alt="portfolio_image3" />
+          </div>
           <span class="portfolio_title"
             >Website portfolio #03
             <a class="btn_view pc" href="#none">PC</a>

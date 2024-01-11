@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript_jquery</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="js_jq.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <h1 id="greeting">Good to see you! I'm CodingWorks</h1>
+    </div>
+    <div class="btns">
+      <button id="btn1">클래스 추가하기</button>
+      <button id="btn2">클래스 제거하기</button>
+      <button id="btn3">클래스 토글하기</button>
+      <button id="btn4">요소 내에 텍스트 변경하기</button>
+    </div>
+    <script>
+      // ##### Vanilla Java Script #####
+      // const $greeting = document.querySelector("#greeting");
+      // const $addClassBtn = document.querySelector("#btn1");
+      // const $removeClassBtn = document.querySelector("#btn2");
+      // const $toggleClassBtn = document.querySelector("#btn3");
+      // const $editTextBtn = document.querySelector("#btn4");
+
+      // $addClassBtn.addEventListener("click", () => {
+      //   $greeting.classList.add("active");
+      // });
+      // $removeClassBtn.addEventListener("click", () => {
+      //   $greeting.classList.remove("active");
+      // });
+      // $toggleClassBtn.addEventListener("click", () => {
+      //   $greeting.classList.toggle("active");
+      // });
+      // $editTextBtn.addEventListener("click", () => {
+      //   $greeting.textContent = "Edit Text Button Click!";
+      // });
+
+      // ##### JQuery #####
+      $("#btn1").click(function () {
+        $("#greeting").addClass("active");
+      });
+      $("#btn2").click(function () {
+        $("#greeting").removeClass("active");
+      });
+      $("#btn3").click(function () {
+        $("#greeting").toggleClass("active");
+      });
+      $("#btn4").click(function () {
+        $("#greeting").text("You clicked the toggle button");
+      });
+    </script>
+  </body>
+</html>
