@@ -1,0 +1,10 @@
+/* Mobile */
+@media (max-width: 767px) {
+  section {
+    height: auto;
+  }
+  .modal {
+    flex-direction: column;
+    width: calc(100% - 40px);
+  }
+}

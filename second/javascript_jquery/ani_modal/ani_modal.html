@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ani_modal</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./ani_modal.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <button class="trigger_btn">뉴스레터 구독하기</button>
+      <div class="overlay"></div>
+      <div class="modal">
+        <div class="modal_img">
+          <img src="./img/office.jpg" alt="modal_image" />
+        </div>
+        <div class="modal_desc">
+          <h2>지금 다양한 혜택을 받아보세요.</h2>
+          <input type="text" placeholder="이메일 주소를 입력하세요." />
+          <button>뉴스레터 구독하기</button>
+          <p>
+            스타트업 메이트 뉴스룸의 다양한 소식과 혜택을 이메일로 받아 보시려면
+            구독 신청 해주시기 바랍니다. 스타트업 메이트에 대해 알고 싶은 뉴스,
+            꼭 알아야 할 뉴스를 신속하고 정확하게 전합니다.
+          </p>
+          <i class="xi-plus-thin"></i>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // ##### jQuery #####
+      $(".trigger_btn").click(function () {
+        $(".overlay, .modal").addClass("active");
+      });
+      $(".modal_desc i, .overlay").click(function () {
+        $(".modal, .overlay").removeClass("active");
+      });
+    </script>
+  </body>
+</html>
