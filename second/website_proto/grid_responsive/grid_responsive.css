@@ -1,0 +1,123 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+
+/* Reset CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+
+/* COMMON CSS */
+.font_noto {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+}
+
+/* body */
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+
+/* ############### Section ############### */
+section {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background: url(./img/background.png) no-repeat top right;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 40px;
+}
+.heading:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 5px;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
+.items {
+  width: 1250px;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* ############### ITEM ############### */
+.item {
+}
+aside.item {
+}
+aside.item b {
+  font-weight: 500;
+  color: crimson;
+}
+aside.item span {
+  display: list-item;
+  list-style: square;
+  margin-left: 20px;
+}
+.item.thum {
+}
+.item.thum .photo {
+  height: 400px;
+  background-position: top;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  transition: 2s;
+}
+.item.thum:nth-of-type(1) .photo {
+  background-image: url(./img/web-portfolio-01.jpg);
+}
+.item.thum:nth-of-type(2) .photo {
+  background-image: url(./img/web-portfolio-02.jpg);
+}
+.item.thum:nth-of-type(3) .photo {
+  background-image: url(./img/web-portfolio-03.jpg);
+}
+.item.thum:hover .photo {
+  background-position: bottom;
+}
+.item.thum .desc {
+  margin-top: 7px;
+  text-align: center;
+}
+.item.thum .desc span {
+  display: inline-block;
+  transform: translateY(2px);
+  margin-right: 5px;
+}
+.view_btn {
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 10px;
+}
+.view_btn.pc {
+  background-color: crimson;
+}
+.view_btn.mb {
+  background-color: royalblue;
+}
