@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>custom_footer2</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="custom_footer2.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>HEADER</h1>
+      </header>
+      <section>
+        <h1>SECTION #01</h1>
+      </section>
+      <section>
+        <h1>SECTION #02</h1>
+      </section>
+      <footer>
+        <div class="inner">
+          <div class="copyright">
+            <div class="policy">
+              <a href="#none" target="_blank" rel="noopener noreferrer"
+                >개인정보처리방침</a
+              >
+              <a href="#none" target="_blank" rel="noopener noreferrer"
+                >사이트맵</a
+              >
+            </div>
+            <div class="info">
+              <span>인천광역시 중구 개항로 6층 (주)코딩웍스</span>
+              <span>Tel. 032-850-4345, 4346</span>
+              <span>E-mail. codingworks@abcd.com</span>
+              <p>COPYRIGHT (C) CODINGWORKS COMPANY. ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
+          <div class="select">
+            <div class="dropdown">
+              <div class="title">FAMILY SITE</div>
+              <ul class="list">
+                <li>
+                  <a
+                    href="https://www.inflearn.com/users/@codingworks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >코딩웍스 인프런 강좌</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.inflearn.com/users/@codingworks/blogs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >코딩웍스 퍼블리싱 블로그</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/codingworks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >코딩웍스 퍼블리싱 유튜브</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.inflearn.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >인프런 홈페이지</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      //  ##### jQuery #####
+      $(".dropdown .title").click(function () {
+        $(this).toggleClass("active");
+        $(".dropdown .list").stop().slideToggle();
+      });
+      $(".dropdown .list li a").click(function () {
+        $(".dropdown .title").text($(this).text());
+        $(".dropdown .list").stop().slideUp();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Reset CSS */
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1 {
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+
+/* ############### HEADER ############### */
+header {
+  background-color: deepskyblue;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 50px;
+}
+
+/* ############### SECTION ############### */
+section {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-of-type(even) {
+  background-color: #eee;
+}
+section h1 {
+  font-size: 50px;
+}
+
+/* ############### FOOTER ############### */
+footer {
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+}
+.inner {
+  width: 1250px;
+  padding: 30px 0;
+  margin: auto;
+  display: flex;
+  color: #ccc;
+}
+.inner > div {
+}
+
+/* ##### FOOTER > .copyright ##### */
+.copyright {
+  flex: 3;
+}
+.policy {
+}
+.policy a {
+}
+.policy a:nth-of-type(1) {
+  color: yellowgreen;
+}
+.policy a:nth-of-type(1)::after,
+.info span:not(:last-of-type)::after {
+  content: "|";
+  display: inline-block;
+  color: #ccc;
+  font-size: 12px;
+  margin-left: 7px;
+  margin-right: 5px;
+  transform: translateY(-2px);
+}
+.policy a:nth-of-type(2) {
+  color: #ccc;
+}
+.info {
+  margin-top: 10px;
+}
+.info span {
+}
+.info p {
+  margin: 0;
+}
+
+/* ##### FOOTER > .select ##### */
+.select {
+  position: relative;
+  flex: 1;
+}
+.dropdown {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 220px;
+  border: 1px solid white;
+  text-align: center;
+}
+.dropdown .title {
+  position: relative;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.dropdown .title:hover {
+  background-color: #666;
+}
+.dropdown .title::after {
+  content: "\f107";
+  font-family: "fontawesome";
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.dropdown .title.active::after {
+  transform: rotate(180deg);
+}
+.dropdown .list {
+  position: absolute;
+  left: -1px;
+  bottom: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: calc(100% + 2px);
+  border: 1px solid #ccc;
+  display: none;
+}
+.dropdown .list li {
+  background-color: #666;
+}
+.dropdown .list li:hover {
+  background-color: #333;
+}
+.dropdown .list li a {
+  display: block;
+  width: 100%;
+  color: #ccc;
+  padding: 5px 0;
+}
+.dropdown .list li:not(:last-of-type) a {
+  border-bottom: 1px solid #ccc;
+}
