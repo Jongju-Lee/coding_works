@@ -1,0 +1,133 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+/* Reset CSS */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+
+/* ############### Layout ############### */
+.container {
+}
+
+/* ############### Header ############### */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #deddde;
+}
+header nav {
+  width: 1400px;
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 70px;
+  height: 70px;
+}
+header .logo img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.search {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.search.active {
+  width: 400px;
+}
+.search .search_btn,
+.search .close_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+.search .search_btn {
+  font-size: 25px;
+  z-index: 1;
+}
+.search .close_btn {
+  font-size: 20px;
+  color: #aaa;
+}
+.search.active .close_btn {
+  left: calc(100% - 50px);
+}
+.input_frame {
+  width: 300px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.input_frame input {
+  width: inherit;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+}
+.input_frame input::placeholder {
+  transition: 0.5s;
+  font-style: italic;
+  color: #aaa;
+}
+.input_frame input:focus::placeholder {
+  opacity: 0;
+}
+
+/* ############### Section ############### */
+section {
+  height: 1000px;
+}
+section:nth-of-type(2) {
+  background-color: #eee;
+}
+section .inner {
+  width: 1000px;
+  margin: auto;
+  height: inherit;
+  text-align: center;
+  padding-top: 200px;
+}
+section .inner h1 {
+  font-size: 80px;
+}
+section .inner p {
+}

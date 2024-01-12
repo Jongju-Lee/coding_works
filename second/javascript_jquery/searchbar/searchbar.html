@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search_bar</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="searchbar.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="./img/logo-favicon.png" alt="logo_image" />
+          </div>
+          <div class="search">
+            <span class="search_btn">
+              <i class="xi-search"></i>
+            </span>
+            <span class="close_btn">
+              <i class="xi-close-thin"></i>
+            </span>
+            <div class="input_frame">
+              <input type="text" placeholder="Type Here..." />
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section>
+        <div class="inner">
+          <h1>This is Section #01</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae
+            quibusdam nisi dolore mollitia, pariatur eius eos quas veritatis ad
+            illo repellendus temporibus animi corporis blanditiis,
+            necessitatibus modi possimus. Perspiciatis fuga ut deleniti quaerat
+            porro sunt animi eum quisquam, officiis, doloribus ullam quam, vel
+            assumenda. Cum ex reprehenderit hic magnam?
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="inner">
+          <h1>This is Section #02</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae
+            quibusdam nisi dolore mollitia, pariatur eius eos quas veritatis ad
+            illo repellendus temporibus animi corporis blanditiis,
+            necessitatibus modi possimus. Perspiciatis fuga ut deleniti quaerat
+            porro sunt animi eum quisquam, officiis, doloribus ullam quam, vel
+            assumenda. Cum ex reprehenderit hic magnam?
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // ##### jQuery #####
+      // $(".search_btn").click(function () {
+      //   $(this).parent().addClass("active");
+      // });
+      // $(".close_btn, section").click(function () {
+      //   $(".search").removeClass("active");
+      //   $(".input_frame input").val("");
+      // });
+
+      // ##### Vanilla JavaScript #####
+      const $search = document.querySelector(".search");
+      const $search_btn = document.querySelector(".search_btn");
+      const $close_btn = document.querySelector(".close_btn");
+      const $section = document.querySelector("section");
+      const $search_input = document.querySelector(".input_frame input");
+
+      $search_btn.addEventListener("click", () => {
+        $search.classList.add("active");
+      });
+      $close_btn.addEventListener("click", () => {
+        $search.classList.remove("active");
+        $search_input.value = "";
+      });
+    </script>
+  </body>
+</html>
