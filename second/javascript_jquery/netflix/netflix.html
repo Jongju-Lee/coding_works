@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>netflix</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="netflix.css" />
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="faq_inner">
+        <h1>Frequently Asked Questions</h1>
+        <div class="accordion">
+          <div class="faq_title">What is Netflix?</div>
+          <div class="faq_content">
+            Netflix is a streaming service that offers a wide variety of
+            award-winning TV shows, movies, anime, documentaries, and more on
+            thousands of internet-connected devices.
+            <img src="./img/netflix-main.jpg" alt="netflix-main_image" />
+            You can watch as much as you want, whenever you want without a
+            single commercial – all for one low monthly price. There's always
+            something new to discover and new TV shows and movies are added
+            every week!
+          </div>
+          <div class="faq_title">How much does Netflix cost?</div>
+          <div class="faq_content">
+            Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+            streaming device, all for one fixed monthly fee. Plans range from
+            KRW9,500 to KRW14,500 a month. No extra costs, no contracts.
+            <img src="./img/netflix-cost.jpg" alt="netflix-cost_image" />
+          </div>
+          <div class="faq_title">Where can I watch?</div>
+          <div class="faq_content">
+            Watch anywhere, anytime, on an unlimited number of devices. Sign in
+            with your Netflix account to watch instantly on the web at
+            netflix.com from your personal computer or on any internet-connected
+            device that offers the Netflix app, including smart TVs,
+            smartphones, tablets, streaming media players and game consoles.
+            <br /><br />
+            You can also download your favorite shows with the iOS, Android, or
+            Windows 10 app. Use downloads to watch while you're on the go and
+            without an internet connection. Take Netflix with you anywhere.
+          </div>
+          <div class="faq_title">How do I cancel?</div>
+          <div class="faq_content">
+            etflix is flexible. There are no pesky contracts and no commitments.
+            You can easily cancel your account online in two clicks. There are
+            no cancellation fees – start or stop your account anytime. Netflix
+            has an extensive library of feature films, documentaries, TV shows,
+            anime, award-winning Netflix originals, and more. Watch as much as
+            you want, anytime you want.
+          </div>
+          <div class="faq_title">What can I watch on Netflix?</div>
+          <div class="faq_content">
+            Netflix has an extensive library of feature films, documentaries, TV
+            shows, anime, award-winning Netflix originals, and more. Watch as
+            much as you want, anytime you want.
+            <img src="./img/netflix-tv.jpg" alt="netflix-tv_image" />
+          </div>
+          <div class="faq_title">Is Netflix good for kids?</div>
+          <div class="faq_content">
+            The Netflix Kids experience is included in your membership to give
+            parents control while kids enjoy family-friendly TV shows and movies
+            in their own space.
+            <img src="./img/netflix-kids.jpg" alt="netflix-kids_image" />
+            Kids profiles come with PIN-protected parental controls that let you
+            restrict the maturity rating of content kids can watch and block
+            specific faq-titles you don’t want kids to see.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".faq_title").eq(0).addClass("active");
+      $(".faq_title").eq(0).next().slideDown();
+      $(".faq_title").click(function () {
+        $(this).addClass("active");
+        $(this).siblings(".faq_title").removeClass("active");
+        $(this).next().slideDown();
+        $(this).siblings(".faq_title").next().slideUp();
+      });
+    </script>
+  </body>
+</html>

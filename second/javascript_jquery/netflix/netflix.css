@@ -1,0 +1,80 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+/* Reset CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+
+/* ############### Layout ############### */
+.container {
+  padding: 50px 0;
+  background-color: #333;
+  color: gainsboro;
+  min-height: 100vh;
+}
+.faq_inner {
+  width: 1250px;
+  margin: auto;
+}
+.faq_inner h1 {
+  margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* ############### Accordion ############### */
+.accordion {
+  width: 700px;
+  margin: auto;
+}
+.faq_title,
+.faq_content {
+  padding: 10px;
+  background-color: #303030;
+}
+.faq_title {
+  position: relative;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.faq_title::after {
+  content: "\e9c5";
+  font-family: "xeicon";
+  position: absolute;
+  right: 15px;
+  transition: 0.5s;
+}
+.faq_title.active::after {
+  transform: rotate(45deg);
+}
+.faq_title:hover,
+.faq_title.active {
+  background-color: #34495e;
+}
+.faq_content {
+  margin-bottom: 7px;
+  display: none;
+}
+.faq_content img {
+  width: 100%;
+}
