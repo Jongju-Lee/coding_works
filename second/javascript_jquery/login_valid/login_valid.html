@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login_valid</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="login_valid.css" />
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <article class="login">
+        <form action="">
+          <div class="logo">
+            <img src="./img/logo-favicon.png" alt="logo_image" />
+          </div>
+          <h1>CodingWorks Login</h1>
+          <div class="input-field">
+            <input type="email" id="email" autocomplete="off" required />
+            <label for="email">USER EMAIL</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="pw" required />
+            <label for="pw">PASSWORD</label>
+          </div>
+          <div class="button-field">
+            <button type="submit">SIGN IN</button>
+          </div>
+          <div class="add-info">
+            <div class="save-email">
+              <input type="checkbox" id="chk1" />
+              <label for="chk1">Save your Email?</label>
+            </div>
+            <a class="forgot" href="#none">Forgot Password?</a>
+          </div>
+        </form>
+      </article>
+    </section>
+
+    <script>
+      // ##### jQuery #####
+      const $emailInput = $(".input-field input[type=email]");
+      const $pwInput = $(".input-field input[type=password]");
+      const $submitBtn = $(".button-field button");
+      $emailInput.blur(function () {
+        if (!($emailInput.val() === "")) {
+          // email input에 값이 있으면 success 클래스 추가
+          $emailInput.addClass("success");
+        } else if ($emailInput.val() === "") {
+          // email input에 값이 없으면 fail 클래스 추가
+          $emailInput.addClass("fail");
+        }
+      });
+      $pwInput.blur(function () {
+        if (!($pwInput.val() === "")) {
+          // email input에 값이 있으면 success 클래스 추가
+          $pwInput.addClass("success");
+        } else if ($pwInput.val() === "") {
+          // email input에 값이 없으면 fail 클래스 추가
+          $pwInput.addClass("fail");
+        }
+      });
+      $submitBtn.click(function () {
+        if ($emailInput.val() === "") {
+          $emailInput.addClass("warning");
+        }
+        if ($pwInput.val() === "") {
+          $pwInput.addClass("warning");
+        }
+      });
+    </script>
+  </body>
+</html>

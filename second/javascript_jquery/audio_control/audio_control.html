@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>audio control by javascript</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="audio_control.css" />
+  </head>
+  <body>
+    <h1>자바스크립트 사운드 재생 제어하기</h1>
+    <div class="buttons">
+      <button class="play-pause_btn">
+        Play<i class="fa fa-play" aria-hidden="true"></i>
+      </button>
+      <button class="stop_btn">
+        Stop<i class="fa fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="audio-status">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <audio src="./audio/mountain-sky-bgm.mp3"></audio>
+
+    <script>
+      // ########## JavaScript ##########
+      const $playPauseBtn = document.querySelector(".play-pause_btn");
+      const $stopBtn = document.querySelector(".stop_btn");
+      const $audio = document.querySelector("audio");
+      const $audioBar = document.querySelector(".audio-status");
+      let playFlag = false;
+
+      $audio.volume = 0.1;
+
+      const playPause = () => {
+        if (!playFlag) {
+          // 함수 실행전 오디오가 재생중이지 않을때(초기상태)
+          $audio.play();
+          $audioBar.classList.add("active");
+          $playPauseBtn.innerHTML =
+            'Pause<i class="fa fa-pause" aria-hidden="true"></i>';
+        } else if (playFlag) {
+          // 함수 실행 전 오디오가 재생중일 때
+          $audio.pause();
+          $audioBar.classList.remove("active");
+          $playPauseBtn.innerHTML =
+            'Play<i class="fa fa-play" aria-hidden="true"></i>';
+        }
+        playFlag = !playFlag;
+      };
+      const stop = () => {
+        $audio.pause();
+        $audioBar.classList.remove("active");
+        $audio.currentTime = 0;
+        playFlag = false;
+        $playPauseBtn.innerHTML =
+          'Play<i class="fa fa-play" aria-hidden="true"></i>';
+      };
+
+      $playPauseBtn.addEventListener("click", playPause);
+      $stopBtn.addEventListener("click", stop);
+    </script>
+  </body>
+</html>

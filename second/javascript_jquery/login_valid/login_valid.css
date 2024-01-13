@@ -1,0 +1,142 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+/* Reset CSS */
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+body {
+  position: relative;
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  background: url(./img/background.jpg) no-repeat center center / cover;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* ############### Layout ############### */
+section {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ############### Login ############### */
+article.login {
+  width: 350px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.login .logo {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+.login .logo img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.login h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+}
+.login .input-field {
+  position: relative;
+  margin: 30px 0;
+}
+.login .input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: gainsboro;
+  transition: 0.5s;
+}
+.login .input-field input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  padding: 10px 0;
+  background-color: transparent;
+  color: gainsboro;
+  font-size: 18px;
+}
+.login .input-field input:focus + label,
+.login .input-field input:valid + label,
+.login .input-field input.success + label {
+  top: -8px;
+  color: dodgerblue;
+}
+.login .input-field input.warning:invalid + label,
+.login .input-field input.fail:invalid + label {
+  top: -8px;
+  color: crimson;
+}
+.login .button-field button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: yellowgreen;
+  color: #fff;
+}
+.login .button-field button:hover {
+  background-color: rgb(135, 180, 43);
+}
+.login .add-info {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.login .save-email {
+}
+.login .save-email input {
+  display: none;
+}
+.login .save-email label {
+  color: gainsboro;
+  cursor: pointer;
+}
+.login .save-email label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  transform: translateY(3px);
+  background: url(./img/icon-checkbox.png) no-repeat;
+  background-position: center left;
+}
+.login .save-email input:checked + label::before {
+  background-position: center right;
+}
+.login .forgot {
+  color: gainsboro;
+}
+.login .forgot:hover {
+  text-decoration: underline;
+}
