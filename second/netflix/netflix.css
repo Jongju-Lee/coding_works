@@ -1,0 +1,103 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+/* Reset CSS */
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+body {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
+  background: #000
+    url(./img/KR-ko-20240107-trifectadaily-perspective_alpha_website_large.jpg)
+    no-repeat center center / cover;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* COMMON CSS */
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+
+/* ########## Header ########## */
+header {
+}
+.header_inner {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_inner .logo img {
+  width: 180px;
+}
+.side_wrapper {
+  display: flex;
+}
+.select_language {
+  background-color: #000;
+  text-align: center;
+  margin-right: 15px;
+}
+.select_language .title {
+  position: relative;
+  padding: 6px 30px;
+  padding-left: 20px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.select_language .title i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.select_language .content {
+  display: none;
+}
+.select_language .content span {
+  display: block;
+  font-size: 15px;
+}
+.select_language .content span:hover {
+  background-color: #999;
+}
+.btn_login {
+  border: none;
+  background-color: crimson;
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+/* ########## Section ########## */
+section.welcome {
+}
