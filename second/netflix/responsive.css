@@ -1,0 +1,98 @@
+/* ##### Mobile ##### */
+@media (max-width: 767px) {
+  /* ########## COMMON CSS ########## */
+  body {
+    height: auto;
+  }
+  .inner {
+    width: 100%;
+    padding: 30px;
+  }
+
+  /* ########## Header ########## */
+  .header_inner {
+    width: 100%;
+  }
+  .header_inner .logo img {
+    width: 120px;
+  }
+
+  /* ########## Section : Welcome ########## */
+  section .heading {
+    width: 100%;
+    padding: 30px;
+    padding-top: 100px;
+  }
+  section .heading h1 {
+    font-size: 25px;
+  }
+  section .heading h5 {
+    font-size: 20px;
+  }
+
+  /* ##### get-started ##### */
+  .get-started {
+    width: 100%;
+  }
+  .get-started button i {
+    display: none;
+  }
+
+  /* Section : Enjoy, Watch, Kids, download */
+  section:is(.enjoy, .watch, .kids, .download) {
+    border-bottom: 10px solid #333;
+    padding: 30px 0;
+  }
+  section .inner {
+    flex-direction: column;
+  }
+  section .inner h2 {
+    font-size: 30px;
+    line-height: 1.2em;
+  }
+  section.watch .preview,
+  section.download .preview {
+    order: 2;
+  }
+  section.watch .desc,
+  section.download .desc {
+    order: 1;
+  }
+  section.download .image_frame {
+    display: none;
+  }
+
+  /* ########## Section : FAQ ########## */
+  section .faq_inner {
+    width: 100%;
+    padding: 30px;
+  }
+  .faq_inner h2 {
+    margin: 30px;
+    font-size: 30px;
+  }
+  .faq_inner .accordion {
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  /* ########## Footer ########## */
+  footer .footer_inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .site-map h5 a {
+    display: block;
+  }
+  .site-map .links {
+    display: block;
+    line-height: 1.5em;
+  }
+  .site-map .links .item {
+    display: inline-block;
+    width: 45%;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}

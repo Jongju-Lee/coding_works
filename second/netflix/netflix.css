@@ -16,30 +16,26 @@ a {
 button {
   cursor: pointer;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 body {
   position: relative;
   font-size: 20px;
-  line-height: 1.5em;
+  line-height: 1.6em;
+  font-weight: 300;
   margin: 0;
   height: 100vh;
   color: #fff;
   background-color: #000;
-  background: #000
-    url(./img/KR-ko-20240107-trifectadaily-perspective_alpha_website_large.jpg)
-    no-repeat center center / cover;
-}
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
 }
 
-/* COMMON CSS */
+/* ########## COMMON CSS ########## */
 .inner {
   width: 1200px;
   margin: auto;
@@ -47,13 +43,22 @@ body::after {
 
 /* ########## Header ########## */
 header {
+  position: absolute;
+  border: 1px solid white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 .header_inner {
+  position: relative;
   width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 .header_inner .logo img {
   width: 180px;
@@ -61,43 +66,414 @@ header {
 .side_wrapper {
   display: flex;
 }
+
+/* ##### select_language ##### */
 .select_language {
+  position: relative;
   background-color: #000;
   text-align: center;
   margin-right: 15px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  width: 100px;
+}
+.select_language.active {
+  border-radius: 5px 5px 0 0;
 }
 .select_language .title {
   position: relative;
-  padding: 6px 30px;
-  padding-left: 20px;
   background-color: #000;
   color: #fff;
-  border: 1px solid #fff;
-  border-radius: 5px;
+  border: none;
+  transform: translateY(-3px);
 }
 .select_language .title i {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: -15px;
 }
 .select_language .content {
+  position: absolute;
+  width: inherit;
+  top: 100%;
+  left: -1px;
+  border: 1px solid #999;
+  border-radius: 0 0 5px 5px;
   display: none;
 }
+
 .select_language .content span {
   display: block;
   font-size: 15px;
+  background-color: #333;
 }
 .select_language .content span:hover {
-  background-color: #999;
+  background-color: #555;
 }
 .btn_login {
   border: none;
   background-color: crimson;
   color: #fff;
   padding: 0 15px;
+  margin-right: 20px;
   border-radius: 5px;
 }
 
-/* ########## Section ########## */
+/* ########## Section : Welcome ########## */
 section.welcome {
+  position: relative;
+  height: 80vh;
+  background: url(./img/KR-ko-20240107-trifectadaily-perspective_alpha_website_large.jpg)
+    no-repeat center center / cover;
+}
+section.welcome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+section .heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+section .heading h1 {
+  font-size: 45px;
+}
+section .heading h5 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 20px;
+  margin-top: 35px;
+}
+
+/* ##### get-started ##### */
+.get-started {
+  position: relative;
+  display: flex;
+  gap: 3px;
+  width: 500px;
+  margin: 20px auto;
+}
+.get-started :is(input[type="email"], button) {
+  padding: 0px;
+  border-radius: 3px;
+}
+.get-started input[type="email"] {
+  flex: 7;
+  border: 1px solid gainsboro;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 60%;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+.get-started span {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: gainsboro;
+  transition: 0.35s;
+  pointer-events: none;
+}
+.get-started input[type="email"]:focus + span,
+.get-started.focus input[type="email"] + span {
+  top: 12px;
+}
+.get-started button {
+  flex: 3;
+  border: 1px solid transparent;
+  background-color: crimson;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+.get-started button i {
+  transform: translateY(1px);
+}
+
+/* Section : Enjoy, Watch, Kids, download */
+section:is(.enjoy, .watch, .kids, .download) {
+  border-bottom: 10px solid #333;
+  padding: 70px 0;
+}
+section .inner {
+  display: flex;
+  align-items: center;
+}
+section .inner h2 {
+  font-size: 40px;
+  line-height: 1.2em;
+}
+section .inner p {
+  font-size: 25px;
+}
+section .inner .preview {
+  flex: 1;
+}
+section .inner .preview > img {
+  width: 100%;
+}
+section .inner .desc {
+  flex: 1;
+}
+
+/* ########## Section : download ########## */
+section.download {
+}
+section.download .preview {
+  position: relative;
+}
+section.download .image_frame {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  background-color: #000;
+}
+section.download .image_frame .box-shot {
+  height: 100%;
+}
+section.download .image_frame .download_icon {
+  height: 100%;
+}
+section.download .image_frame p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+section.download .image_frame p span {
+  margin-top: -10px;
+  display: block;
+  font-weight: normal;
+  color: dodgerblue;
+  font-size: 15px;
+}
+section.download .desc h2 {
+  margin-top: 80px;
+}
+
+/* ########## Section : FAQ ########## */
+section.faq {
+  border-bottom: 10px solid #333;
+}
+section .faq_inner {
+  width: 1200px;
+  margin: auto;
+  padding: 50px 0;
+}
+.faq_inner h2 {
+  margin: 50px;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+}
+.faq_inner .accordion {
+  font-size: 18px;
+}
+input[name="faq"] {
+  display: none;
+}
+input[name="faq"] + label {
+  position: relative;
+  display: block;
+  background-color: #333;
+  padding: 15px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+input[name="faq"] + label::after {
+  content: "\e9c5";
+  font-family: "xeicon";
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  transition: 0.35s;
+}
+input[name="faq"]:checked + label::after {
+  transform: rotate(45deg);
+}
+input[name="faq"] + label + .faq_content {
+  background-color: #333;
+  padding: 15px;
+  margin-bottom: 8px;
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: max-height 0.35s;
+}
+.faq_inner aside p {
+  text-align: center;
+}
+
+/* ##### Checked Function ##### */
+input[name="faq"]:checked + label + .faq_content {
+  max-height: 500px;
+  padding: 15px;
+}
+.faq_content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ########## Footer ########## */
+footer {
+  padding-top: 50px;
+  color: #999;
+}
+footer .footer_inner {
+  width: 1200px;
+  margin: auto;
+}
+.footer_inner a {
+  color: #999;
+  text-decoration: underline;
+}
+.site-map h5 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.site-map .links {
+  display: flex;
+  line-height: 2em;
+}
+.site-map .links .item {
+  flex: 1;
+}
+.site-map .links .item a {
+  font-weight: 300;
+  display: block;
+}
+.footer_inner .select_language {
+  display: inline-block;
+  margin: 20px 0;
+}
+.copy-rights span {
+  font-size: 13px;
+  display: block;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+.copy-rights a {
+  font-size: 13px;
+}
+
+/* ########## Login Modal ########## */
+.login_modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: none;
+}
+.login_modal .login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  padding: 70px 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+.login_modal .login i {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  cursor: pointer;
+  color: gainsboro;
+}
+.login_modal .login h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+.login_modal .input_field {
+  position: relative;
+  margin-bottom: 20px;
+}
+.login_modal .input_field input {
+  width: 100%;
+  padding: 15px;
+  padding-top: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+}
+.login_modal .input_field span {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  font-size: 15px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.35s;
+}
+.login_modal .input_field input:focus + span {
+  top: -5px;
+}
+.login_modal .btn_login {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.add-info {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.remember-info label {
+  cursor: pointer;
+}
+.need-help {
+  color: #fff;
+}
+.need-help:hover {
+  text-decoration: underline;
+}
+.sign-up-now {
+  font-size: 18px;
+  margin-top: 50px;
+  color: #999;
+}
+.sign-up-now a {
+  margin-left: 5px;
+  color: #fff;
+}
+.sign-up-now a:hover {
+  text-decoration: underline;
+}
+.check-robot {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+.check-robot a {
+  color: dodgerblue;
 }

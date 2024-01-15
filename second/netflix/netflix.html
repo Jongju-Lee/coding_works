@@ -6,16 +6,203 @@
     <title>Netflix Main</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="netflix.css" />
+    <link rel="stylesheet" href="responsive.css">
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
-    <header>
-      <div class="header_inner">
-        <div class="logo">
-          <img src="./img/Netflix_Logo_PMS.png" alt="logo_image" />
+    <div class="container">
+      <header>
+        <div class="header_inner">
+          <div class="logo">
+            <img src="./img/Netflix_Logo_PMS.png" alt="logo_image" />
+          </div>
+          <div class="side_wrapper">
+            <div class="select_language">
+              <button class="title">
+                한국어<i class="xi-caret-down-min"></i>
+              </button>
+              <div class="content">
+                <span>한국어</span>
+                <span>English</span>
+              </div>
+            </div>
+            <button class="btn_login">로그인</button>
+          </div>
         </div>
-        <div class="side_wrapper">
+      </header>
+      <section class="welcome">
+        <div class="heading">
+          <h1>영화, 시리즈 등을 무제한으로</h1>
+          <h5>어디서나 자유롭게 시청하세요. 해지는 언제든 가능합니다.</h5>
+          <p>
+            시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를
+            입력하세요.
+          </p>
+          <div class="get-started">
+            <input type="email" />
+            <span>이메일 주소</span>
+            <button>시작하기 <i class="xi-angle-right-thin"></i></button>
+          </div>
+        </div>
+      </section>
+      <section class="enjoy">
+        <div class="inner">
+          <div class="desc">
+            <h2>TV로 즐기세요</h2>
+            <p>
+              스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이
+              플레이어 등 다양한 디바이스에서 시청하세요.
+            </p>
+          </div>
+          <div class="preview">
+            <img src="./img/tv.png" alt="preview_image" />
+          </div>
+        </div>
+      </section>
+      <section class="watch">
+        <div class="inner">
+          <div class="preview">
+            <img src="./img/device-pile.png" alt="preview_image" />
+          </div>
+          <div class="desc">
+            <h2>어디서나 자유롭게<br/>시청하세요</h2>
+            <p>
+              각종 영화와 시리즈를 스마트폰, 태블릿, 노트북, TV에서 무제한으로
+              스트리밍하세요.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="kids">
+        <div class="inner">
+          <div class="desc">
+            <h2>어린이 전용 프로필을<br/>만들어 보세요</h2>
+            <p>
+              자기만의 공간에서 좋아하는 캐릭터와 즐기는 신나는 모험. 자녀에게 이
+              특별한 경험을 선물하세요. 넷플릭스 회원이라면 무료입니다.</p>
+            </p>
+          </div>
+          <div class="preview">
+            <img src="./img/AAAABdl4VeWgVycbbzJBV1KbIpMScxU_I4h6uTvNRpFab-65jsTTqI0V-g-4Jq4CLaIVqx-wbKAwA_Ee8KhZyTb0SFJ5tK2mifI-GYEB.png" alt="preview_image" />
+          </div>
+        </div>
+      </section>
+      <section class="download">
+        <div class="inner">
+          <div class="preview">
+            <img
+              src="./img/mobile-0819.jpg"
+              alt="preview_image"
+            />
+            <div class="image_frame">
+              <img class="box-shot" src="./img/boxshot.png" alt="">
+              <p>기묘한 이야기 <span>저장 중...</span></p>
+              <img class="download_icon" src="./img/download-icon.gif" alt="">
+            </div>
+          </div>
+          <div class="desc">
+            <h2>즐겨 보는 콘텐츠를 저장해 오프라인으로 시청하세요</h2>
+            <p>비행기, 기차, 잠수함. 어디서든 시청하세요.</p>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="faq_inner">
+          <h2>자주 묻는 질문</h2>
+          <article class="accordion">
+            <input type="radio" name="faq" id="faq1">
+            <label for="faq1">넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?</label>
+            <div class="faq_content">
+              넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 각종 상을 수상한 
+              넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 
+              마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 
+              수 있습니다.
+              <br /><br />
+              <a href="#none">넷플릭스 콘텐츠를 한번 살펴보세요.</a>
+            </div>
+            <input type="radio" name="faq" id="faq2">
+            <label for="faq2">넷플릭스란 무엇인가요?</label>
+            <div class="faq_content">
+              넷플릭스는 각종 수상 경력에 빛나는 시리즈, 영화, 애니메이션, 다큐멘터리
+              등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 
+              시청할 수 있는 스트리밍 서비스입니다.
+              <br /><br />
+              저렴한 월 요금으로 원하는 시간에 원하는 만큼 즐길 수 있습니다. 무궁무진한 콘텐츠가 준비되어 있으며 매주 새로운 시리즈와 영화가 제공됩니다.
+            </div>
+            <input type="radio" name="faq" id="faq3">
+            <label for="faq3">넷플릭스 요금은 얼마인가요?</label>
+            <div class="faq_content">
+              스마트폰, 태블릿, 스마트 TV, 노트북, 스트리밍 디바이스 등 다양한 디바이스에서 월정액 요금 하나로
+              넷플릭스를 시청하세요. 멤버십 요금은 월 5,500원부터 17,000원까지 다양합니다. 추가 비용이나 약정이
+              없습니다.
+            </div>
+            <input type="radio" name="faq" id="faq4">
+            <label for="faq4">어디에서 시청할 수 있나요?</label>
+            <div class="faq_content">
+              언제 어디서나 시청할 수 있습니다. 넷플릭스 계정으로 로그인하면 PC에서 netflix.com을 통해 바로 시청할 
+              수 있으며, 인터넷이 연결되어 있고 넷플릭스 앱을 지원하는 디바이스(스마트 TV, 스마트폰, 태블릿, 스트리밍
+              미디어 플레이어, 게임 콘솔 등)에서도 언제든지 시청할 수 있습니다.
+              <br /><br />
+              iOS, Android, Windows 10용 앱에서는 좋아하는 시리즈를 저장할 수도 있습니다. 저장 기능을 이용해 이동
+              중이나 인터넷에 연결할 수 없는 곳에서도 시청하세요. 넷플릭스는 어디서든 함께니까요.
+            </div>
+            <input type="radio" name="faq" id="faq5">
+            <label for="faq5">멤버십을 해지하려면 어떻게 하나요?</label>
+            <div class="faq_content">
+              넷플릭스는 부담 없이 간편합니다. 성가신 계약도, 약정도 없으니까요. 멤버십 해지도 온라인에서 클릭 두 번이면
+              완료할 수 있습니다. 해지 수수료도 없으니 원할 때 언제든 계정을 시작하거나 종료하세요.
+            </div>
+            <input type="radio" name="faq" id="faq6">
+            <label for="faq6">아이들이 넷플릭스를 봐도 좋을까요?</label>
+            <div class="faq_content">
+              멤버십에 넷플릭스 키즈 환경이 포함되어 있어 자녀가 자기만의 공간에서 가족용 시리즈와 영화를 즐기는 동안
+              부모가 이를 관리할 수 있습니다.
+              <br /><br />
+              키즈 프로필과 더불어 PIN 번호를 이용한 자녀 보호 기능도 있어, 자녀가 시청할 수 있는 콘텐츠의 관람등급을
+              제한하고 자녀의 시청을 원치 않는 특정 작품을 차단할 수도 있습니다.
+            </div>
+          </article>
+          <aside>
+            <p>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
+            <div class="get-started">
+              <input type="email" />
+              <span>이메일 주소</span>
+              <button>시작하기 <i class="xi-angle-right-thin"></i></button>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <footer>
+        <div class="footer_inner">
+          <div class="site-map">
+            <h5>질문이 있으신가요? 문의전화: <a href="#none">00-308-321-0161 (수신자 부담)</a></h5>
+            <div class="links">
+              <div class="item">
+                <a href="#none">자주 묻는 질문</a>
+                <a href="#none">투자 정보(IR)</a>
+                <a href="#none">개인정보 처리방침</a>
+                <a href="#none">속도 테스트</a>
+              </div>
+              <div class="item">
+                <a href="#none">고객 센터</a>
+                <a href="#none">입사 정보</a>
+                <a href="#none">쿠키 설정</a>
+                <a href="#none">법적 고지</a>
+              </div>
+              <div class="item">
+                <a href="#none">계정</a>
+                <a href="#none">넷플릭스 지원 디바이스</a>
+                <a href="#none">회사 정보</a>
+                <a href="#none">오직 넷플릭스에서</a>
+              </div>
+              <div class="item">
+                <a href="#none">미디어 센터</a>
+                <a href="#none">이용 약관</a>
+                <a href="#none">문의하기</a>
+              </div>
+            </div>
+          </div>
           <div class="select_language">
             <button class="title">
               한국어<i class="xi-caret-down-min"></i>
@@ -25,16 +212,78 @@
               <span>English</span>
             </div>
           </div>
+          <div class="copy-rights">
+            <h6>넷플릭스 대한민국</h6>
+            <span>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 00-308-321-0161 (수신자 부담)</span>
+            <span>대표: 레지널드 숀 톰프슨</span>
+            <span>이메일 주소: korea@netflix.com</span>
+            <span>주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</span>
+            <span>사업자등록번호: 165-87-00119</span>
+            <span>클라우드 호스팅: Amazon Web Services Inc.</span>
+            <a href="#none">공정거래위원회 웹사이트</a>
+          </div>
+        </div>      
+      </footer>
+      <div class="login_modal">
+        <div class="login">
+          <i class="btn_close xi-close-thin"></i>
+          <h2>로그인</h2>
+          <div class="input_field">
+            <input type="email">
+            <span>이메일 주소 또는 전화번호</span>
+          </div>
+          <div class="input_field">
+            <input type="password">
+            <span>비밀번호</span>
+          </div>
           <button class="btn_login">로그인</button>
-        </div>
+          <div class="add-info">
+            <div class="remember-info">
+              <input type="checkbox" id="remember" />
+              <label for="remember">로그인 정보 저장</label>
+            </div>
+            <a class="need-help" href="#none">도움이 필요하신가요?</a>
+          </div>
+          <p class="sign-up-now">Netflix 회원이 아닌가요?<a href="#none">지금 가입하세요.</a></p>
+          <p class="check-robot">이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다. 
+        <a href="#none"> 자세히 알아보기.</a></p>
       </div>
-    </header>
-    <section class="welcome"></section>
-    <section class="enjoy"></section>
-    <section class="watch"></section>
-    <section class="kids"></section>
-    <section class="download"></section>
-    <section class="faq"></section>
-    <footer></footer>
+    </div>
+  </div>
+
+
+    <script>
+      // ########## jQuery ##########
+      const $email_input = $('.get-started input[type="email"]');
+      $('.get-started input[type="email"]').blur(function () {
+        if (!($email_input.val() === "")) {
+          // input[type=email]에 값이 들어가있으면
+          $(".get-started").addClass("focus");
+        } else if ($email_input.val() === "") {
+          // input[type=email]에 값이 비어있으면
+          $(".get-started").removeClass("focus");
+        }
+      });
+      $('.select_language .title').focus(function() {
+        $('.select_language .content').slideDown()
+        $('.select_language').addClass('active')
+      })
+      $('.select_language .title').blur(function() {
+        $('.select_language .content').slideUp()
+        $('.select_language').removeClass('active')
+      })
+      $('.select_language .content span:nth-child(1)').click(function() {
+        $('.select_language .title').html('한국어')
+      })
+      $('.select_language .content span:nth-child(2)').click(function() {
+        $('.select_language .title').html('English')
+      })
+      $('.btn_login').click(function() {
+        $('.login_modal').fadeIn()
+      })
+      $('.btn_close').click(function() {
+        $('.login_modal').fadeOut()
+      })
+    </script>
   </body>
 </html>
