@@ -1,0 +1,290 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+/* Reset CSS */
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  color: #333;
+  font-weight: 300;
+}
+
+/* ############### COMMON ###############  */
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+.download_btn a {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: dodgerblue;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 3px;
+}
+.download_btn a:hover {
+  background-color: rgb(24, 113, 203);
+}
+
+/* ############### Header ###############  */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+header .logo {
+}
+header .logo img {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+
+/* ########## Section : welcome ##########  */
+section.welcome {
+  padding: 200px 0 100px 0;
+}
+.welcome .inner {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+.welcome .logo img {
+  width: 50px;
+  height: 50px;
+}
+.welcome h1 {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1.3em;
+}
+.welcome h1 + p {
+  margin: 20px 0;
+}
+
+/* ########## .welcome .download ########## */
+.welcome .download span {
+  display: block;
+  font-size: 14px;
+}
+
+/* ########## .welcome .static ########## */
+.welcome .static {
+  font-size: 14px;
+}
+.welcome .static p:nth-of-type(1) {
+}
+.welcome .static p:nth-of-type(1) label {
+  cursor: pointer;
+}
+.welcome .static p:nth-of-type(1) input {
+}
+.welcome .static a {
+  color: dodgerblue;
+}
+.welcome .static p:nth-of-type(2) {
+}
+
+/* ########## .welcome .next-section ########## */
+.next_section {
+  margin: auto;
+  margin-top: 150px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+  color: #777;
+}
+.next_section:hover i {
+  animation: upDown 1.2s linear infinite;
+}
+
+/* ##### KeyFrame animation ##### */
+@keyframes upDown {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+/* ########## Section.feature ########## */
+section.feature {
+  margin: 50px 0;
+}
+section.feature .inner {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+section.feature .inner > div {
+  flex: 1;
+}
+
+/* ##### Section.feature .desc ##### */
+section.feature .desc {
+  margin-top: 50px;
+}
+section.feature .desc img {
+  width: 80px;
+  height: 80px;
+}
+section.feature .desc h2 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.3em;
+}
+section.feature .desc a {
+  color: purple;
+}
+section.feature .desc a i {
+  transition: 0.35s;
+}
+section.feature .desc a:hover i {
+  transform: translateX(5px);
+}
+
+/* ##### Section.feature .photo ##### */
+section.feature .photo {
+}
+section.feature .photo img {
+  width: 100%;
+}
+
+/* ########## Section.call-action ########## */
+section.call-action {
+  padding: 70px 0;
+  background-color: dodgerblue;
+  color: #fff;
+  text-align: center;
+}
+.call-action h2 {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.call-action .download_btn a {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+/* ########## Footer ########## */
+footer {
+  padding-bottom: 100px;
+}
+/* Footer > .sns */
+footer .sns {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+footer .sns span {
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .sns span a {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 22px;
+  transform: translateY(3px);
+}
+/* Footer > .site-map */
+footer .site-map {
+  padding: 50px 0;
+  border-bottom: 1px solid #ddd;
+}
+footer .link-items {
+  overflow: hidden;
+}
+footer .link-item {
+  float: left;
+  width: 17%;
+  margin-right: 10px;
+}
+footer .item_title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+footer .item_content {
+}
+footer .item_content a {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+footer .item_content a:hover {
+  color: #000;
+}
+/* Footer > .copy-rights */
+footer .copy-right {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .logo_footer img {
+}
+footer .policy {
+  margin-left: 10px;
+  flex: 1;
+}
+footer .policy a {
+}
+footer .policy a::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 8px;
+  font-size: 12px;
+  transform: translateY(-2px);
+}
+footer .language {
+}
+footer .language i {
+  font-size: 20px;
+  transform: translateY(3px);
+}
+footer .language span {
+  margin-right: 5px;
+}
+footer .language select {
+  width: 200px;
+}
