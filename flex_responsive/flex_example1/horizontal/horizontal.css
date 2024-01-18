@@ -1,0 +1,19 @@
+.container {
+  border: 5px solid #000;
+  display: flex;
+}
+.box {
+  flex: 1;
+  height: 200px;
+  display: flex;
+  border: 5px solid red;
+}
+.box > div {
+  flex: 1;
+}
+.box .child1 {
+  background-color: yellow;
+}
+.box .child2 {
+  background-color: yellowgreen;
+}
