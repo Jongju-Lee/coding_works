@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-weight: bold;
+}
+.container {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+header,
+section.banner {
+  padding: 20px;
+}
+header {
+  background-color: yellow;
+}
+section.banner {
+  background-color: yellowgreen;
+}
+section.main {
+  display: flex;
+  flex: 1;
+}
+section.main nav,
+section.main article {
+  padding: 20px;
+}
+section.main nav {
+  flex-basis: 300px;
+  background-color: pink;
+}
+section.main article {
+  flex: 1;
+  background-color: skyblue;
+}
+section.main article h1 {
+  margin: 0;
+}
+section.main article p {
+  margin: 0;
+}
