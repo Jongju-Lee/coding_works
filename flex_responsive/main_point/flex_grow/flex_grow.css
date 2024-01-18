@@ -1,0 +1,27 @@
+.parent {
+  border: 5px solid green;
+  display: flex;
+}
+.parent div {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  font-size: 30px;
+}
+.child1 {
+  background-color: crimson;
+  /* flex-grow: 1; */
+  flex: 1;
+}
+.child2 {
+  background-color: yellowgreen;
+  /* flex-grow: 2; */
+  flex: 2;
+}
+.child3 {
+  background-color: royalblue;
+  /* flex-grow: 1; */
+  flex: 1;
+}

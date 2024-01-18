@@ -1,0 +1,21 @@
+.parent {
+  border: 5px solid #000;
+  display: flex;
+  height: 500px;
+  align-items: center;
+}
+.parent div {
+  height: 200px;
+  background-color: crimson;
+  margin: 5px;
+  flex: 1;
+}
+.child1 {
+  align-self: flex-start;
+}
+.child2 {
+  align-self: stretch;
+}
+.child3 {
+  align-self: flex-end;
+}

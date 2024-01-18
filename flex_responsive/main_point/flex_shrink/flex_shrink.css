@@ -1,0 +1,20 @@
+.parent {
+  border: 5px solid black;
+  display: flex;
+}
+.parent div {
+  width: 300px;
+  height: 200px;
+}
+.child1 {
+  background-color: crimson;
+  flex-shrink: 1;
+}
+.child2 {
+  background-color: yellowgreen;
+  flex-shrink: 2;
+}
+.child3 {
+  background-color: royalblue;
+  flex-shrink: 1;
+}

@@ -1,0 +1,17 @@
+.parent {
+  border: 5px solid black;
+  display: flex;
+  /* flex-direction: column;
+  flex-wrap: wrap; */
+  flex-flow: row wrap;
+}
+.child {
+  background-color: purple;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin: 5px;
+}
