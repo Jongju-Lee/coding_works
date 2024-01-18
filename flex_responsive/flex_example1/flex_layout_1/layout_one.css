@@ -1,0 +1,66 @@
+/* Default CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  text-align: center;
+}
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #a1905f;
+  font-size: 30px;
+}
+section {
+  display: flex;
+  align-items: center;
+  flex: 6;
+}
+section > * {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+section article {
+  background-color: #fff;
+  flex: 3;
+}
+section aside {
+  background-color: #f0ebe4;
+  flex: 1;
+}
+section nav {
+  background-color: #e6e2d6;
+  flex: 1;
+}
