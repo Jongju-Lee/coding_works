@@ -4,6 +4,9 @@
 @import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
 
 /* Reset CSS */
+html {
+  scroll-behavior: smooth;
+}
 * {
   font-family: "Noto Sans KR", sans-serif;
   box-sizing: border-box;
@@ -62,17 +65,24 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-}
-header .logo {
+  z-index: 100;
 }
 header .logo img {
   cursor: pointer;
   transform: translateY(3px);
 }
+header .download_btn {
+  transform: translateX(220px);
+  transition: 0.5s;
+}
+header .download_btn.active {
+  transform: translateX(0);
+}
 
 /* ########## Section : welcome ##########  */
 section.welcome {
   padding: 200px 0 100px 0;
+  height: 100vh;
 }
 .welcome .inner {
   width: 500px;
@@ -127,22 +137,25 @@ section.welcome {
   border-radius: 50%;
   cursor: pointer;
   font-size: 30px;
-  color: #777;
 }
-.next_section:hover i {
+.next_section a {
+  color: #999;
+  background-color: #fff;
+}
+.next_section a i {
   animation: upDown 1.2s linear infinite;
 }
 
 /* ##### KeyFrame animation ##### */
 @keyframes upDown {
   0% {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
   50% {
-    transform: translateY(2px);
+    transform: translateY(3px);
   }
   100% {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 }
 
@@ -162,11 +175,18 @@ section.feature .inner > div {
 
 /* ##### Section.feature .desc ##### */
 section.feature .desc {
+  position: relative;
+  z-index: 0;
   margin-top: 50px;
 }
 section.feature .desc img {
+  position: absolute;
+  bottom: calc(100% + 20px);
+  left: 0px;
   width: 80px;
   height: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
 }
 section.feature .desc h2 {
   font-size: 40px;
@@ -209,7 +229,6 @@ section.call-action {
 
 /* ########## Footer ########## */
 footer {
-  padding-bottom: 100px;
 }
 /* Footer > .sns */
 footer .sns {
@@ -225,6 +244,9 @@ footer .sns span a {
   margin-left: 10px;
   font-size: 22px;
   transform: translateY(3px);
+}
+footer .sns span a:hover {
+  color: #999;
 }
 /* Footer > .site-map */
 footer .site-map {
@@ -242,6 +264,7 @@ footer .link-item {
 footer .item_title {
   font-size: 18px;
   margin-bottom: 15px;
+  pointer-events: none;
 }
 footer .item_content {
 }
@@ -261,12 +284,11 @@ footer .copy-right {
   align-items: center;
 }
 footer .logo_footer img {
+  cursor: pointer;
 }
 footer .policy {
   margin-left: 10px;
   flex: 1;
-}
-footer .policy a {
 }
 footer .policy a::after {
   content: "|";
@@ -276,6 +298,9 @@ footer .policy a::after {
   font-size: 12px;
   transform: translateY(-2px);
 }
+footer .policy a:last-child::after {
+  content: none;
+}
 footer .language {
 }
 footer .language i {
@@ -283,7 +308,7 @@ footer .language i {
   transform: translateY(3px);
 }
 footer .language span {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 footer .language select {
   width: 200px;

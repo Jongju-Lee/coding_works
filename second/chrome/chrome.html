@@ -10,18 +10,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Custom CSS & jQuery -->
     <link rel="stylesheet" href="chrome.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <script src="custom.js" defer></script>
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="./img/chrome-logo-landscape.svg" alt="logo_image" />
+        <a href="#none"
+          ><img src="./img/chrome-logo-landscape.svg" alt="logo_image"
+        /></a>
       </div>
       <div class="download_btn">
         <a href="#none">Chrome 다운로드</a>
       </div>
     </header>
-    <section class="welcome">
+    <section class="welcome" id="none">
       <div class="inner">
         <div class="logo">
           <img src="./img/chrome-logo_112px.svg" alt="logo_image" />
@@ -53,12 +56,12 @@
             </p>
           </div>
           <div class="next_section">
-            <i class="xi-angle-down-min"></i>
+            <a href="#solution"><i class="xi-angle-down-min"></i></a>
           </div>
         </div>
       </div>
     </section>
-    <section class="feature solution">
+    <section class="feature solution" id="solution">
       <div class="inner">
         <div class="desc">
           <img src="./img/extensions-icon.png" alt="small_image" />
@@ -193,7 +196,9 @@
         </div>
         <div class="copy-right">
           <span class="logo_footer">
-            <img src="./img/chrome-logo-landscape.svg" alt="footer_logo" />
+            <a class="logo" href="#none"
+              ><img src="./img/chrome-logo-landscape.svg" alt="footer_logo"
+            /></a>
           </span>
           <span class="policy">
             <a href="#none">개인정보 보호 및 약관</a>
