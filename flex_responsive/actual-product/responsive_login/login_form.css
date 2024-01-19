@@ -1,0 +1,140 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* Default CSS */
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+.container {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ############### Login Form ############### */
+.login {
+  border: 30px solid #eee;
+  padding: 30px;
+  width: 750px;
+}
+.login h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.sns_login {
+  margin: 30px 0;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+.sns_login span {
+  flex: 1;
+  text-align: center;
+}
+.sns_login span a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+.sns_login span:nth-child(1) a {
+  padding-left: 25px;
+  background-color: #2d5193;
+}
+.sns_login span:nth-child(2) a {
+  padding-left: 30px;
+  background-color: #4ea6f2;
+}
+.sns_login span:nth-child(3) a {
+  padding-left: 30px;
+  background-color: #e65c48;
+}
+.sns_login span a::before {
+  font-family: "xeicon";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 20px;
+}
+.sns_login span:nth-child(1):hover a {
+  background-color: #457adb;
+}
+.sns_login span:nth-child(2):hover a {
+  background-color: #3a86c9;
+}
+.sns_login span:nth-child(3):hover a {
+  background-color: #c44d3a;
+}
+.sns_login span:nth-child(1) a::before {
+  content: "\ebd5";
+  left: 15px;
+  transform: translateY(calc(-50% + 1px));
+}
+.sns_login span:nth-child(2) a::before {
+  content: "\ec1f";
+  left: 25px;
+  transform: translateY(calc(-50% + 1px));
+}
+.sns_login span:nth-child(3) a::before {
+  content: "\ebe0";
+  left: 25px;
+}
+.text_field {
+  margin: 20px 0;
+  display: flex;
+}
+.text_field label {
+  flex: 1;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.text_field input {
+  font-size: 18px;
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+}
+.btn_login {
+  float: right;
+  background-color: royalblue;
+  padding: 7px 50px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn_login:hover {
+  background-color: rgb(50, 84, 187);
+}

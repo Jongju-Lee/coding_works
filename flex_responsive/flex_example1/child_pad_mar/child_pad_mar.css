@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent {
+  border: 1px solid red;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.child {
+  background-color: crimson;
+  margin: 15px;
+  width: calc(50% - 30px);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

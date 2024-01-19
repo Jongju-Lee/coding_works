@@ -1,0 +1,46 @@
+/* ############### Mobile ############### */
+@media (max-width: 767px) {
+  body {
+    height: auto;
+  }
+  .container {
+    display: block;
+    /* padding: 20px; */
+  }
+  /* ########## Login Form ########## */
+  .login {
+    width: 100%;
+    border: none;
+  }
+  .login h2 {
+    text-align: center;
+  }
+  .sns_login {
+    margin: 30px 0 20px 0;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sns_login span:nth-child(1) a::before {
+    left: 18%;
+  }
+  .sns_login span:nth-child(2) a::before {
+    left: 18%;
+  }
+  .sns_login span:nth-child(3) a::before {
+    left: 18%;
+  }
+  .text_field {
+    flex-direction: column;
+    margin: 5px 0;
+  }
+  .text_field label {
+    margin-bottom: 7px;
+  }
+  .btn_login {
+    float: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
