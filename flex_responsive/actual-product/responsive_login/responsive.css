@@ -2,6 +2,8 @@
 @media (max-width: 767px) {
   body {
     height: auto;
+    background-color: #eee;
+    padding: 20px;
   }
   .container {
     display: block;
@@ -11,6 +13,9 @@
   .login {
     width: 100%;
     border: none;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
   }
   .login h2 {
     text-align: center;
@@ -21,20 +26,18 @@
     gap: 8px;
   }
   .sns_login span:nth-child(1) a::before {
-    left: 18%;
+    left: 15%;
   }
   .sns_login span:nth-child(2) a::before {
-    left: 18%;
+    left: 15%;
   }
   .sns_login span:nth-child(3) a::before {
-    left: 18%;
+    left: 15%;
   }
   .text_field {
     flex-direction: column;
     margin: 5px 0;
-  }
-  .text_field label {
-    margin-bottom: 7px;
+    gap: 7px;
   }
   .btn_login {
     float: none;

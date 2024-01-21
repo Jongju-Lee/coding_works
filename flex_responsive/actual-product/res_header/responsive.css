@@ -1,0 +1,53 @@
+/* ############### Mobile ############### */
+@media (max-width: 767px) {
+  header {
+    background-color: dodgerblue;
+    padding: 0;
+  }
+  header nav {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+  }
+  .header_logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+  }
+  .gnb {
+    border-top: 1px solid #ddd;
+  }
+  .gnb {
+    display: none;
+    flex: none;
+  }
+  .gnb a {
+    display: block;
+    margin: 20px;
+    font-size: 18px;
+  }
+  header .sns {
+    background-color: rgb(28, 116, 204);
+    padding: 5px 0;
+    text-align: center;
+    display: none;
+  }
+  header .sns a {
+    margin-right: 0;
+    margin: 0 10px;
+  }
+  header .sns a i {
+    font-size: 25px;
+  }
+  .trigger {
+    display: inline-block;
+    top: 20px;
+    right: 20px;
+    margin-right: 5px;
+  }
+}
+
+/* ############### Tablet ############### */
+@media (min-width: 768px) and (max-width: 1024px) {
+}

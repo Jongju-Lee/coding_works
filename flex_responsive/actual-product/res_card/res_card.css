@@ -1,0 +1,54 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+/* Default CSS */
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+}
+/* ############### Card ############### */
+.card {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-basis: 500px;
+  background-color: #eee;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.card_photo {
+  flex-basis: 150px;
+}
+.card_photo img {
+  width: 100%;
+}
+.card_desc {
+  flex: 1;
+}
