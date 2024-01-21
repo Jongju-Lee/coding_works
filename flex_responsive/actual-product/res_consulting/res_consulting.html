@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Consulting</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="res_consulting.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <section>
+      <div class="inner">
+        <div class="consulting_header">
+          <h1 class="heading">
+            퍼블리싱 학습의 새로운 <em>패러다임!</em
+            ><span
+              >신속하게 <em>코딩웍스 간편 상담</em>을 신청하실 수
+              있습니다.</span
+            >
+          </h1>
+          <h5>
+            상담 내용에 따라 비용과 절차에 관련하여 전화 또는 이메일로 신속하게
+            상담해 드립니다.
+          </h5>
+        </div>
+        <div class="consulting_form">
+          <form>
+            <div class="row">
+              <div class="input_field">
+                <label>이름</label>
+                <input type="text" required placeholder="이름을 입력하세요" />
+              </div>
+              <div class="input_field">
+                <label>이메일</label>
+                <input
+                  type="email"
+                  required
+                  placeholder="이메일을 입력하세요"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input_field">
+                <label>연락처</label>
+                <input type="tel" required placeholder="연락처를 입력하세요" />
+              </div>
+              <div class="input_field">
+                <label>상담구분</label>
+                <select required>
+                  <option value="선택하세요">선택하세요</option>
+                </select>
+              </div>
+            </div>
+            <div class="input_field">
+              <label>상담내용</label>
+              <textarea
+                required
+                placeholder="상담 접수가 이루어진 후 24시간 내에 연락 드리겠습니다. 감사합니다."
+              ></textarea>
+            </div>
+            <div class="iframe_field">
+              <label>개인정보 취급방침 (필수)</label>
+              <iframe src="./iframe/policy.html" frameborder="0"></iframe>
+              <label>
+                <input type="checkbox" required /> 개인정보 취급방침을 읽었으며
+                이에 동의합니다.
+              </label>
+            </div>
+            <button class="btn_submit">상담신청</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

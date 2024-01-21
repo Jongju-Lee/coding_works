@@ -1,0 +1,59 @@
+/* ############### Tablet ############### */
+@media (min-width: 768px) and (max-width: 1024px) {
+  section {
+    padding: 20px;
+  }
+  .inner {
+    width: 100%;
+  }
+  /* ##### Consulting Header ##### */
+  .heading {
+    font-size: 30px;
+  }
+  /* ##### Consulting Form ##### */
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* ############### Mobile ############### */
+@media (max-width: 767px) {
+  .inner {
+    width: 100%;
+  }
+  /* ##### Consulting Header ##### */
+  .heading {
+    font-size: 21px;
+    padding-bottom: 20px;
+  }
+  .heading::after {
+    width: 25%;
+  }
+  .consulting_header h5 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  /* ##### Consulting Form ##### */
+  .consulting_form {
+    margin: 20px 0;
+  }
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .input_field textarea {
+    min-height: 100px;
+    max-height: 100px;
+    max-width: 100%;
+  }
+  .iframe_field iframe {
+    max-height: 100px;
+  }
+  .iframe_field label:nth-of-type(2) {
+    font-size: 14px;
+  }
+  .btn_submit {
+    width: 100%;
+    font-size: 15px;
+  }
+}
