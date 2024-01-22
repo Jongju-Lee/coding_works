@@ -1,0 +1,108 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* Default CSS */
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+section {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.items {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.item {
+  position: relative;
+  width: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.item:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 20px 3px rgba(0, 0, 0, 0.3);
+}
+.item .photo {
+  width: inherit;
+  height: auto;
+}
+.item .photo img {
+  display: block;
+  transition: 0.5s;
+}
+.item:hover .photo img {
+  filter: grayscale(60%);
+}
+.item .desc {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 0 30px;
+  padding-top: 60%;
+  transition: 0.5s;
+}
+.item:hover .desc {
+  top: 0;
+}
+.item:nth-of-type(1) .desc {
+  background: linear-gradient(to bottom, transparent, crimson);
+}
+.item:nth-of-type(2) .desc {
+  background: linear-gradient(to bottom, transparent, yellowgreen);
+}
+.item:nth-of-type(3) .desc {
+  background: linear-gradient(to bottom, transparent, royalblue);
+}
+.item .desc h2 span {
+  display: block;
+  font-weight: 500;
+  font-size: 17px;
+  color: orange;
+  margin-top: 5px;
+}
+.sns a {
+  margin: 2px;
+}
+.sns i {
+  font-size: 20px;
+  color: #fff;
+}
+.sns a:hover i {
+  color: #999;
+}

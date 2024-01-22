@@ -1,0 +1,48 @@
+/* ########## Tablet ########## */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .items {
+    width: 100%;
+    padding: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .item .desc {
+    padding: 0 20px;
+    padding-top: 55%;
+  }
+  .item .desc h2 span {
+    font-size: 19px;
+    font-weight: bold;
+  }
+  .item .desc p {
+    font-size: 17px;
+  }
+  .sns a {
+    margin: 10px;
+  }
+  .sns i {
+    font-size: 25px;
+  }
+}
+
+/* ########## Mobile ########## */
+@media (max-width: 767px) {
+  body {
+    height: auto;
+  }
+  section {
+    margin: 30px 0;
+  }
+  .items {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .sns a {
+    margin: 10px;
+  }
+  .sns i {
+    font-size: 25px;
+  }
+}
