@@ -1,0 +1,59 @@
+/* ############### Tablet ############### */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ##### Header ##### */
+  .header_inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  /* ##### Section ##### */
+  .gallery {
+    width: 100%;
+    padding: 20px;
+  }
+  .gallery .image:last-child {
+    height: auto;
+  }
+}
+
+/* ############### Mobile ############### */
+@media (max-width: 767px) {
+  /* ##### Header ##### */
+  .header_inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .gnb {
+    text-align: center;
+  }
+  .gnb a {
+    margin-left: 0;
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  .gnb a:last-child {
+    margin-right: 0;
+  }
+  .search_wrapper {
+    margin-top: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .search input {
+    margin-bottom: 20px;
+  }
+  .search i {
+    top: 22px;
+    right: 18px;
+  }
+  .search_wrapper button {
+    margin: auto;
+  }
+  /* ##### Section ##### */
+  section {
+    padding: 20px 0;
+  }
+  .gallery {
+    width: 100%;
+    padding: 20px;
+  }
+}
