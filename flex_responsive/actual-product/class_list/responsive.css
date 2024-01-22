@@ -1,0 +1,74 @@
+/* ############### Tablet ############### */
+@media (min-width: 768px) and (max-width: 1024px) {
+  section {
+    padding: 20px;
+  }
+  .inner {
+    width: 100%;
+  }
+  /* ##### Heading ##### */
+  .heading h1 {
+    font-size: 33px;
+  }
+  .heading h1::after {
+    font-size: 25px;
+  }
+  .heading p {
+    font-size: 20px;
+  }
+  /* ##### Class List ##### */
+  .items {
+    justify-content: space-between;
+    gap: 13px;
+  }
+  .item {
+    flex: none;
+    width: 49%;
+    margin-bottom: 15px;
+  }
+}
+
+/* ############### Mobile ############### */
+@media (max-width: 767px) {
+  section {
+    padding: 20px;
+  }
+  .inner {
+    width: 100%;
+  }
+  /* ##### Heading ##### */
+  .heading {
+    text-align: center;
+  }
+  .heading h1 {
+    font-size: 28px;
+    line-height: 1.2em;
+  }
+  .heading h1::after {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .heading p {
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+  /* ##### Class List ##### */
+  .items {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .item:nth-of-type(1) {
+    order: 2;
+  }
+  .item:nth-of-type(2) {
+    order: 3;
+  }
+  .item:nth-of-type(3) {
+    order: 4;
+  }
+  .item.event {
+    order: 1;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 20px;
+  }
+}
