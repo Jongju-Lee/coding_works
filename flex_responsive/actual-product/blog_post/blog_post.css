@@ -1,0 +1,74 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* Default CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+section {
+}
+/* ########## Blog Items ########## */
+.blog_items {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+}
+.item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.item .photo {
+  overflow: hidden;
+}
+
+.item .photo img {
+  display: block;
+  width: 100%;
+  transition: 0.2s;
+}
+.item .photo:hover img {
+  transform: scale(1.05);
+}
+.item .desc {
+  flex-basis: 250px;
+  width: 250px;
+  background-color: #0fbda4;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.item .desc h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.item .desc p {
+  margin-bottom: 0;
+}

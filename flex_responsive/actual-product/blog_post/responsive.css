@@ -1,0 +1,40 @@
+/* ############### Tablet ############### */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ##### Blog Items ##### */
+  .blog_items {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .item {
+    flex: none;
+    width: 100%;
+    flex-direction: row;
+  }
+  .item .photo {
+    flex: 1;
+  }
+  .item .desc {
+    flex: 1;
+    padding: 0;
+  }
+}
+
+/* ############### Mobile ############### */
+@media (max-width: 767px) {
+  .blog_items {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+  .item .photo {
+  }
+  .item .desc {
+    width: 100%;
+  }
+  .item:nth-of-type(even) .photo {
+    order: 1;
+  }
+  .item:nth-of-type(even) .desc {
+    order: 2;
+  }
+}
