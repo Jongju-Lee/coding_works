@@ -1,0 +1,532 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+/* XEICON CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+/* Default CSS */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+.container {
+  position: relative;
+}
+/* ########## COMMON ##########  */
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+section:nth-of-type(even) {
+  background-color: #f8f8f8;
+}
+/* ########## Top Button ##########  */
+.btn_top {
+  position: fixed;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.5s;
+  bottom: -20px;
+  opacity: 0;
+  z-index: 100;
+}
+.btn_top i {
+  color: #fff;
+  font-size: 30px;
+  transform: translateY(6px);
+}
+.btn_top.active {
+  bottom: 20px;
+  opacity: 1;
+}
+/* ############### Header ############### */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+header .banner {
+  background-color: #222;
+  padding: 5px 0;
+}
+.lnb {
+  text-align: right;
+}
+.lnb a {
+  color: #bbb;
+  font-size: 13px;
+  margin-left: 10px;
+}
+.lnb a::before {
+  content: "for";
+  font-style: italic;
+  margin-right: 3px;
+  font-weight: 300;
+}
+nav {
+  background-color: transparent;
+  transition: 0.5s;
+}
+nav.active {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.nav_inner {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.gnb a {
+  color: #fff;
+  margin-left: 15px;
+}
+nav.active .gnb a {
+  color: #999;
+}
+/* ############### Main ############### */
+.intro {
+  height: 100vh;
+  background: url(./img/intro.jpg) no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro .heading {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  color: #fff;
+}
+.intro .heading h1 {
+  margin-top: 50px;
+  font-size: 65px;
+  font-weight: 500;
+}
+.intro .heading p {
+  font-size: 20px;
+  margin-top: 50px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+/* ########## Section : About ########## */
+.about {
+  padding: 150px 0;
+}
+.about .inner {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.about .heading {
+  flex: 3;
+  text-align: center;
+}
+.about .heading h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+.about .heading p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 30px;
+}
+.about .heading a {
+  color: crimson;
+  font-weight: bold;
+}
+.about .photo {
+  flex: 2;
+  overflow: hidden;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+}
+.about .photo img {
+  display: block;
+  width: 100%;
+}
+/* ########## Section : Ranking ########## */
+.ranking {
+  padding: 100px 0;
+}
+.ranking .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.ranking h2 {
+  font-size: 35px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+.ranking .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+.ranking .item {
+  flex: 1;
+  border-radius: 20px 0 20px 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.ranking .photo {
+  overflow: hidden;
+}
+.ranking .photo img {
+  display: block;
+  width: 100%;
+  transition: 0.35s;
+}
+.ranking .item:hover .photo img {
+  transform: scale(1.05);
+}
+.ranking .desc {
+  padding: 30px 15px;
+  height: 280px;
+}
+.ranking .desc .badge {
+  color: #fff;
+  padding: 2px 7px;
+}
+.ranking .badge.red {
+  background-color: crimson;
+}
+.ranking .badge.blue {
+  background-color: dodgerblue;
+}
+.ranking .desc h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.ranking .desc p i {
+  color: #000;
+  font-size: 15px;
+}
+.ranking .desc a {
+  color: crimson;
+}
+.ranking .desc a::after {
+  content: "\e90b";
+  font-family: "xeicon";
+  margin-left: 10px;
+  display: inline-block;
+  transform: translateY(1px) scaleX(1.5);
+  transition: 0.35s;
+}
+.ranking .desc a:hover::after {
+  transform: translate(5px, 1px) scaleX(1.5);
+}
+/* ########## Section : Testimonial ########## */
+.testimonial {
+  padding: 100px 0;
+}
+.testimonial_content h2 {
+  text-align: center;
+  position: relative;
+  padding-bottom: 30px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.testimonial_content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10%;
+  height: 3px;
+  background-color: royalblue;
+}
+.client {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.client img {
+  width: 85px;
+  border-radius: 50%;
+  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.client span {
+  font-size: 18px;
+}
+.client span b {
+  display: block;
+  margin-bottom: 5px;
+}
+.comment {
+  font-size: 16px;
+  line-height: 1.6em;
+  padding-right: 30px;
+}
+.slick-dots li button:before {
+  font-size: 10px;
+  margin-top: 20px;
+}
+/* ########## Section : Call-Action ########## */
+.call-action {
+  position: relative;
+  height: 50vh;
+  background: url(./img/callaction-01.jpg) no-repeat center center / cover;
+}
+.call-action .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, crimson, green);
+  opacity: 0.5;
+  z-index: 0;
+}
+.call-action .heading {
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  text-align: center;
+}
+.call-action .heading h2 {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+.call-action .heading h2 span {
+  font-weight: 500;
+}
+.call-action .heading a {
+  margin-top: 30px;
+  font-weight: 300;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  background-color: #2ecc71;
+  border-radius: 5px;
+  color: #fff;
+}
+/* ########## Section : Blog ########## */
+.blog {
+  padding: 70px 0;
+}
+/* ##### Blog : Heading ##### */
+.blog .heading {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.blog .heading span {
+  font-weight: 500;
+  color: dodgerblue;
+}
+.blog .heading h2 {
+  margin-top: 30px;
+  font-size: 35px;
+}
+.blog .heading p {
+  margin-top: 40px;
+  font-size: 22px;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+.blog .heading a {
+  color: crimson;
+  font-style: normal;
+}
+.blog .heading a::after {
+  content: "\e90b";
+  font-family: "xeicon";
+  margin-left: 10px;
+  display: inline-block;
+  transform: translateY(1px) scaleX(1.5);
+  transition: 0.35s;
+}
+.blog .heading a:hover::after {
+  transform: translate(10px, 1px) scaleX(1.5);
+}
+/* Main - Common */
+.main img {
+  width: 350px;
+  border-radius: 30px 0 30px 0;
+  cursor: pointer;
+}
+/* ##### Blog : Main ##### */
+.main {
+  display: flex;
+  gap: 30px;
+}
+.main article {
+  flex: 5;
+}
+.main article > span,
+.main aside > span {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.main article .item {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+.main article .item:last-of-type {
+  border-bottom: none;
+}
+.main article .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.main .desc h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+.main article .desc p {
+  font-weight: 300;
+}
+.main .desc span {
+  display: inline-block;
+  color: #999;
+  font-weight: 300;
+}
+
+.main aside {
+  flex: 2;
+}
+.main aside .item {
+  margin-bottom: 50px;
+}
+/* ########## Section : Festival ########## */
+.festival {
+  padding: 70px 0;
+  background-color: #444 !important;
+}
+.festival .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.festival .heading h2 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 25px;
+}
+.festival .heading h2 b {
+  font-weight: 500;
+}
+.festival .links {
+  margin-top: 30px;
+}
+.festival .links a {
+  display: inline-block;
+  color: #fff;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 3px;
+  transition: 0.35s;
+}
+.festival .links a:nth-of-type(1) {
+  background-color: rgb(255, 196, 0);
+}
+.festival .links a:nth-of-type(2) {
+  background-color: #eee;
+  color: #333;
+}
+.festival .links a:hover:nth-of-type(1) {
+  background-color: goldenrod;
+}
+.festival .links a:hover:nth-of-type(2) {
+  background-color: #999;
+  color: #fff;
+}
+/* ########## Section : Footer ########## */
+footer {
+  padding: 30px 0;
+  background-color: #000;
+  color: #fff;
+}
+footer .inner {
+  display: flex;
+}
+footer .links {
+  flex: 1;
+  display: flex;
+}
+footer .wrapper {
+  flex: 1;
+  text-align: center;
+}
+footer .wrapper span {
+}
+footer .wrapper a {
+  display: block;
+  color: #bbb;
+  font-weight: 300;
+}
+footer .wrapper a:hover {
+  color: #fff;
+}
+footer .copy-right {
+  flex: 1;
+  text-align: center;
+}
+footer .copy-right p {
+}
+footer .copy-right p span {
+  display: block;
+  color: #bbb;
+  font-weight: 300;
+  font-size: 13px;
+}
+footer .copy-right > span {
+  display: inline-block;
+  margin-top: 10px;
+}
