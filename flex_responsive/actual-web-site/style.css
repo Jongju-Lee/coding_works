@@ -22,6 +22,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  line-height: 1.2em;
 }
 html {
   scroll-behavior: smooth;
@@ -47,7 +48,8 @@ section:nth-of-type(even) {
 /* ########## Top Button ##########  */
 .btn_top {
   position: fixed;
-  right: 20px;
+  bottom: -30px;
+  right: 30px;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -56,9 +58,9 @@ section:nth-of-type(even) {
   text-align: center;
   border-radius: 50%;
   transition: 0.5s;
-  bottom: -20px;
   opacity: 0;
   z-index: 100;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .btn_top i {
   color: #fff;
@@ -66,7 +68,7 @@ section:nth-of-type(even) {
   transform: translateY(6px);
 }
 .btn_top.active {
-  bottom: 20px;
+  bottom: 30px;
   opacity: 1;
 }
 /* ############### Header ############### */
@@ -118,7 +120,27 @@ nav.active {
 nav.active .gnb a {
   color: #999;
 }
-/* ############### Main ############### */
+/* trigger */
+.trigger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid red;
+  width: 30px;
+  height: 17px;
+}
+.trigger span {
+  background-color: #fff;
+  width: 100%;
+  height: 1px;
+}
+.trigger span:nth-child(1) {
+}
+.trigger span:nth-child(2) {
+}
+.trigger span:nth-child(3) {
+}
+/* ########## Section : Intro ########## */
 .intro {
   height: 100vh;
   background: url(./img/intro.jpg) no-repeat center center / cover;
@@ -238,10 +260,6 @@ nav.active .gnb a {
   margin-top: 15px;
   font-size: 22px;
   font-weight: 500;
-}
-.ranking .desc p i {
-  color: #000;
-  font-size: 15px;
 }
 .ranking .desc a {
   color: crimson;
@@ -503,13 +521,14 @@ footer .links {
 footer .wrapper {
   flex: 1;
   text-align: center;
-}
-footer .wrapper span {
+  line-height: 1.7em;
 }
 footer .wrapper a {
   display: block;
   color: #bbb;
   font-weight: 300;
+  width: fit-content;
+  margin: auto;
 }
 footer .wrapper a:hover {
   color: #fff;
@@ -517,8 +536,6 @@ footer .wrapper a:hover {
 footer .copy-right {
   flex: 1;
   text-align: center;
-}
-footer .copy-right p {
 }
 footer .copy-right p span {
   display: block;
