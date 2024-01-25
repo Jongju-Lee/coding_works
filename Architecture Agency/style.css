@@ -1,0 +1,335 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+/* FontAwesome CDN 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* Default CSS */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  height: 100vh;
+  background-color: #fff;
+}
+/* ########## Entire layout ########## */
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  position: relative;
+  height: 100%;
+}
+.content {
+  background-color: #ddd;
+  position: absolute;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 80px);
+  left: 20px;
+  bottom: 20px;
+  overflow: hidden;
+}
+/* ########## Header ########## */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.gnb-inner {
+  height: 60px;
+  line-height: 60px;
+  width: calc(100% - 40px);
+  margin: auto;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  margin-top: 20px;
+}
+.gnb {
+  float: right;
+}
+.menu {
+  display: none;
+}
+.menu a {
+}
+.slogan {
+  font-size: 18px;
+  font-style: italic;
+}
+/* ########## Trigger ########## */
+.trigger {
+  display: none;
+}
+/* ########## Button - Hiring ########## */
+.btn_hiring {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+}
+.btn_hiring i {
+  transform: rotateY(180deg);
+}
+/* Button - Go To Top */
+.btn_top {
+  display: none;
+}
+/* ########## Section : About ########## */
+.about-inner {
+  position: relative;
+  background: #0dace3 url(./images/line-drawing.png) no-repeat right bottom;
+  height: 100%;
+}
+.about-items {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50%;
+  color: #fff;
+}
+.about-items .item {
+  width: 90%;
+  margin-left: auto;
+  margin-bottom: 80px;
+}
+.about-items .item:last-of-type {
+  margin-bottom: 0;
+}
+.about-items .item img {
+  width: 120px;
+  float: left;
+  margin-right: 20px;
+  filter: invert(100%);
+  transition: 0.35s;
+}
+.about-items .item:hover img {
+  filter: invert(0);
+}
+.about-items .item h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+  transition: 0.5s;
+}
+.about-items .item:hover h3 {
+  color: #000;
+}
+
+.about-items .item p {
+  margin: 0;
+  font-size: 18px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+/* ########## Section : Awards ########## */
+.awards-inner {
+  height: 100%;
+}
+.awards-inner > div {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.about-awards {
+  background-color: #1b2027;
+}
+.about-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  color: #fff;
+  text-align: center;
+}
+.about-heading h2 {
+  position: relative;
+  padding-bottom: 30px;
+  font-size: 35px;
+}
+.about-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 15%;
+  height: 3px;
+  background-color: crimson;
+}
+.about-heading p {
+  color: #bbb;
+  line-height: 1.5em;
+  margin-bottom: 40px;
+}
+.about-heading a {
+  color: #bbb;
+  border: 1px solid #bbb;
+  padding: 7px 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.about-heading a:hover {
+  background-color: #31c0ce;
+  color: #fff;
+  border-color: transparent;
+}
+
+.victory-jump {
+  background-color: #fff;
+}
+.victory-jump img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+}
+/* ########## Section : Location ########## */
+.location-inner {
+  position: relative;
+  background: url(./images/background-location.jpg) no-repeat center center;
+  height: 100%;
+}
+.location-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.85;
+}
+.feature {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  color: #bbb;
+  z-index: 1;
+}
+.feature > div {
+  float: left;
+}
+.office {
+  width: 60%;
+  padding-right: 100px;
+}
+.office-item:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+.office-item b {
+  font-weight: normal;
+}
+.office-item h2 {
+  margin: 0;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+  color: #1db1f0;
+}
+.office-item p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.office-item span {
+  color: #fff;
+}
+.service {
+  width: 40%;
+}
+.service-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.service-item i {
+  color: #1db1f0;
+  font-size: 40px;
+}
+.service-item h3 {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.service-item p {
+  margin: 0;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+/* ########## Section : Contact ########## */
+.contact-inner {
+  background-color: #fff;
+  height: 100%;
+}
+.contact-feature {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid red;
+}
+.contact-feature > div {
+  width: 50%;
+  height: 100%;
+  float: left;
+  border: 1px solid black;
+}
+.contact-form {
+}
+.contact-form h3 {
+}
+.contact-form h3 b {
+}
+.contact-form p {
+}
+.send-box {
+}
+.send-box label {
+}
+.send-box label::after {
+}
+.send-box input {
+}
+.send-box textarea {
+}
+.send-box button {
+}
+.contact-info {
+}
+.contact-info h4 {
+}
+.contact-info h4 b {
+}
+.contact-info ul {
+}
+.contact-info li {
+}
+.contact-info p {
+}
