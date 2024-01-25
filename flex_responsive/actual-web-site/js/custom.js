@@ -12,6 +12,15 @@ $(window).scroll(function () {
     $(".btn_top").removeClass("active");
   }
 });
+// ########## Trigger ##########
+$(".trigger").click(function () {
+  $(this).toggleClass("active");
+  $(".gnb").toggleClass("active");
+});
+$(".gnb a").click(function () {
+  $(".trigger").removeClass("active");
+  $(".gnb").removeClass("active");
+});
 // ########## Slick Slider ##########
 $(".my-slider").slick({
   dots: true,

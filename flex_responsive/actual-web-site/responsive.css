@@ -1,14 +1,233 @@
 /* ########## Mobile ########## */
 @media (max-width: 767px) {
+  /* ##### COMMON #####  */
+  .inner {
+    width: 100%;
+  }
+  /* ##### Top Button ##### */
+  .btn_top {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .btn_top i {
+    font-size: 35px;
+    transform: translate(1px, 8px);
+  }
   /* ##### Header ##### */
-  header .banner {
-    display: none;
+  .banner {
+    display: none !important;
+  }
+  .nav_inner {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .gnb {
+    position: absolute;
+    top: 0;
+    right: -230px;
+    width: 230px;
+    background-color: #fff;
+    height: 100vh;
+    text-align: center;
+    padding-top: 70px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .gnb a {
+    color: #333;
+    font-size: 22px;
+    display: block;
+    padding: 15px;
   }
   /* trigger */
   .trigger {
     display: block;
   }
-  .trigger span {
+  /* ##### Header ##### */
+  .intro .heading {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .intro .heading h1 {
+    font-size: 45px;
+  }
+  .intro .heading p {
+    margin-top: 30px;
+  }
+  /* ##### Section : About ##### */
+  .about {
+    padding: 70px 0;
+  }
+  .about .inner {
+    padding: 0 20px;
+    flex-direction: column-reverse;
+  }
+  .about .heading h2 {
+    font-size: 35px;
+  }
+  .about .heading p {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+  .about .heading a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  /* ##### Section : Ranking ##### */
+  .ranking {
+    padding: 80px 20px;
+  }
+  .ranking h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .ranking .items {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .ranking .item {
+    border-radius: 10px;
+  }
+  .ranking .desc {
+    height: auto;
+  }
+  /* ##### Section : Testimonial ##### */
+  .testimonial {
+    padding: 80px 20px;
+  }
+  .testimonial_content h2 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .testimonial_content h2::after {
+    width: 20%;
+  }
+  .client {
+    justify-content: center;
+    gap: 15px;
+  }
+  .comment {
+    text-align: center;
+    padding-right: 0;
+  }
+  /* ##### Section : Call-Action ##### */
+  .call-action {
+    height: 35vh;
+  }
+  .call-action .heading {
+    padding: 0 20px;
+  }
+  .call-action .heading h2 {
+    margin-top: 0;
+    font-size: 30px;
+  }
+  .call-action .heading a {
+    font-weight: 400;
+  }
+  /* ##### Section : Blog ##### */
+  .blog {
+    padding: 70px 20px;
+    padding-bottom: 20px;
+  }
+  .blog .heading {
+    text-align: center;
+  }
+  .blog .heading span {
+    font-size: 18px;
+  }
+  .blog .heading h2 {
+    font-size: 24px;
+  }
+  .blog .heading p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .blog .heading a {
+    font-size: 18px;
+  }
+  /* Main - Common */
+  .main img {
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+  }
+  .main {
+    flex-direction: column;
+    gap: 0;
+  }
+  .main article > span,
+  .main aside > span {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .main article .item {
+    flex-direction: column;
+    padding-right: 0;
+    gap: 0;
+  }
+  .main article .item:last-of-type {
+    border-bottom: 1px solid #ddd;
+  }
+  .main article .desc {
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .main .desc h3 {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  .main .desc p {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+  .main aside .item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .main aside .item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  /* ##### Section : Festival ##### */
+  .festival {
+    padding: 40px 30px;
+    text-align: center;
+  }
+  .festival .links {
+    margin-top: 20px;
+  }
+  .festival .links a {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+  }
+  /* ##### Section : Festival ##### */
+  footer .inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .wrapper {
+    line-height: 1em;
+    font-size: 17px;
+  }
+  footer .wrapper span {
+    display: inline-block;
+    padding: 10px;
+  }
+  footer .wrapper a {
+    width: 100%;
+    padding: 10px;
   }
 }
 
