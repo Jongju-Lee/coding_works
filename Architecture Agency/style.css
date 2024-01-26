@@ -142,6 +142,164 @@ header {
   margin-top: 5px;
   overflow: hidden;
 }
+/* ########## Section : Project ########## */
+.project-inner {
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.tabs {
+  width: 300%;
+  height: 100%;
+  transition: 0.5s;
+}
+.tab {
+  width: calc(100% / 3);
+  height: 100%;
+  float: left;
+}
+.tab > div {
+  float: left;
+  height: 100%;
+}
+.project-info {
+  width: 25%;
+}
+.project-photo {
+  width: 75%;
+}
+.project-photo img {
+  width: 100%;
+}
+input[type="radio"] {
+  display: none;
+}
+.btn {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 25%;
+  text-align: center;
+}
+.btn label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 8px;
+}
+.btn label::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  display: inline-block;
+  border: 1px solid transparent;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transition: 0.35s;
+}
+input[id="tab1"]:checked ~ .btn label[for="tab1"]::before,
+input[id="tab2"]:checked ~ .btn label[for="tab2"]::before,
+input[id="tab3"]:checked ~ .btn label[for="tab3"]::before,
+.btn label:hover::before {
+  border: 1px solid #777;
+}
+input[id="tab1"]:checked ~ .tabs {
+  transform: translateX(0);
+}
+input[id="tab2"]:checked ~ .tabs {
+  transform: translateX(-33.333333%);
+}
+input[id="tab3"]:checked ~ .tabs {
+  transform: translateX(-66.666666%);
+}
+/* ########## Section : Plan ########## */
+.plan-inner {
+  background-color: #1d1b24;
+  height: 100%;
+}
+.plan-feature {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plan-feature > div {
+  height: 300px;
+  color: #bbb;
+}
+.plan-info {
+  height: auto;
+  /* overflow: hidden; */
+}
+.plan-info > div {
+  float: left;
+}
+.plan-heading {
+  padding-right: 50px;
+  width: 60%;
+}
+:is(.plan-heading, .history-info) h2 {
+  position: relative;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 25px;
+}
+:is(.plan-heading, .history-info) h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #5cdac7;
+}
+.plan-heading p {
+  margin-top: 30px;
+  font-size: 17px;
+  line-height: 1.5em;
+}
+.plan-photo {
+  width: 40%;
+}
+.plan-photo img {
+  height: 280px;
+}
+.history-item {
+  margin-right: 10px;
+}
+.history-item h4 {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+}
+.history-item h4 span {
+  color: dodgerblue;
+}
+.history-item p {
+  line-height: 1.5em;
+}
+/* ##### Slick.js Custom CSS ##### */
+.history-slider .slick-dots li.slick-active button:before {
+  color: #fff;
+  font-size: 15px;
+}
+.history-slider .slick-dots li button:before {
+  color: #fff;
+  font-size: 15px;
+}
+.slick-dots li {
+  margin: 0 7px;
+}
 /* ########## Section : Awards ########## */
 .awards-inner {
   height: 100%;
@@ -290,46 +448,101 @@ header {
   width: 70%;
   height: 70%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid red;
 }
 .contact-feature > div {
   width: 50%;
   height: 100%;
   float: left;
-  border: 1px solid black;
+  padding: 20px;
 }
 .contact-form {
 }
 .contact-form h3 {
-}
-.contact-form h3 b {
-}
-.contact-form p {
-}
-.send-box {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0;
 }
 .send-box label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 .send-box label::after {
+  content: " *";
+  color: crimson;
+}
+.send-box input,
+.send-box textarea {
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  outline: none;
+  transition: 0.35s;
 }
 .send-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+}
+.send-box input:hover,
+.send-box input:focus,
+.send-box textarea:hover,
+.send-box textarea:focus {
+  border: 1px solid #0088cc;
+  box-shadow: 0 0 10px #007dcd4d;
 }
 .send-box textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+  padding: 10px;
+  font-size: 16px;
 }
 .send-box button {
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0088cc;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.send-box button:hover {
+  background-color: #000;
 }
 .contact-info {
 }
 .contact-info h4 {
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 300;
 }
-.contact-info h4 b {
+.contact-info h4:not(:nth-of-type(1)) {
+  margin-top: 35px;
 }
 .contact-info ul {
+  margin: 0;
+  padding: 0;
 }
 .contact-info li {
+  line-height: 2em;
+}
+.contact-info li:last-of-type {
+  color: #0088cc;
 }
 .contact-info p {
+  line-height: 1.5em;
+}
+.business li::before {
+  content: "\f017";
+  font-family: "fontawesome";
+  margin-right: 5px;
 }

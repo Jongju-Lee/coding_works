@@ -13,6 +13,21 @@
     <script src="./js/velocity/velocity.ui.min.js"></script>
     <script src="./js/velocity/main.js"></script>
     <link rel="stylesheet" href="./js/velocity/velocity.css" />
+    <!-- Slick.js JS & CSS -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <!-- Custom JS & CSS -->
     <script src="./custom.js"></script>
     <link rel="stylesheet" href="style.css" />
@@ -21,7 +36,7 @@
   <!-- hijacking: on/off - animation: none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax -->
   <body data-hijacking="on" data-animation="rotate">
     <div class="container">
-      <section class="cd-section visible" id="home">
+      <section class="cd-section" id="home">
         <div>
           <div class="content">
             <img src="./images/temp-section-01.jpg" alt="section_image1" />
@@ -85,11 +100,59 @@
         </div>
       </section>
 
-      <section class="cd-section" id="project">
+      <section class="cd-section visible" id="project">
         <div>
           <div class="content">
-            <div class="content">
-              <img src="./images/temp-section-03.jpg" alt="section_image3" />
+            <div class="project-inner">
+              <input type="radio" name="project-tab" id="tab1" checked />
+              <input type="radio" name="project-tab" id="tab2" />
+              <input type="radio" name="project-tab" id="tab3" />
+              <div class="tabs">
+                <div class="tab">
+                  <div class="project-info">
+                    <h3>Project : Glass Wall Architecture</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ea doloremque consequuntur eaque inventore quibusdam
+                      voluptatum hic eligendi illum error aliquid atque vero
+                      fuga perferendis accusamus eveniet, aut laboriosam
+                      officia. Veniam sequi cupiditate velit nisi minus enim
+                      dolore obcaecati neque fuga.
+                    </p>
+                    <ul>
+                      <li><b>Area</b> : 1670 m2</li>
+                      <li><b>Completed Date</b> : September 2018</li>
+                      <li><b>Architect</b> : Andrew Yu</li>
+                    </ul>
+                    <div class="detail">
+                      <div><span>225</span>WORKING DAY</div>
+                      <div><span>320</span>MEMBERS</div>
+                      <div><span>3M</span>BUDGET</div>
+                    </div>
+                    <a href="#none">VIEW PROJECT</a>
+                  </div>
+                  <div class="project-photo">
+                    <img src="./images/project-main-01-02.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="tab">
+                  <div class="project-info">project-info2</div>
+                  <div class="project-photo">
+                    <img src="./images/project-main-02-02.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="tab">
+                  <div class="project-info">project-info3</div>
+                  <div class="project-photo">
+                    <img src="./images/project-main-03-02.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="btn">
+                <label for="tab1"></label>
+                <label for="tab2"></label>
+                <label for="tab3"></label>
+              </div>
             </div>
           </div>
         </div>
@@ -98,8 +161,122 @@
       <section class="cd-section" id="plan">
         <div>
           <div class="content">
-            <div class="content">
-              <img src="./images/temp-section-04.jpg" alt="section_image4" />
+            <div class="plan-inner">
+              <div class="plan-feature">
+                <div class="plan-info">
+                  <div class="plan-heading">
+                    <h2>Planning<br />For the Next Project</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iure cum impedit earum. Totam nulla veritatis ipsum eum
+                      libero vitae labore necessitatibus eaque. Accusantium nisi
+                      consectetur sint tempore temporibus est placeat,
+                      laudantium quam numquam minus eum adipisci officiis cumque
+                      ipsam minima, pariatur culpa quod. Quos fugit ut sint
+                      facilis voluptas aspernatur.
+                    </p>
+                  </div>
+                  <div class="plan-photo">
+                    <img
+                      src="./images/plan-main-01.jpg"
+                      alt="plan-main_image"
+                    />
+                  </div>
+                </div>
+                <div class="history-info">
+                  <h2>History</h2>
+                  <div class="history-slider">
+                    <div class="history-item">
+                      <h4>
+                        The Project<br />
+                        of Architect for the <span>2013</span>
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis possimus eveniet quis repudiandae impedit
+                        in, cumque nesciunt veritatis eum quisquam.
+                      </p>
+                    </div>
+                    <div class="history-item">
+                      <h4>
+                        The Project<br />
+                        of Architect for the <span>2014</span>
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis possimus eveniet quis repudiandae impedit
+                        in, cumque nesciunt veritatis eum quisquam.
+                      </p>
+                    </div>
+                    <div class="history-item">
+                      <h4>
+                        The Project<br />
+                        of Architect for the <span>2015</span>
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis possimus eveniet quis repudiandae impedit
+                        in, cumque nesciunt veritatis eum quisquam.
+                      </p>
+                    </div>
+                    <div class="history-item">
+                      <h4>
+                        The Project<br />
+                        of Architect for the <span>2016</span>
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis possimus eveniet quis repudiandae impedit
+                        in, cumque nesciunt veritatis eum quisquam.
+                      </p>
+                    </div>
+                    <div class="history-item">
+                      <h4>
+                        The Project<br />
+                        of Architect for the <span>2017</span>
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis possimus eveniet quis repudiandae impedit
+                        in, cumque nesciunt veritatis eum quisquam.
+                      </p>
+                    </div>
+                    <div class="history-item">
+                      <h4>
+                        The Project<br />
+                        of Architect for the <span>2018</span>
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis possimus eveniet quis repudiandae impedit
+                        in, cumque nesciunt veritatis eum quisquam.
+                      </p>
+                    </div>
+                    <div class="history-item">
+                      <h4>
+                        The Project<br />
+                        of Architect for the <span>2019</span>
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis possimus eveniet quis repudiandae impedit
+                        in, cumque nesciunt veritatis eum quisquam.
+                      </p>
+                    </div>
+                    <div class="history-item">
+                      <h4>
+                        The Project<br />
+                        of Architect for the <span>2020</span>
+                      </h4>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis possimus eveniet quis repudiandae impedit
+                        in, cumque nesciunt veritatis eum quisquam.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -206,7 +383,7 @@
               <div class="contact-feature">
                 <div class="contact-form">
                   <h3><b>Contact</b> Us</h3>
-                  <p></p>
+                  <p>Feel free to ask for details, don't save any questions.</p>
                   <form class="send-box" action="">
                     <label>Email</label>
                     <input type="email" />
@@ -225,21 +402,17 @@
                     <li>Email : designworks@designworks.com</li>
                   </ul>
                   <h4>Business <b>Hours</b></h4>
-                  <ul>
+                  <ul class="business">
                     <li>Monday - Friday : 9am to 5pm</li>
                     <li>Saturday : 9am to 2pm</li>
                     <li>Sunday : Closed</li>
                   </ul>
                   <h4>Get in <b>Touch</b></h4>
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Eaque, illo aliquam magni voluptatem quisquam similique
-                    quidem ratione enim sed explicabo architecto quaerat quae
-                    adipisci aperiam aut beatae, expedita nostrum voluptas ab
-                    provident minima nam. Blanditiis voluptate eos, ipsa iure
-                    explicabo, quae animi deleniti ipsam aspernatur at ab non
-                    doloremque placeat. Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. Commodi, autem!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Reiciendis dolore harum impedit rerum, quam doloribus autem
+                    temporibus optio eligendi culpa dolorum quis, adipisci
+                    pariatur assumenda placeat dolores ipsum eveniet odio.
                   </p>
                 </div>
               </div>
