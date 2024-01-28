@@ -66,8 +66,6 @@ header {
 .menu {
   display: none;
 }
-.menu a {
-}
 .slogan {
   font-size: 18px;
   font-style: italic;
@@ -86,6 +84,10 @@ header {
   background-color: #000;
   border-radius: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+  transition: 0.5s;
+}
+.btn_hiring:active {
+  transform: scale(0.5);
 }
 .btn_hiring i {
   transform: rotateY(180deg);
@@ -93,6 +95,119 @@ header {
 /* Button - Go To Top */
 .btn_top {
   display: none;
+}
+/* ########## Section : Home ########## */
+.home-inner {
+  height: 100%;
+  background-color: #fff;
+}
+.home-inner::before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  animation: overlay 1s 2s ease-in-out both;
+}
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 50px;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.2em;
+  animation: slideUp 2s linear both;
+}
+.welcome-text span {
+  display: block;
+  font-size: 25px;
+}
+.welcome-text i {
+  color: crimson;
+}
+.opacity-image {
+  background: url(./images/section-bg-01.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  opacity: 0;
+  animation: opacity-image 1s 2.5s ease-in both;
+}
+.home-heading {
+  position: absolute;
+  top: 50%;
+  left: 300px;
+  transform: translateY(-50%);
+}
+.home-heading span {
+  display: block;
+  font-size: 115px;
+  color: #fff;
+  font-weight: 600;
+  width: 0;
+  overflow: hidden;
+  animation: reveal 1s ease-in-out both;
+}
+.home-heading span:nth-child(1) {
+  animation-delay: 3s;
+}
+.home-heading span:nth-child(2) {
+  animation-delay: 3.2s;
+}
+.home-heading span:nth-child(3) {
+  animation-delay: 3.4s;
+}
+/* ##### Animation ##### */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes opacity-image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 /* ########## Section : About ########## */
 .about-inner {
@@ -164,7 +279,92 @@ header {
   height: 100%;
 }
 .project-info {
+  padding: 30px;
   width: 25%;
+}
+.project-info h3 {
+  position: relative;
+}
+.tab .project-info h3::before {
+  content: "01";
+  position: absolute;
+  top: -60px;
+  left: -20px;
+  color: #eee;
+  font-size: 100px;
+  font-weight: 400;
+  z-index: -1;
+}
+.tab:nth-of-type(1) .project-info h3::before {
+  content: "01";
+}
+.tab:nth-of-type(2) .project-info h3::before {
+  content: "02";
+}
+.tab:nth-of-type(3) .project-info h3::before {
+  content: "03";
+}
+.project-info p {
+  margin-top: 25px;
+  line-height: 1.5em;
+}
+.project-info ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  line-height: 2em;
+}
+.project-info li {
+  font-size: 16px;
+}
+.project-info li::before {
+  content: "\f105";
+  font-family: "fontawesome";
+  margin-right: 10px;
+}
+.detail {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.detail div {
+  float: left;
+  text-align: center;
+  width: calc(100% / 3);
+  font-size: 10px;
+  font-weight: bold;
+  color: #999;
+  border-right: 1px solid #ddd;
+}
+.detail div:last-of-type {
+  border-right: none;
+}
+.detail span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #222;
+}
+.project-info > a {
+  font-size: 13px;
+  background-color: #555;
+  color: #fff;
+  padding: 7px 30px;
+  transition: 0.35s;
+}
+.project-info > a:hover {
+  background-color: #000;
+}
+.project-info > a::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 10px;
+  transform: scaleX(1.5);
+  transition: 0.35s;
+}
+.project-info > a:hover::after {
+  margin-left: 20px;
 }
 .project-photo {
   width: 75%;
@@ -545,4 +745,240 @@ input[id="tab3"]:checked ~ .tabs {
   content: "\f017";
   font-family: "fontawesome";
   margin-right: 5px;
+}
+/* ########## SubPage - Hiring ########## */
+.modal {
+  font-family: "Source Sans Pro", sans-serif;
+  padding-bottom: 30px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+.header-inner {
+  width: 95%;
+  margin: auto;
+  height: 90px;
+  line-height: 90px;
+  border-bottom: 1px solid #ddd;
+}
+.modal-display {
+  font-size: 18px;
+}
+.hiring-main {
+  position: relative;
+  height: 600px;
+}
+.hiring-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hiring-heading span {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 5px;
+}
+.hiring-heading span::before,
+.hiring-heading span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 1px;
+  background-color: #222;
+  display: inline-block;
+}
+.hiring-heading span::before {
+  right: 110%;
+}
+.hiring-heading span::after {
+  left: 110%;
+}
+.hiring-heading h1 {
+  font-size: 100px;
+  font-weight: 200;
+  margin: 0;
+  margin-top: 40px;
+}
+.hiring-info {
+  overflow: hidden;
+}
+.hiring-info > div {
+  width: 50%;
+  float: left;
+  height: 600px;
+}
+.center-parent {
+  position: relative;
+}
+.center-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.center-child h2 {
+  font-size: 36px;
+  font-weight: normal;
+}
+.center-child p {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+.photo img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+.hiring-slogan {
+  padding: 100px 0;
+}
+.hiring-slogan p {
+  position: relative;
+  font-size: 32px;
+  font-weight: 300;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.hiring-slogan p::before {
+  content: ",,";
+  font-family: "Overpass", sans-serif;
+  position: absolute;
+  top: -80px;
+  left: -60px;
+  font-size: 200px;
+  font-weight: 900;
+  color: #ddd;
+  transform: rotate(180deg);
+}
+.hiring-contact {
+}
+.hiring-contact ul {
+  display: inline-block;
+  width: 49%;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+.hiring-contact li {
+}
+.hiring-contact ul li:first-of-type {
+  font-weight: normal;
+}
+.hiring-contact ul li:last-of-type {
+  color: dodgerblue;
+}
+.sns {
+  margin-top: 10px;
+}
+.sns a {
+  position: relative;
+  font-size: 15px;
+  color: #222;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  margin: 2px;
+  transition: 0.35s;
+}
+.sns a:hover {
+  color: #fff;
+}
+.sns a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: inherit;
+  height: inherit;
+  background-color: #ddd;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.35s;
+}
+.sns a:nth-of-type(1):before {
+  background-color: #3b5999;
+}
+.sns a:nth-of-type(2):before {
+  background-color: #55acee;
+}
+.sns a:nth-of-type(3):before {
+  background-color: #0077b5;
+}
+.sns a:nth-of-type(4):before {
+  background-color: #e4405f;
+}
+.sns a:nth-of-type(5):before {
+  background-color: #cd201f;
+}
+.sns a:nth-of-type(6):before {
+  background-color: #25d366;
+}
+.sns a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+/* ########## SubPage : Project ########## */
+.project-main1 {
+  background: url(./images/project-modal-main-01.jpg) no-repeat center center /
+    cover;
+  height: 100vh;
+}
+.project-main2 {
+  background: url(./images/project-modal-main-02.jpg) no-repeat center center /
+    cover;
+  height: 100vh;
+}
+.project-main3 {
+  background: url(./images/project-modal-main-03.jpg) no-repeat center center /
+    cover;
+  height: 100vh;
+}
+.project-detail .hiring-heading {
+  color: #fff;
+  width: 100%;
+  animation: slideDown 1s linear;
+}
+.project-detail .hiring-heading h1 {
+  font-size: 70px;
+}
+.project-detail .hiring-slogan p::before {
+  left: -100px;
+}
+.photo.project-info {
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 120px;
+}
+.project-detail .hiring-heading span::before,
+.project-detail .hiring-heading span::after {
+  background-color: #fff;
+}
+/* ##### Animation ##### */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
 }

@@ -1,0 +1,101 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  color: #333;
+  line-height: 1.5em;
+}
+/* ##### Layout ##### */
+section {
+  background-color: #fff;
+  height: 100%;
+  border: 1px solid #000;
+}
+.inner {
+  height: inherit;
+  overflow: hidden;
+}
+.tabs {
+  width: 300%;
+  height: inherit;
+  transition: 0.5s;
+}
+.tab {
+  width: calc(100% / 3);
+  height: inherit;
+  float: left;
+}
+.tab > div {
+  float: left;
+}
+.desc {
+  height: 100%;
+  width: 25%;
+  padding: 20px;
+}
+.desc span {
+  font-weight: 600;
+  color: dodgerblue;
+}
+.desc h2 {
+  font-weight: 300;
+  font-size: 30px;
+}
+.desc p {
+  font-size: 18px;
+  line-height: 1.6em;
+}
+.desc a {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: fit-content;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #555;
+  color: #fff;
+  padding: 5px 20px;
+}
+.photo {
+  width: 75%;
+}
+.photo img {
+  width: 100%;
+}
+/* ##### Button - Tab ##### */
+input[type="radio"] {
+  display: none;
+}
+.btn_tab {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 25%;
+  text-align: center;
+}
+.btn_tab label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 5px;
+  transition: 0.35s;
+  cursor: pointer;
+}
+input[id="tab1"]:checked ~ .btn_tab label[for="tab1"],
+input[id="tab2"]:checked ~ .btn_tab label[for="tab2"],
+input[id="tab3"]:checked ~ .btn_tab label[for="tab3"] {
+  background-color: crimson;
+}
+input[id="tab1"]:checked ~ .tabs {
+}
+input[id="tab2"]:checked ~ .tabs {
+  transform: translateX(-33.333333%);
+}
+input[id="tab3"]:checked ~ .tabs {
+  transform: translateX(-66.666666%);
+}
