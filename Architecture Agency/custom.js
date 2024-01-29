@@ -32,6 +32,17 @@ $(function () {
     slidesToScroll: 1,
     fade: true,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 
   // ##### Slick.js - Section : Plan #####
@@ -42,5 +53,16 @@ $(function () {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 });

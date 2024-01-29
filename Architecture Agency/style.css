@@ -435,10 +435,6 @@ input[id="tab3"]:checked ~ .tabs {
   height: 300px;
   color: #bbb;
 }
-.plan-info {
-  height: auto;
-  /* overflow: hidden; */
-}
 .plan-info > div {
   float: left;
 }
@@ -554,7 +550,6 @@ input[id="tab3"]:checked ~ .tabs {
   color: #fff;
   border-color: transparent;
 }
-
 .victory-jump {
   background-color: #fff;
 }
@@ -630,8 +625,7 @@ input[id="tab3"]:checked ~ .tabs {
 }
 .service-item h3 {
   color: #fff;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-size: 22px;
 }
 .service-item p {
@@ -657,8 +651,6 @@ input[id="tab3"]:checked ~ .tabs {
   height: 100%;
   float: left;
   padding: 20px;
-}
-.contact-form {
 }
 .contact-form h3 {
   font-size: 30px;
@@ -716,8 +708,6 @@ input[id="tab3"]:checked ~ .tabs {
 }
 .send-box button:hover {
   background-color: #000;
-}
-.contact-info {
 }
 .contact-info h4 {
   font-size: 22px;
