@@ -1,6 +1,7 @@
-// Slick.js
-$(".responsive").slick({
+/* ##### Slick.js - Section : Plan ##### */
+$(".plan-slider").slick({
   dots: true,
+  arrows: false,
   infinite: false,
   speed: 300,
   slidesToShow: 4,
@@ -29,8 +30,17 @@ $(".responsive").slick({
         slidesToScroll: 1,
       },
     },
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ],
+});
+/* ##### Slick.js - Section : Project ##### */
+$(".project-photo").slick({
+  dots: false,
+  infinite: true,
+  speed: 800,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  fade: true,
+  cssEase: "linear",
+  slidesToShow: 1,
+  slidesToScroll: 1,
 });

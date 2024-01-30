@@ -1,5 +1,6 @@
 /* Google Web Font */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
 /* Fontawesome 4.7 */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /* Default CSS */
@@ -83,6 +84,129 @@ header {
   font-size: 22px;
   letter-spacing: 2px;
 }
+/* ########## Section : Home ########## */
+.home-inner {
+  background-color: #fff;
+  height: 100%;
+}
+.welcome {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.welcome h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 300;
+  opacity: 1;
+  animation: slideUp 2s ease-in-out both;
+}
+.welcome span::after {
+  content: "\f004";
+  font-family: "fontawesome";
+  color: crimson;
+  margin-left: 5px;
+}
+.welcome h1 span {
+  font-size: 28px;
+}
+.welcome h1 span::after {
+  content: "\f004";
+  font-family: "fontawesome";
+  color: crimson;
+  margin-left: 5px;
+}
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000;
+  animation: slideOverlay 1s 2s;
+}
+.home-background {
+  border: 1px solid #000;
+  position: relative;
+  opacity: 0;
+  height: 100%;
+  background: url(./images/section-bg-01.jpg) no-repeat center center / cover;
+  animation: background 1s 2.5s linear both;
+}
+.home-background > div {
+  position: absolute;
+  top: 50%;
+  left: 300px;
+  transform: translateY(-50%);
+}
+.home-background span {
+  display: block;
+  color: #fff;
+  font-size: 130px;
+  font-weight: bold;
+  line-height: 1.1em;
+  width: 0;
+  overflow: hidden;
+  animation: revealText 0.7s linear both;
+}
+.home-background span:nth-of-type(1) {
+  animation-delay: 2.8s;
+}
+.home-background span:nth-of-type(2) {
+  animation-delay: 3s;
+}
+.home-background span:nth-of-type(3) {
+  animation-delay: 3.2s;
+}
+
+/* Home - Animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideOverlay {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+@keyframes background {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes revealText {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 /* ########## Section : About ########## */
 .about-inner {
   background: #0dace3 url(./images/line-drawing.png) no-repeat bottom right;
@@ -128,9 +252,146 @@ header {
   margin: 0;
   margin-top: 5px;
 }
+/* ########## Section : Project ########## */
+.project-inner {
+  background-color: #fff;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+input[name="project-tab"] {
+  display: none;
+}
+.project-tabs {
+  width: 300%;
+  height: inherit;
+  transition: 0.5s;
+}
+.project-tab {
+  float: left;
+  width: calc(100% / 3);
+  height: inherit;
+}
+.project-tab > div {
+  float: left;
+  height: inherit;
+}
+.project-desc {
+  position: relative;
+  width: 25%;
+  height: inherit;
+  padding: 20px;
+  font-size: 17px;
+}
+.project-desc::before {
+  content: attr(data-number);
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  font-weight: bold;
+  font-size: 100px;
+  color: #eee;
+}
+.project-desc h3 {
+  position: relative;
+  margin-top: 8px;
+  font-size: 22px;
+}
+.project-desc p {
+  margin-top: 20px;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+.project-desc ul {
+  padding: 0;
+}
+.project-desc ul li::before {
+  content: "\f105";
+  font-family: "fontawesome";
+  font-weight: normal;
+  margin-right: 5px;
+  line-height: 2em;
+}
+.coast {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.coast div {
+  display: inline-block;
+  width: 32%;
+  font-weight: 300;
+  border-right: 1px solid #ddd;
+  padding: 3px;
+  font-size: 13px;
+}
+.coast div:last-of-type {
+  border-right: none;
+}
+.coast div b {
+  display: block;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.view-project {
+  background-color: #555;
+  color: #fff;
+  padding: 7px 30px;
+  transition: 0.35s;
+}
+.view-project::after {
+  content: "→";
+  display: inline-block;
+  transform: scaleX(1.3);
+  margin-left: 10px;
+  transition: 0.35s;
+}
+.view-project:hover {
+  background-color: #000;
+}
+.view-project:hover::after {
+  margin-left: 20px;
+}
+.project-photo {
+  width: 75%;
+}
+/* Project - Tab Button */
+.btn_tab {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 25%;
+  text-align: center;
+}
+.btn_tab label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.35s;
+}
+input[id="tab1"]:checked ~ .btn_tab label[for="tab1"],
+input[id="tab2"]:checked ~ .btn_tab label[for="tab2"],
+input[id="tab3"]:checked ~ .btn_tab label[for="tab3"] {
+  background-color: #555;
+}
+input[id="tab1"]:checked ~ .project-tabs {
+  transform: translateX(0);
+}
+input[id="tab2"]:checked ~ .project-tabs {
+  transform: translateX(-33.333333%);
+}
+input[id="tab3"]:checked ~ .project-tabs {
+  transform: translateX(-66.666666%);
+}
+
 /* ########## Section : Plan ########## */
 .plan-inner {
   background-color: #1d1b24;
+  color: #fff;
   height: 100%;
 }
 .plan-center {
@@ -138,31 +399,76 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 80%;
 }
 .plan-heading {
+  overflow: hidden;
+}
+.plan-heading > div {
+  float: left;
 }
 .plan-desc {
+  width: 60%;
+  padding-right: 50px;
 }
-.plan-desc h2 {
+.plan-desc h2,
+.plan-history h2 {
+  position: relative;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+.plan-desc h2::after,
+.plan-history h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 5px;
+  background-color: #74ffea;
 }
 .plan-desc p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
 }
 .plan-photo {
+  width: 40%;
 }
 .plan-photo img {
+  height: 250px;
 }
 .plan-history {
-}
-.plan-history h2 {
-}
-.plan-slider {
-}
-.plan-slider-item {
+  margin-top: 20px;
 }
 .plan-slider-item h3 {
+  font-size: 22px;
+  line-height: 1.5em;
+}
+.plan-slider-item h3 span {
+  color: #74ffea;
 }
 .plan-slider-item p {
+  font-size: 16px;
+  margin: 0;
+  margin-top: 5px;
+  font-weight: 300;
+  padding-right: 20px;
+}
+/* Slick.js Custom CSS */
+.slick-dots {
+  bottom: -50px;
+}
+.slick-dots li.slick-active button:before {
+  color: #bbb;
+  font-size: 15px;
+}
+.slick-dots li button:before {
+  color: #fff;
+  font-size: 15px;
 }
 /* ########## Section : Awards ########## */
 .awards-inner {
@@ -187,20 +493,30 @@ header {
   text-align: center;
 }
 .victory-heading h2 {
+  position: relative;
   color: #fff;
-  font-size: 45px;
+  font-size: 40px;
+  padding-bottom: 20px;
 }
 .victory-heading h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15%;
+  height: 3px;
+  background-color: crimson;
 }
 .victory-heading p {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.5em;
   font-weight: 300;
   color: #ddd;
 }
 .victory-heading a {
   display: inline-block;
-  font-size: 20px;
+  font-size: 19px;
   border: 1px solid #ddd;
   border-radius: 20px;
   padding: 7px 20px;
@@ -347,8 +663,18 @@ header {
   border: 1px solid #bbb;
   border-radius: 5px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 15px;
   font-size: 20px;
+  transition: 0.35s;
+}
+.input-field input:hover,
+.input-field textarea:hover {
+  border: 1px solid #1e90ff;
+  box-shadow: 0 0 10px #1e90ff4d;
+}
+.input-field input:focus,
+.input-field textarea:focus {
+  background-color: #eee;
 }
 .input-field textarea {
   min-width: 100%;
@@ -357,6 +683,9 @@ header {
   max-height: 170px;
   border-radius: 5px;
   border: 1px solid #bbb;
+  transition: 0.35s;
+  font-size: 20px;
+  padding: 15px;
 }
 .contact-form button {
   background-color: #0088cc;
@@ -365,8 +694,6 @@ header {
   border-radius: 5px;
   padding: 5px 25px;
   font-size: 18px;
-}
-.contact-desc {
 }
 .contact-desc h4 {
   font-size: 27px;
@@ -388,11 +715,37 @@ header {
 .business-hours li::before {
   content: "\f017";
   font-family: "fontawesome";
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .contact-desc p {
   margin: 0;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5em;
+}
+/* ########## Hiring Button ########## */
+.btn_hiring {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.5);
+}
+.btn_hiring a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.btn_hiring a::before {
+  display: inline-block;
+  content: "\f27a";
+  font-family: "fontawesome";
+  margin-right: 5px;
+  transform: rotateY(180deg);
+}
+/* ########## Hiring Page ########## */
+.hiring-inner {
+  font-family: "Raleway", sans-serif;
 }
