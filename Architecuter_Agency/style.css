@@ -1,0 +1,362 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700;900&display=swap");
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Default CSS */
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0;
+  color: #333;
+  background-color: #fff;
+}
+/* Entire Layout */
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  height: 100%;
+}
+.content {
+  background-color: #ddd;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+}
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ########## Header ########## */
+header {
+  position: fixed;
+  width: 100%;
+}
+.header-inner {
+  width: calc(100vw - 40px);
+  margin: auto;
+  height: 60px;
+}
+.header-logo {
+  float: left;
+  line-height: 60px;
+}
+.header-logo img {
+  display: inline-block;
+  margin-top: 15px;
+}
+.gnb {
+  float: right;
+}
+.gnb .menu {
+  display: none;
+}
+.gnb-slogan {
+  line-height: 60px;
+}
+.gnb-slogan em {
+  color: #777;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+/* ########## Section : About ########## */
+.about-inner {
+  background: #0dace3 url(./images/line-drawing.png) no-repeat bottom right;
+  height: 100%;
+}
+.about-items {
+  width: 50%;
+  position: absolute;
+  top: 52%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+.about-item {
+  overflow: hidden;
+  margin-bottom: 40px;
+  width: 90%;
+}
+.about-item img {
+  width: 120px;
+  float: left;
+  margin-right: 15px;
+  filter: invert(100%);
+  transition: 0.35s;
+}
+.about-item:hover img {
+  filter: invert(0);
+}
+.about-item > div {
+  color: #fff;
+  margin-left: 15px;
+}
+.about-item h3 {
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.35s;
+}
+.about-item:hover h3 {
+  color: #000;
+}
+.about-item p {
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0;
+  margin-top: 5px;
+}
+/* ########## Section : Awards ########## */
+.awards-inner {
+  height: 100%;
+}
+.awards-inner > div {
+  width: 50%;
+  height: inherit;
+  float: left;
+}
+.victory-awards {
+  background-color: #1b2027;
+  position: relative;
+  height: inherit;
+}
+.victory-heading {
+  width: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.victory-heading h2 {
+  color: #fff;
+  font-size: 45px;
+}
+.victory-heading h2::after {
+}
+.victory-heading p {
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: 300;
+  color: #ddd;
+}
+.victory-heading a {
+  display: inline-block;
+  font-size: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 7px 20px;
+  color: #ddd;
+  text-transform: uppercase;
+  margin-top: 10px;
+  transition: 0.35s;
+}
+.victory-heading a:hover {
+  background-color: #3ac1b0;
+}
+.victory-jump {
+  background-color: #fff;
+}
+.victory-jump .photo {
+  padding: 50px;
+}
+.victory-jump .photo img {
+  width: 100%;
+}
+/* ########## Section : Location ########## */
+.location-inner {
+  position: relative;
+  height: 100%;
+  color: #ddd;
+  background: url(./images/background-location.jpg) no-repeat center center /
+    cover;
+}
+.location-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.location-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  z-index: 1;
+}
+.location-center > div {
+  float: left;
+}
+.location-desc {
+  width: 60%;
+  padding-right: 50px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.location-desc-item:first-child {
+  margin-bottom: 50px;
+}
+.location-desc-item b {
+  font-size: 20px;
+  font-weight: 400;
+}
+.location-desc-item h2 {
+  margin-top: 5px;
+  font-weight: bold;
+  color: #1db1f0;
+}
+.location-desc-item p {
+  line-height: 1.5em;
+}
+.location-desc-item span {
+  color: #fff;
+}
+.location-detail {
+  width: 40%;
+}
+.location-detail-item {
+  margin-bottom: 40px;
+}
+.location-detail-item:last-child {
+  margin-bottom: 0;
+}
+.location-detail-item .fa {
+  font-size: 40px;
+  color: #1db1f0;
+  margin-bottom: 10px;
+}
+.location-detail-item h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+}
+.location-detail-item p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* ########## Section : Contact ########## */
+.contact-inner {
+  height: 100%;
+  background-color: #fff;
+}
+.contact-center {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+.contact-center > div {
+  float: left;
+  width: 50%;
+}
+.contact-form {
+  padding-right: 50px;
+}
+.contact-form > h3 {
+  font-size: 30px;
+  font-weight: 300;
+}
+.contact-form > p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.input-field {
+  margin-bottom: 20px;
+}
+.input-field:last-of-type {
+  margin-bottom: 10px;
+}
+.input-field label {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.input-field label::after {
+  content: " *";
+  color: crimson;
+}
+.input-field input {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+.input-field textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 170px;
+  max-height: 170px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+.contact-form button {
+  background-color: #0088cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 25px;
+  font-size: 18px;
+}
+.contact-desc {
+}
+.contact-desc h4 {
+  font-size: 27px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.contact-desc ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.contact-desc ul li {
+  line-height: 1.8em;
+  font-size: 18px;
+}
+.contact-desc ul li:last-of-type {
+  color: #0088cc;
+}
+.business-hours li::before {
+  content: "\f017";
+  font-family: "fontawesome";
+  margin-right: 5px;
+}
+.contact-desc p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
