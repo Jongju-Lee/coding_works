@@ -128,6 +128,42 @@ header {
   margin: 0;
   margin-top: 5px;
 }
+/* ########## Section : Plan ########## */
+.plan-inner {
+  background-color: #1d1b24;
+  height: 100%;
+}
+.plan-center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+.plan-heading {
+}
+.plan-desc {
+}
+.plan-desc h2 {
+}
+.plan-desc p {
+}
+.plan-photo {
+}
+.plan-photo img {
+}
+.plan-history {
+}
+.plan-history h2 {
+}
+.plan-slider {
+}
+.plan-slider-item {
+}
+.plan-slider-item h3 {
+}
+.plan-slider-item p {
+}
 /* ########## Section : Awards ########## */
 .awards-inner {
   height: 100%;
