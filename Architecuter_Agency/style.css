@@ -1,6 +1,7 @@
 /* Google Web Font */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
 /* Fontawesome 4.7 */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /* Default CSS */
@@ -746,6 +747,204 @@ input[id="tab3"]:checked ~ .project-tabs {
   transform: rotateY(180deg);
 }
 /* ########## Hiring Page ########## */
-.hiring-inner {
+.hiring {
+  background-color: #fff;
+}
+.hiring *:not(i.fa) {
   font-family: "Raleway", sans-serif;
+}
+.hiring-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 80px;
+  line-height: 80px;
+  z-index: 100;
+}
+.hiring-header-inner {
+  margin: auto;
+  width: 95%;
+  height: inherit;
+  border-bottom: 1px solid #ddd;
+}
+.hiring-header-inner span {
+  font-size: 20px;
+}
+.hiring-heading {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.hiring-heading span {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+}
+.hiring-heading span::before,
+.hiring-heading span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 1px;
+  background-color: #000;
+}
+.hiring-heading span::before {
+  right: 100px;
+}
+.hiring-heading span::after {
+  left: 100px;
+}
+.hiring-heading h1 {
+  font-weight: 300;
+  font-size: 90px;
+  margin-top: 50px;
+}
+.together {
+  overflow: hidden;
+}
+.together > div,
+.talent > div {
+  float: left;
+  width: 50%;
+  height: 600px;
+}
+.together-desc {
+  position: relative;
+  height: 100%;
+}
+.together-desc-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+.together-desc h2,
+.talent-desc h2 {
+  font-size: 34px;
+  font-weight: 500;
+}
+.together-desc p,
+.talent-desc p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+.together-photo,
+.talent-photo {
+  width: 100%;
+  height: 100%;
+}
+.together-photo img,
+.talent-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hiring-slogan {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+.hiring-slogan p {
+  position: relative;
+  width: 70%;
+  margin: auto;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.3em;
+  z-index: 0;
+}
+.hiring-slogan p::before {
+  content: ",,";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  font-family: "Lato", sans-serif;
+  transform: rotate(180deg);
+  color: #eee;
+  font-size: 200px;
+  z-index: -1;
+}
+.talent {
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.talent-desc {
+  position: relative;
+}
+.talent-desc-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+}
+.talent-location {
+}
+.talent-desc ul {
+  display: inline-block;
+  width: 49%;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  line-height: 2.5em;
+}
+.talent-desc ul li {
+  font-size: 18px;
+  font-weight: 300;
+}
+.talent-desc ul li:first-child {
+  font-weight: 500;
+}
+.talent-desc ul li:last-child {
+  color: dodgerblue;
+}
+.sns {
+  margin-top: 20px;
+}
+.sns a {
+  position: relative;
+  margin: 15px;
+  font-size: 22px;
+  transition: 0.35s;
+}
+.sns a:hover {
+  color: #fff;
+}
+.sns a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.35s;
+}
+.sns a:nth-of-type(1)::after {
+  background-color: #0a66c2;
+}
+.sns a:nth-of-type(2)::after {
+  background-color: #1da1f2;
+}
+.sns a:nth-of-type(3)::after {
+  background-color: #410093;
+}
+.sns a:nth-of-type(4)::after {
+  background-color: #e4405f;
+}
+.sns a:nth-of-type(5)::after {
+  background-color: #cd201f;
+}
+.sns a:nth-of-type(6)::after {
+  background-color: #25d366;
+}
+.sns a:hover::after {
+  transform: translate(-50%, -50%) scale(1);
 }
