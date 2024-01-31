@@ -35,6 +35,7 @@ $(".plan-slider").slick({
 /* ##### Slick.js - Section : Project ##### */
 $(".project-photo").slick({
   dots: false,
+  arrows: false,
   infinite: true,
   speed: 800,
   autoplay: true,

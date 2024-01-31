@@ -39,6 +39,7 @@ body {
 }
 .cd-section > div {
   height: 100%;
+  position: relative;
 }
 .content {
   background-color: #ddd;
@@ -47,11 +48,6 @@ body {
   left: 20px;
   width: calc(100% - 40px);
   height: calc(100% - 80px);
-}
-.content img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 /* ########## Header ########## */
 header {
@@ -102,12 +98,6 @@ header {
   font-weight: 300;
   opacity: 1;
   animation: slideUp 2s ease-in-out both;
-}
-.welcome span::after {
-  content: "\f004";
-  font-family: "fontawesome";
-  color: crimson;
-  margin-left: 5px;
 }
 .welcome h1 span {
   font-size: 28px;
@@ -214,11 +204,11 @@ header {
   height: 100%;
 }
 .about-items {
-  width: 50%;
   position: absolute;
   top: 52%;
   left: 30%;
   transform: translate(-50%, -50%);
+  width: 50%;
 }
 .about-item {
   overflow: hidden;
@@ -458,6 +448,7 @@ input[id="tab3"]:checked ~ .project-tabs {
   margin-top: 5px;
   font-weight: 300;
   padding-right: 20px;
+  line-height: 1.5em;
 }
 /* Slick.js Custom CSS */
 .slick-dots {
@@ -726,7 +717,7 @@ input[id="tab3"]:checked ~ .project-tabs {
 }
 /* ########## Hiring Button ########## */
 .btn_hiring {
-  position: absolute;
+  position: fixed;
   bottom: 50px;
   right: 50px;
   background-color: #000;
@@ -746,11 +737,11 @@ input[id="tab3"]:checked ~ .project-tabs {
   margin-right: 5px;
   transform: rotateY(180deg);
 }
-/* ########## Hiring Page ########## */
-.hiring {
+/* ########## Sub Page - Hiring ########## */
+.hiring-modal {
   background-color: #fff;
 }
-.hiring *:not(i.fa) {
+.hiring-modal *:not(i.fa) {
   font-family: "Raleway", sans-serif;
 }
 .hiring-header {
@@ -853,6 +844,7 @@ input[id="tab3"]:checked ~ .project-tabs {
   position: relative;
   width: 70%;
   margin: auto;
+  left: 5%;
   font-size: 40px;
   font-weight: 300;
   line-height: 1.3em;
@@ -871,7 +863,7 @@ input[id="tab3"]:checked ~ .project-tabs {
 }
 .talent {
   overflow: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .talent-desc {
   position: relative;
@@ -882,8 +874,6 @@ input[id="tab3"]:checked ~ .project-tabs {
   left: 50%;
   width: 70%;
   transform: translate(-50%, -50%);
-}
-.talent-location {
 }
 .talent-desc ul {
   display: inline-block;
@@ -947,4 +937,70 @@ input[id="tab3"]:checked ~ .project-tabs {
 }
 .sns a:hover::after {
   transform: translate(-50%, -50%) scale(1);
+}
+/* ########## Sub Page - Project ########## */
+.project-modal {
+}
+.project-heading1 {
+  background: url(./images/project-main-01-01.jpg) no-repeat center center /
+    cover;
+  color: #fff;
+}
+.project-heading2 {
+  background: url(./images/project-main-02-01.jpg) no-repeat center center /
+    cover;
+  color: #fff;
+}
+.project-heading3 {
+  background: url(./images/project-main-03-01.jpg) no-repeat center center /
+    cover;
+  color: #fff;
+}
+.project-heading {
+  height: 100vh;
+  padding-top: 300px;
+}
+.hiring-heading.project-heading span::before,
+.hiring-heading.project-heading span::after {
+  background-color: #fff;
+  height: 2px;
+}
+.hiring-heading.project-heading span::before {
+  margin-right: 20px;
+}
+.hiring-heading.project-heading span::after {
+  margin-left: 20px;
+}
+.project-heading h1 {
+  margin-top: 70px;
+  font-size: 70px;
+}
+.project-main {
+}
+.project-desc-info {
+  position: relative;
+}
+.project-desc-info ul {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 2.5em;
+  font-size: 20px;
+}
+.project-desc-info ul li::before {
+  content: "\f105";
+  font-family: "fontawesome";
+  margin-right: 10px;
+}
+.project-desc-inner h2 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+.hiring-slogan.project-slogan p {
+  font-size: 35px;
+  left: 3%;
 }
