@@ -1,14 +1,8 @@
 /* ########### Mobile ########### */
 @media (max-width: 768px) {
-  /* Show Hide Section */
-  #home,
-  #about,
-  #project,
-  #plan,
-  #awards,
-  #location,
-  #contact {
-    /* display: none; */
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
   }
   /* Entire Layout */
   .cd-section {
@@ -24,21 +18,80 @@
   }
   /* ########## Header ########## */
   header {
-    top: 0;
+    top: -1px;
     left: 0;
     transition: 0.5s;
   }
   header.active {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  .header-inner {
+    position: relative;
   }
   .gnb .menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 270px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+    transition: 0.5s;
+  }
+  .gnb.active .menu {
+    right: -20px;
+  }
+  .gnb .menu a {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    padding: 20px;
   }
   .gnb-slogan {
     display: none;
   }
   .trigger {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 30px;
+    height: 16px;
+    cursor: pointer;
   }
+  .trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    transition: 0.5s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    width: 80%;
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
   /* ########## Section : Home ########## */
   .home-inner {
     height: 100vh;
@@ -62,7 +115,8 @@
   /* ########## Section : About ########## */
   .about-inner {
     height: auto;
-    padding: 20px;
+    padding: 50px 20px;
+    padding-top: 80px;
     background: #0dace3;
   }
   .about-items {
@@ -195,6 +249,7 @@
   }
   .location-center {
     position: relative;
+    z-index: 1;
     top: 0;
     left: 0;
     transform: none;
@@ -302,11 +357,113 @@
     font-size: 20px;
     text-align: center;
   }
-
   /* ########## Hiring Button ########## */
   .btn_hiring {
     bottom: 25px;
     right: 25px;
     font-weight: normal;
+  }
+  /* ########## Sub Page - Hiring ########## */
+  .hiring-header-inner {
+    width: 85%;
+  }
+  .hiring-heading {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+  .hiring-heading span::before,
+  .hiring-heading span::after {
+    width: 70px;
+    height: 1px;
+    background-color: #000;
+  }
+  .hiring-heading h1 {
+    font-size: 60px;
+  }
+  .together > div,
+  .talent > div {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .together-desc {
+    margin-bottom: 50px;
+  }
+  .together-desc-inner {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .hiring-slogan {
+    margin-bottom: 50px;
+  }
+  .hiring-slogan p {
+    font-size: 30px;
+  }
+  .hiring-slogan p::before {
+    top: 10px;
+    left: -50px;
+  }
+  .talent-desc-inner {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 20px;
+  }
+  .talent-desc-inner h2,
+  .talent-desc-inner p {
+    text-align: center;
+  }
+  .talent-desc ul {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .talent-desc ul li {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .sns {
+    margin-top: 40px;
+  }
+  /* ########## Sub Page - Project ########## */
+  .project-heading {
+    height: 70vh;
+    padding-top: 200px;
+  }
+  .project-heading h1 {
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: normal;
+  }
+  .project-desc-inner {
+    margin-top: 50px;
+  }
+  .project-desc-inner p {
+    margin-bottom: 0;
+  }
+  .project-desc-info ul {
+    position: static;
+    transform: none;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+  .hiring-slogan.project-slogan p {
+    font-size: 25px;
+    text-align: right;
+  }
+  .hiring-slogan.project-slogan p::before {
+    top: 60px;
+    left: -20px;
+  }
+
+  /* ########## Featherlight Custom ########## */
+  .featherlight .featherlight-close-icon {
+    top: 30px;
+    right: 30px;
+    font-size: 25px;
   }
 }
